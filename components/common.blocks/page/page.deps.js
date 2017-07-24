@@ -3,7 +3,7 @@
     {
       mods: { view: ['404'] }
     },
-    'header',
+    'sidebar',
     'body',
     'footer'
   ]

@@ -1,7 +1,8 @@
 block('page').content()(function() {
   return [
     {
-      block: 'header'
+      block: 'sidebar',
+      mix: { block: 'page', elem: 'aside'}
     },
     {
       block: this.data.view
