@@ -32,7 +32,7 @@ block('root').replace()(function() {
       { elem: 'meta', attrs: { property: 'og:type', content: 'website' } }
     ],
     mods: {
-      theme: 'islands',
+      theme: '25menu',
       view: data.view
     }
   };

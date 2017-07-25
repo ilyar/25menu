@@ -1,0 +1,13 @@
+.page__aside {
+  height: 100vh;
+  width: 144px;
+  background-color: #D0D0D0;
+  float: left;
+}
+
+.page__aside_order {
+  height: 100vh;
+  width: 64px;
+  background-color: #F05565;
+  float: right;
+}

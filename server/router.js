@@ -2,7 +2,7 @@ const render = require('./render').render,
   axios = require('axios');
 
 const client = axios.create({
-  baseURL: 'https://api.github.com/'
+  baseURL: 'http://delivery.breadhead.ru'
 });
 
 const request = options => {

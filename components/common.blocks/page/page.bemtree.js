@@ -9,6 +9,13 @@ block('page').content()(function() {
     },
     {
       block: 'footer'
+    },
+    {
+      block: 'sidebar',
+      mods: {
+        order: true
+      },
+      mix: { block: 'page', elem: 'aside', elemMods: { order: true, hide: true }}
     }
   ];
 });

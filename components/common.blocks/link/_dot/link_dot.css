@@ -1,0 +1,14 @@
+.link_dot_red {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.link_dot_green {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: green;
+}
+
