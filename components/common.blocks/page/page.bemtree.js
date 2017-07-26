@@ -5,10 +5,8 @@ block('page').content()(function() {
       mix: { block: 'page', elem: 'aside'}
     },
     {
-      block: this.data.view
-    },
-    {
-      block: 'footer'
+      block: 'items',
+      mix: { block: 'page', elem: 'inner' }
     },
     {
       block: 'sidebar',

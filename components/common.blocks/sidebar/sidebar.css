@@ -1,0 +1,9 @@
+.sidebar {
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+.sidebar__content {
+  height: 412px;
+  width: 100%;
+}

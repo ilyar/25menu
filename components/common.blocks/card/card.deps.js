@@ -8,7 +8,6 @@
           symbol: '*'
         }
       },
-      'inner',
-
+      'inner'
     ]
 })

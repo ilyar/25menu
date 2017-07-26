@@ -9,8 +9,15 @@
     {
       mods: { view: ['404'] }
     },
+    {
+      block: 'sidebar',
+      mods: {
+        order: true
+      }
+    },
     'sidebar',
     'body',
-    'footer'
+    'footer',
+    'items'
   ]
 })

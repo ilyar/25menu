@@ -6,6 +6,9 @@ block('sidebar')
       content: [
         {
           block: 'logo',
+          mods: {
+            small: true
+          }
         },
         {
           block: 'logo',
@@ -15,7 +18,7 @@ block('sidebar')
         },
         {
           block: 'link',
-          url: '34234',
+          url: 'tel=+7812200-20-20',
           content: '8 812 200-20-20'
         }
       ]
@@ -33,7 +36,7 @@ block('sidebar')
             dot: 'red',
           },
           url: '#',
-          content: '8'
+          content: ''
         },
         {
           block: 'link',
@@ -41,7 +44,7 @@ block('sidebar')
             dot: 'green',
           },
           url: '#',
-          content: '8'
+          content: ''
         }
       ]
     }

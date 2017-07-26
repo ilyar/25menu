@@ -1,0 +1,19 @@
+.items{
+  padding: 20px 164px 0;
+  width: 85%;
+}
+
+.items__card-group {
+  width: 98%;
+  height: 600px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: gray;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.items__card {
+  margin-right: 10px;
+}

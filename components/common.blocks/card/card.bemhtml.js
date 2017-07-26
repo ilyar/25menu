@@ -4,7 +4,7 @@ block('card').content()(function() {
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
@@ -20,7 +20,7 @@ block('card').mod('special', true).content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
@@ -48,7 +48,7 @@ block('card').mod('usual', true).content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
@@ -80,7 +80,7 @@ block('card').mod('pizza', true).content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
@@ -99,13 +99,13 @@ block('card').mod('pizza', true).content()(function(){
         ]
       },
       {
-        block: 'dropdown',
+        block: 'select',
         mods: {
           pizza: 'size'
         }
       },
       {
-        block: 'dropdown',
+        block: 'select',
         mods: {
           pizza: 'base'
         }
@@ -118,13 +118,13 @@ block('card').mod('pizza', true).content()(function(){
     }]
 });
 
-block('card').mod('text-card', true).content()(function(){
+block('card').mod('info', true).content()(function(){
   return [ {
       elem: 'header',
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
@@ -132,7 +132,7 @@ block('card').mod('text-card', true).content()(function(){
       block: 'inner',
       content: [ {
         block: 'description',
-        content: 'Готовим супер пупер вкусности'
+        content: 'Готовим супер-пупер вкусности'
       },
       {
         block: 'button',
@@ -157,7 +157,7 @@ block('card').mod('chosen', true).content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://babeholder.pixoil.com/img/196/196'
+          url: 'http://lorempixel.com/196/196/cats'
         }
       ]
     },
