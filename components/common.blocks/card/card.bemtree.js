@@ -25,16 +25,16 @@ block('card').mod('type', 'special').content()(function(){
       ]
     },
     {
-      block: 'inner',
+      elem: 'inner',
       content: [ {
         block: 'description',
         content: [
         {
           elem: 'main-info',
-          content: 'Пицца, вкусне, сочне, сладке'
+          content: 'Скидка 15 % на все пиццы в день рождения'
         },{
           elem: 'add-info',
-          content: 'до 32 августа!'
+          content: 'Промокод #partytime'
         }
         ]
       }

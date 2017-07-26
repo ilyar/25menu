@@ -1,0 +1,10 @@
+.icon_symbol_pizza {
+  width: 24px;
+  height: 24px;
+  background-image: url(svg/piece_of_pizza_icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  display: block;
+  fill: black;
+}

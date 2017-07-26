@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>map-filled-24 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-S" fill-rule="nonzero" stroke="#363839" stroke-width="1.5">
+            <g id="map-filled-24-copy">
+                <g>
+                    <path d="M23.0031641,4.22985906 C19.7522707,1.95398726 15.9151398,0.75 12,0.75 C8.08486025,0.75 4.24772932,1.95398726 0.996835897,4.22985906 L12,22.5437088 L23.0031671,4.2298541 Z" id="Shape"></path>
+                    <circle id="Oval" cx="12" cy="8" r="3"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

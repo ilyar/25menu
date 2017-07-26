@@ -1,0 +1,23 @@
+.card_type_special {
+  border-radius: 6px;
+  max-width: 264px;
+  min-width: 208px;
+  background: linear-gradient(180deg, rgb(180, 38, 71), rgb(255, 137, 108));
+}
+
+.card_type_special .description__main-info {
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 176px;
+  margin: 10px 0 0 25px;
+  color: white;
+  line-height: 24px;
+}
+
+.card_type_special .description__add-info {
+  font-size: 14px;
+  font-weight: 100;
+  max-width: 176px;
+  margin: 10px 0 0 25px;
+  color: white;
+}

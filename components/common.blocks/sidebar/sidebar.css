@@ -1,9 +1,17 @@
 .sidebar {
   padding: 16px 20px;
-  box-sizing: border-box;
+}
+
+.sidebar__header .link {
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .sidebar__content {
   height: 412px;
   width: 100%;
+}
+
+.sidebar_order {
+  width: 64px;
 }

@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+.card__header {
+  height: 50%;
+  overflow: hidden;
+}
+
 .card img {
   display: block;
   margin: 0 auto;

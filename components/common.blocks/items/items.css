@@ -1,6 +1,25 @@
-.items{
-  padding: 0px 164px 0;
+.items__header {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  margin-top: 16px;
 }
+
+.items__workinfo {
+  display: flex;
+  width: 50%;
+}
+
+.items__login-area {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.items__login {
+  align-self: flex-start;
+}
+
 
 .items__card-group {
   max-width: 1120px;
@@ -12,6 +31,15 @@
   flex-wrap: wrap;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.items__card-group_special {
+  display: block;
+}
+
+.items__card-group_special .card {
+  display: inline-block;
+  margin-right: 0;
 }
 
 .items__card {

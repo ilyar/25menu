@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>cart icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cart-S" transform="translate(-21.000000, -16.000000)">
+            <g id="cart-icon">
+                <g transform="translate(20.000000, 16.000000)">
+                    <g>
+                        <rect id="Rectangle-ic" x="0" y="0" width="24" height="24"></rect>
+                        <polygon id="Stroke-ic" stroke="#FFFFFF" stroke-width="1.5" points="21.6229565 20.5652174 2.49252174 20.5652174 4.23165217 6.65217391 19.8838261 6.65217391"></polygon>
+                        <path d="M8.57947826,10.1304348 L8.57947826,4.91304348 C8.57947826,2.99217391 10.1368696,1.43478261 12.0577391,1.43478261 L12.0577391,1.43478261 C13.9786087,1.43478261 15.536,2.99217391 15.536,4.91304348 L15.536,10.1304348" id="Stroke-ic" stroke="#FFFFFF" stroke-width="1.5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
