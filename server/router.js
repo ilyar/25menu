@@ -39,7 +39,17 @@ const isCallerMobile = req => {
 module.exports = function( app ) {
 
   app.get( '/', function( req, res ) {
-    render( req, res, { page: 'index', bundle: isCallerMobile( req ) ? 'touch' : 'desktop' } )
+    render( req, res, {
+      page: 'index',
+      bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+      items: [
+        {
+          title: 'Title',
+          price: 500,
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores amet, pariatur obcaecati vel perspiciatis aspernatur nam, voluptatum, nemo eveniet maiores, velit quidem natus beatae? Ut eos reiciendis tenetur, fugiat minima.'
+        }
+      ]
+    } )
   });
 
   app.get( '/about/', function( req, res ) {

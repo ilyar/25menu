@@ -4,32 +4,8 @@
       {
         block: 'card',
         mods: {
-          usual: '*'
+          type: '*'
         }
-      },
-      {
-        block: 'card',
-        mods: {
-          info: '*'
-        }
-      },
-      {
-        block: 'card',
-        mods: {
-          special: '*'
-        }
-      },
-      {
-        block: 'card',
-        mods: {
-          pizza: '*'
-        }
-      },
-      {
-        block: 'card',
-        mods: {
-          chosen: '*'
-        }
-      },
+      }
     ]
 })

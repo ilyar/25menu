@@ -1,17 +1,17 @@
 .items{
-  padding: 20px 164px 0;
-  width: 85%;
+  padding: 0px 164px 0;
 }
 
 .items__card-group {
-  width: 98%;
-  height: 600px;
+  max-width: 1120px;
   border: 1px solid black;
   padding: 20px;
   background-color: gray;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .items__card {
