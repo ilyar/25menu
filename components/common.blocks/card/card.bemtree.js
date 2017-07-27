@@ -67,7 +67,7 @@ block('card').mod('type', 'usual').content()(function(){
         ]
       },
       {
-        block: 'button',
+        block: 'price',
         content: '150 Р'
       }
       ]
@@ -111,7 +111,7 @@ block('card').mod('type', 'pizza').content()(function(){
         }
       },
       {
-        block: 'button',
+        block: 'price',
         content: '150 Р'
       }
       ]
@@ -132,12 +132,12 @@ block('card').mod('type', 'info').content()(function(){
       elem: 'inner',
       content: [ {
         block: 'description',
-        content: 'Готовим супер-пупер вкусности'
-      },
-      {
-        block: 'button',
-        content: 'Узнать больше'
-      }
+        content: [
+        {
+          elem: 'main-info',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, nam voluptas nihil non nesciunt laborum ut iure illum alias omnis. Porro, praesentium. Saepe facilis in tenetur hic, porro, dicta facere.'
+        }]
+        }
       ]
     }]
 });
@@ -152,46 +152,34 @@ block('card').mod('type', 'chosen').content()(function(){
       mix: { block: 'card', elem: 'popup' }
     },
     {
-      elem: 'header',
+      elem: 'inner',
       content: [
         {
-          block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
-        }
-      ]
-    },
-    {
-      elem: 'inner',
-      content: [ {
-        block: 'description',
-        content: 'Супер салат'
-      },
-      {
-        block: 'button',
-        mods: {
-          choosen: true
-        },
-        content:[{
-          block: 'button',
+          block: 'price',
           mods: {
-           counter: true
+            choosen: true
           },
-          content: [
-          {
-            elem: 'minus',
-            content: '-'
-          },
-          {
-            elem: 'quantity',
-            content: '25'
-          },
-          {
-            elem: 'plus',
-            content: '+'
-          },
-          ]
-        }]
-      },
-      ]
-    }]
+          content:[{
+            block: 'price',
+            mods: {
+             counter: true
+            },
+            content: [
+              {
+                elem: 'minus',
+                content: '-'
+              },
+              {
+                elem: 'quantity',
+                content: '25'
+              },
+              {
+                elem: 'plus',
+                content: '+'
+              },
+            ]
+          }]
+        },
+    ]}
+    ]
 });

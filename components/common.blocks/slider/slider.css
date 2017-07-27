@@ -14,6 +14,10 @@
     justify-content: space-between;
 }
 
+.slider__item {
+  lost-column: 1/4;
+}
+
 .slider__control {
   width: 220px;
   height: 64px;
