@@ -59,15 +59,19 @@ block('card').mod('type', 'usual').content()(function(){
         content: [
         {
           elem: 'main-info',
-          content: 'Борщик, с капусткой, но не красной'
-        },{
+          content: [
+          'Борщик, с капусткой, но не красной',
+          {
           elem: 'weight',
-          content: '300 мг.'
-        }
-        ]
+          content: '300 мг.',
+          tag: 'span'
+          }
+          ]
+        }]
       },
       {
         block: 'price',
+        mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
       ]
@@ -91,27 +95,69 @@ block('card').mod('type', 'pizza').content()(function(){
         content: [
         {
           elem: 'main-info',
-          content: 'Борщик, с капусткой, но не красной'
-        },{
+          content: [
+          'Борщик, с капусткой, но не красной',
+          {
           elem: 'weight',
-          content: '300 мг.'
+          content: '300 мг.',
+          tag: 'span'
+          }
+          ]
+        }]
+      },
+      {
+        block: 'selector',
+        mods: {
+          pizza: 'size'
+        },
+        tag: 'select',
+        content: [
+        {
+          elem: 'option',
+          tag: 'option',
+          attrs: {
+            value: 1
+          },
+          content: 'Ø 25 см'
+        },
+        {
+          elem: 'option',
+          tag: 'option',
+          attrs: {
+            value: 2
+          },
+          content: 'Ø 35 см'
         }
         ]
       },
       {
-        block: 'select',
-        mods: {
-          pizza: 'size'
-        }
-      },
-      {
-        block: 'select',
+        block: 'selector',
         mods: {
           pizza: 'base'
+        },
+        tag: 'select',
+        content: [
+        {
+          elem: 'option',
+          tag: 'option',
+          attrs: {
+            value: 1
+          },
+          content: 'На тонком тесте'
+        },
+        {
+          elem: 'option',
+          tag: 'option',
+          attrs: {
+            value: 2
+          },
+          content: 'На толстом тесте'
         }
+        ]
       },
       {
         block: 'price',
+        mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
       ]
@@ -150,36 +196,45 @@ block('card').mod('type', 'chosen').content()(function(){
         symbol: 'cart'
       },
       mix: { block: 'card', elem: 'popup' }
+    }
+    ]
+});
+
+block('card').mod('type', 'roll').content()(function(){
+  return [ {
+      elem: 'header',
+      content: [
+        {
+          block: 'image',
+          url: 'http://lorempixel.com/196/196/cats'
+        }
+      ]
     },
     {
       elem: 'inner',
-      content: [
+      content: [ {
+        block: 'description',
+        content: [
         {
-          block: 'price',
-          mods: {
-            choosen: true
-          },
-          content:[{
-            block: 'price',
-            mods: {
-             counter: true
-            },
-            content: [
-              {
-                elem: 'minus',
-                content: '-'
-              },
-              {
-                elem: 'quantity',
-                content: '25'
-              },
-              {
-                elem: 'plus',
-                content: '+'
-              },
-            ]
-          }]
-        },
-    ]}
-    ]
+          elem: 'main-info',
+          content: [
+          'Борщик, с капусткой, но не красной',
+          {
+          elem: 'weight',
+          content: '300 мг.',
+          tag: 'span'
+          }
+          ]
+        },{
+          elem: 'amount',
+          content: '8 штук'
+        }]
+      },
+      {
+        block: 'price',
+        mix: { block: 'card', elem: 'price_block'},
+        content: '150 Р'
+      }
+      ]
+    }]
 });

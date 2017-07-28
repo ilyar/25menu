@@ -1,9 +1,7 @@
 .icon_symbol_cart {
-  width: 24px;
-  height: 24px;
+  width: 100%;
   background-image: url(svg/cart_icon.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 10px auto;
   display: block;
 }

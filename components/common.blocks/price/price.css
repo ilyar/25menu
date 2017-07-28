@@ -1,0 +1,10 @@
+.price {
+  padding: 8px 12px;
+  width: 64px;
+  box-sizing: border-box;
+  background-color: #363839;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+}

@@ -57,7 +57,8 @@ block('sidebar').mod('order', true).content()(function(){
      block: 'icon',
      mods: {
       symbol: 'cart'
-     }
+     },
+     mix: {block: 'sidebar', elem: 'cart' }
     }
   ]
 });

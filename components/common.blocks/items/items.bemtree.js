@@ -1,44 +1,6 @@
 block('items').content()(function() {
   return [
-    {
-      elem: 'header',
-      content: [
-      {
-        elem: 'workinfo',
-        content: [
-        {
-          block: 'icon',
-          mods: {
-           symbol: 'pizza'
-          }
-        },
-        {
-          elem: 'title',
-          content: 'Доставка и оплата'
-        },
-        {
-          elem: 'workhours',
-          content: 'с 10 до 23'
-        },
-        ]
-      },
-      {
-        elem: 'login-area',
-        content: [
-          {
-            block: 'icon',
-            mods: {
-              symbol: 'account'
-            }
-          },
-          {
-            elem: 'login',
-            content: 'Войти'
-          },
-        ]
-      }
-      ]
-    },
+    { block: 'header'},
     { elem: 'card-group',
       elemMods: {
        special: true
@@ -175,11 +137,24 @@ block('items').content()(function() {
               }
             }
           ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'roll'
+              }
+            }
+          ]
         }
       ]
     },
     {
-      elem: 'footer'
+      block: 'footer',
+      mix: { block: 'items', elem: 'footer' }
     }
     ]
 });

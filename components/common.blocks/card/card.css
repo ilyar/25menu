@@ -4,6 +4,7 @@
   overflow: hidden;
   display: block;
   box-sizing: border-box;
+  position: relative;
 }
 
 .card__header {
@@ -22,26 +23,30 @@
   line-height: 20px;
   font-size: 18px;
   width: 200px;
-  margin: 20px auto 0;
+  margin: 0 auto;
 }
 
 .description__weight {
-  text-align: center;
   font-weight: normal;
   line-height: 20px;
   font-size: 13px;
-  margin: 0 auto;
+  margin-left: 10px;
   color: #808080;
 }
 
-.card__inner .price {
-  margin: 25px auto 40px;
-  padding: 8px 12px;
-  width: 64px;
-  box-sizing: border-box;
-  background-color: #363839;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 3px;
+.card__popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+.card__price_block {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -32px;
 }

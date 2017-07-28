@@ -1,5 +1,6 @@
 .sidebar {
   padding: 16px 20px;
+  flex-shrink: 0;
 }
 
 .sidebar__header .link {
@@ -12,6 +13,3 @@
   width: 100%;
 }
 
-.sidebar_order {
-  width: 64px;
-}

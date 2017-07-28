@@ -1,12 +1,19 @@
 ({
-    shouldDeps: [
-      'image',
-      'button',
-      {
-        block: 'icon',
-        mods: {
-          symbol: '*'
-        }
+  shouldDeps: [
+    'image',
+    'button',
+    'price',
+    {
+      block: 'icon',
+      mods: {
+        symbol: '*'
       }
-    ]
+    },
+    {
+      block: 'price',
+      mods: {
+        type: '*'
+      }
+    }
+  ]
 })

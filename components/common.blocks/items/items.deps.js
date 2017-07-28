@@ -1,6 +1,6 @@
 ({
     shouldDeps: [
-      'card',
+      'header',
       {
         block: 'card',
         mods: {
@@ -13,6 +13,7 @@
           big: true
         }
       },
-      'slider'
+      'slider',
+      'footer'
     ]
 })
