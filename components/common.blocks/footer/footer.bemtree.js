@@ -3,7 +3,7 @@ block('footer').content()(function() {
     {
         elem: 'first_row',
         content: [{
-          elem: 'footer_contacts',
+          elem: 'contacts',
           content: [
           {
             block: 'icon'
@@ -28,7 +28,7 @@ block('footer').content()(function() {
           mix: {block: 'footer', elem: 'delivery'}
         },
         {
-          elem: 'footer_social',
+          elem: 'social',
           content: [
           {
             block: 'link',
@@ -61,7 +61,7 @@ block('footer').content()(function() {
         elem: 'second_row',
         content: [
         {
-          elem: 'footer_feedback',
+          elem: 'feedback',
           content: [
             {
               block: 'icon'
@@ -82,10 +82,13 @@ block('footer').content()(function() {
         ]
       },
       {
+        tag: 'hr'
+      },
+      {
         elem: 'third_row',
         content: [
         {
-          elem: 'footer_info',
+          elem: 'info',
           content: [
           {
             elem: 'copyright',

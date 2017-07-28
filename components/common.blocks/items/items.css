@@ -1,7 +1,7 @@
 .items__card-group {
   max-width: 1120px;
   border: 1px solid black;
-  padding: 20px;
+  padding: 10px 20px 20px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -10,12 +10,22 @@
   border-radius: 5px;
 }
 
-.items__card-group_special {
-  display: block;
-}
-
 .items__card {
   lost-column: 1/4;
+}
+.items__title {
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.items__popup {
+  position: relative;
+}
+
+.items__arrow {
+  position: absolute;
+  left: 120px;
+  top: -17px;
 }
 
 .items__info-block {

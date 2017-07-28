@@ -3,7 +3,87 @@ display: flex;
 flex-direction: column;
 }
 
+hr {
+  color: #E6E6E6;
+  size: 5px;
+  width: 100%;
+}
+
 .footer>div {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.footer .link {
+  text-decoration: none;
+  color: #363839;
+}
+
+.footer__contacts,
+.footer__feedback,
+.footer__info {
+  display: flex;
+  width: 340px;
+  align-items: center;
+}
+
+.footer__contacts .icon,
+.footer__feedback .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.footer__phone {
+  margin-right: 15px;
+}
+
+.footer__delivery {
+  width: 360px;
+  align-items: center;
+  line-height: 26px;
+}
+
+.footer__social {
+  flex: 1;
+  text-align: right;
+  align-items: center;
+}
+
+.footer__social .link {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-left: 15px;
+}
+
+.footer__faq {
+  flex: 1;
+}
+
+.footer__copyright {
+  color: #808080;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.footer__payment_system {
+  flex: 1;
+  text-align: center;
+}
+
+.footer__site_author {
+  width: 200px;
+  text-align: right;
+  font-size: 14px;
+  color: #808080;
+}
+
+.footer__site_author .link {
+  margin-left: 5px;
 }
 

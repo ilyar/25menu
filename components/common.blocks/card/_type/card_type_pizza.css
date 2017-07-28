@@ -1,9 +1,13 @@
 .selector {
   display: block;
-  margin: 7px auto;
-  height: 16px;
+  margin: 3px auto;
   font-size: 14px;
+  text-align: left;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
+
 
 
 

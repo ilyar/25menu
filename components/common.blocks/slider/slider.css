@@ -16,6 +16,7 @@
 
 .slider__item {
   lost-column: 1/4;
+  margin-right: 5px!important;
 }
 
 .slider__control {

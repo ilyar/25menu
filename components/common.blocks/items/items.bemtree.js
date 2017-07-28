@@ -79,6 +79,11 @@ block('items').content()(function() {
     { elem: 'card-group',
       content: [
         {
+          block: 'title',
+          content: 'Cалаты',
+          mix: { block: 'items', elem: 'title' }
+        },
+        {
           block: 'items',
           elem: 'card',
           content: [
@@ -88,6 +93,18 @@ block('items').content()(function() {
                 type: 'usual'
               }
             }
+          ]
+        },
+        {
+          elem: 'popup',
+          content: [
+          {
+            block: 'product'
+          },
+          {
+            block: 'arrow',
+            mix: { block: 'items', elem: 'arrow' }
+          }
           ]
         },
         {
