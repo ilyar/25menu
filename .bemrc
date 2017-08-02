@@ -10,12 +10,7 @@
                       "js",
                       "deps.js"
                     ],
-                    "templateFolder": ".bem/bem-tools-create/lib/templates",
-                    "templates": {
-                        "js-ymodules": ".bem/bem-tools-create/lib/templates/js"
-                    },
                     "techsTemplates": {
-                        "js": "js-ymodules",
                         "bemtree.js": "bemhtml.js"
                     },
                     "levels": {

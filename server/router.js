@@ -58,10 +58,10 @@ module.exports = function( app ) {
       .catch(() => render(req, res, { page: 'index', view: '404' }) );
   });
 
-  app.get('/:item', function(req, res) {
+  app.get('/catalog/:item', function(req, res) {
   render(req, res, {
     page: 'item',
-    title: 'it\'s ' + req.params.item,
+    title: req.params.item,
     })
   });
 

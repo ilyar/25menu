@@ -1,0 +1,31 @@
+.consist_type_product .ingridients {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ingridient__remove {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: baseline;
+}
+
+.remove__text {
+  display: inline-block;
+  border-bottom: 1px dotted #808080;
+}
+
+
+.consist_type_product .select_mode_check {
+  all: initial;
+}
+
+.product__add_ingridient {
+  width: 32px;
+  height: 32px;
+}
+
+.consist__ingridient_add_button {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}

@@ -7,6 +7,7 @@
     padding: 0 30px;
     box-sizing: border-box;
     display: flex;
+    overflow: hidden;
 }
 
 .product__close {
@@ -17,22 +18,21 @@
 
 .product__control {
   position: absolute;
-  width: 32px;
-  height: 140px;
-  background-color: #D0D0D0;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #D0D0D0;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -28px;
 }
 
 
 .product__control_left {
-  left: 0;
-  top: 50%;
-  margin-top: -70px;
+  left: -2.5%;
 }
 
 .product__control_right {
-  right: 0;
-  top: 50%;
-  margin-top: -70px;
+  right: -2.5%;
 }
 
 .product__info {

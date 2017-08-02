@@ -2,6 +2,9 @@ block('product').content()(function() {
     return [
     {
       block: 'close-btn',
+      mods: {
+        type: 'product'
+      },
       mix: { block: 'product', elem: 'close' }
     },
     {
