@@ -30,6 +30,14 @@
           }
         },
         {
+        block: 'dropdown',
+          mods: {
+              switcher: 'button',
+              theme: 'islands',
+              size: 'm'
+          }
+        },
+        {
           block: 'value',
           mods: {
             type: 'product'

@@ -35,7 +35,7 @@ block('product').content()(function() {
       {
         block: 'title',
         mix: { block: 'product', elem: 'title' },
-        content: 'Котик няшечка в помидорках'
+        content: 'Котик няшечка в соусе'
       },
       {
         block: 'consist',
@@ -47,16 +47,28 @@ block('product').content()(function() {
         block: 'price',
         mods:{
           type: 'product'
-        }
+        },
+        mix: { block: 'product', elem: 'price-block' }
       },
       {
         block: 'description',
         content: [
         {
-          block: 'value',
+          block: 'dropdown',
           mods: {
-            type:'product'
-          }
+            switcher: 'button',
+            theme: 'islands',
+            size: 'm'
+          },
+          switcher: '450 г. ...',
+          popup: [
+          {
+            block: 'value',
+            mods: {
+              type:'product'
+            }
+          },
+          ]
         },
         {
           block: 'link',
