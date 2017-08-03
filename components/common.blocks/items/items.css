@@ -12,6 +12,7 @@
 
 .items__card {
   lost-column: 1/4;
+  z-index: 1;
 }
 .items__title {
   font-size: 56px;
@@ -20,6 +21,7 @@
 
 .items__popup {
   position: relative;
+  z-index: 0;
 }
 
 .items__arrow {
@@ -36,7 +38,7 @@
 }
 
 .items__info-block_card {
-  width: 336px;
+  max-width: 336px;
   height: 128px;
   font-size: 16px;
   line-height: 24px;

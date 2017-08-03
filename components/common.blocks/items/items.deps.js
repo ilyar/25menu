@@ -1,15 +1,10 @@
 ({
     shouldDeps: [
       'header',
-      'title',
       'arrow',
+      'title',
       'product',
-      {
-        block: 'card',
-        mods: {
-          type: '*'
-        }
-      },
+      'card',
       {
         block: 'logo',
         mods: {

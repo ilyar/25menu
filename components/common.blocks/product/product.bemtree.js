@@ -106,7 +106,7 @@ block('product').content()(function() {
       content: [
       {
         block: 'image',
-        url: 'http://lorempixel.com/476/476/cats'
+        url: 'http://babeholder.pixoil.com/img/476/476'
       }
       ]
     }

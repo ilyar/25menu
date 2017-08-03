@@ -7,7 +7,6 @@ html {
   height: 100vh;
   max-height: 100vh;
   display: flex;
-
   overflow: hidden;
   justify-content: space-between;
 }
@@ -15,11 +14,11 @@ html {
 .page__aside {
   background-color: #D0D0D0;
   overflow: auto;
-  width: 144px;
+  min-width: 144px;
   box-sizing: border-box;
 }
 
 .page__aside_order {
   background-color: #F05565;
-  width: 64px;
+  min-width: 64px;
 }

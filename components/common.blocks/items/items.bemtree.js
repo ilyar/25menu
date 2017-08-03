@@ -90,7 +90,8 @@ block('items').content()(function() {
             {
               block: 'card',
               mods: {
-                type: 'usual'
+                type: 'usual',
+                checked: true
               }
             }
           ]
@@ -100,10 +101,6 @@ block('items').content()(function() {
           content: [
           {
             block: 'product'
-          },
-          {
-            block: 'arrow',
-            mix: { block: 'items', elem: 'arrow' }
           }
           ]
         },
@@ -114,7 +111,7 @@ block('items').content()(function() {
             {
               block: 'card',
               mods: {
-                type: 'chosen'
+                chosen: true
               }
             }
           ]
@@ -151,6 +148,18 @@ block('items').content()(function() {
               block: 'card',
               mods: {
                 type: 'special'
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                checked: true
               }
             }
           ]
