@@ -1,0 +1,17 @@
+.product_type_item {
+    border: 0;
+}
+
+.product_type_item .product__control {
+  display: none;
+}
+
+
+.product_type_item .product__close {
+  display: none;
+}
+
+.product_type_item .product__more {
+  display: none;
+}
+

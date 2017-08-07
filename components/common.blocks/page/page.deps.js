@@ -18,6 +18,12 @@
     'sidebar',
     'body',
     'footer',
-    'items'
+    'items',
+    {
+    block: 'product',
+    mods: {
+      type: 'item'
+    }
+    }
   ]
 })

@@ -178,6 +178,100 @@ block('items').content()(function() {
         }
       ]
     },
+    { elem: 'card-group',
+      content: [
+        {
+          block: 'title',
+          content: 'Пиццы',
+          mix: { block: 'items', elem: 'title' }
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'usual',
+                checked: true
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                chosen: true
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'info'
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'pizza'
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'special'
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                checked: true
+              }
+            }
+          ]
+        },
+        {
+          block: 'items',
+          elem: 'card',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'roll'
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       block: 'footer',
       mix: { block: 'items', elem: 'footer' }

@@ -61,6 +61,7 @@ module.exports = function( app ) {
   app.get('/catalog/:item', function(req, res) {
   render(req, res, {
     page: 'item',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
     title: req.params.item,
     })
   });

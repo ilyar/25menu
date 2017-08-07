@@ -1,5 +1,25 @@
 block('page-item').content()(function() {
   return [
-    'Item page content',
+  {
+    block: 'header'
+  },
+  {
+    block: 'link',
+    url: '/',
+    content: 'Название раздела',
+    mix: { block: 'product', elem: 'back' }
+  },
+  {
+    block: 'product',
+    mods: {
+      type: 'item'
+    }
+  },
+  {
+    block: 'upsale'
+  },
+  {
+    block: 'footer'
+  }
   ]
 });

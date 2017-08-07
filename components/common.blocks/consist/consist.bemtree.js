@@ -54,40 +54,59 @@ block('consist').mod('type', 'product').content()(function() {
         type: 'add'
       },
       content: [
-      {
+        {
         block: 'icon',
         mods: {
-          symbol: 'add'
+            symbol: 'add'
         },
         mix: { block: 'product', elem: 'add_ingridient' }
-      },
-      {
-        block: 'select',
-        mods: {
-          mode: 'check',
-          size: 'l',
-          theme: 'islands'
         },
-        name: 'select-ingridient',
-        text: 'Добавки, от 10 Р',
-        options: [
-         {
-             val: 1,
-             text: 'Доклад'
-         },
-         {
-             val: 2,
-             text: 'Мастер-класс'
-         },
-         {
-             val: 3,
-             text: 'Круглый стол'
-         }
-        ]
+        {
+            block: 'dropdown',
+            mods: {
+                switcher: 'button',
+                theme: 'islands',
+                size: 'xl'
+            },
+            switcher: 'Выпадающий список',
+            popup: {
+                block: 'menu',
+                mods: {
+                    theme: 'islands',
+                    size: 'xl',
+                    select: 'check'
+                },
+                content: [
+                    {
+                        elem: 'menu-item',
+                        val: 1,
+                        content: [
+                          {
+                            block: 'addon',
+                            mods: {
+                              type: 'product'
+                            }
+                          }
+                        ]
+                    },
+                    {
+                        elem: 'menu-item',
+                        val: 2,
+                        content: [
+                          {
+                            block: 'addon',
+                            mods: {
+                              type: 'product'
+                            }
+                          }
+                        ]
+                    }
+                ]
+            }
+        }
+      ]
       }
      ]
-    }
-  ]
-});
+    });
 
 

@@ -54,32 +54,25 @@ block('product').content()(function() {
         block: 'description',
         content: [
         {
-          block: 'dropdown',
-          mods: {
-            switcher: 'button',
-            theme: 'islands',
-            size: 'm'
-          },
-          switcher: '450 г. ...',
-          popup: [
-          {
-            block: 'value',
-            mods: {
-              type:'product'
-            }
-          },
-          ]
+          elem: 'weight_special',
+          content: '450 г.',
         },
         {
           block: 'link',
           url: '',
-          content: 'ОСТРОЕ',
+          content:[
+          {
+            block: 'icon'
+          },
+          'ОСТРОЕ'
+          ],
           mix: { block: 'product', elem: 'filter' }
         },
         {
           block: 'link',
           url: '',
-          content: [{
+          content: [
+          {
             block: 'icon'
           },
           'БЕЗ ГЛЮТЕНА'
@@ -97,7 +90,8 @@ block('product').content()(function() {
         {
           block: 'icon'
         }
-        ]
+        ],
+        mix: { block: 'product', elem: 'more' }
       }
       ]
     },
@@ -106,7 +100,7 @@ block('product').content()(function() {
       content: [
       {
         block: 'image',
-        url: 'http://babeholder.pixoil.com/img/476/476'
+        url: 'http://lorempixel.com/476/476/cats'
       }
       ]
     }

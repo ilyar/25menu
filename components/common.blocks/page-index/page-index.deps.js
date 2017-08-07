@@ -6,6 +6,6 @@
         symbol: '*'
       }
     },
-      'items'
+    'items'
   ]
 })

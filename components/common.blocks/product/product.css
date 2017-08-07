@@ -57,3 +57,36 @@
 .product__price-block {
   margin-bottom: 50px;
 }
+
+.product .description__weight_special {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.product .link {
+  color: #F05565;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.description__content {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.product__more {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 112px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #D9D9D9;
+  text-align: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+}

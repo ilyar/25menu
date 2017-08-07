@@ -1,18 +1,24 @@
 ({
     shouldDeps: [
       {
+        block: 'addon',
+        mods: {
+          type: 'product'
+        }
+      },
+      {
         block: 'close-btn',
         mods: {
             type: 'ingridient'
           }
       },
       {
-          block: 'select',
-          mods: {
-              mode: 'check',
-              theme: 'islands',
-              size: 'm'
-          }
+        block: 'dropdown',
+        mods: {
+            switcher: 'button',
+            theme: 'islands',
+            size: 'm'
+        }
       },
       {
         block: 'icon',
@@ -20,5 +26,11 @@
             symbol: '*'
           }
       },
+      {
+        block: 'price',
+        mods: {
+            type: 'product'
+          }
+      }
     ]
 })

@@ -1,6 +1,7 @@
 ({
     shouldDeps: [
         'title',
+        'link',
         {
           block: 'close-btn',
           mods: {
@@ -16,7 +17,6 @@
         {
           block: 'icon'
         },
-        'link',
         {
           block: 'price',
           mods: {
@@ -27,14 +27,6 @@
           block: 'consist',
           mods: {
             type: 'product'
-          }
-        },
-        {
-        block: 'dropdown',
-          mods: {
-              switcher: 'button',
-              theme: 'islands',
-              size: 'm'
           }
         },
         {

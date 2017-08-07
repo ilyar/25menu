@@ -1,12 +1,7 @@
 block('card').content()(function() {
-    return [ {
+    return [
+    {
       elem: 'header',
-      content: [
-        {
-          block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
-        }
-      ]
     },
     {
       block: 'inner',
