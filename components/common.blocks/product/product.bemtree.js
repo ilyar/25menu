@@ -41,7 +41,8 @@ block('product').content()(function() {
         block: 'consist',
         mods: {
           type: 'product'
-        }
+        },
+        mix: { block: 'product', elem: 'topping' }
       },
       {
         block: 'price',
@@ -81,6 +82,13 @@ block('product').content()(function() {
         },
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsa ex ullam velit, dolores aliquam veritatis nostrum autem itaque dolorem facere similique sapiente, unde incidunt nulla tempora eligendi quos vero?'
         ]
+      },
+      {
+        block: 'value',
+        mods: {
+          type: 'product'
+        },
+        mix: { block: 'product', elem: 'value-block' }
       },
       {
         block: 'link',

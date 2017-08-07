@@ -14,13 +14,32 @@
   border-bottom: 1px dotted #808080;
 }
 
-.product__add_ingridient {
-  width: 32px;
-  height: 32px;
+.consist__add_button {
+  display: flex;
+  margin-top: 6px;
 }
 
-.consist__ingridient_add_button {
-  display: flex;
-  margin-top: 16px;
-  margin-bottom: 40px;
+.consist__add_button button {
+  all: initial;
+  width: 164px;
+  height: 32px;
+  font-family: 'Lab grotesque';
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+  margin-left: 36px;
+  cursor: pointer;
+}
+
+.consist__add_button button::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: #FF6673;
+  border-radius: 50%;
+  position: absolute;
+  left: -36px;
+  top: 0px;
+  cursor: pointer;
 }

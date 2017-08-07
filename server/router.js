@@ -58,7 +58,15 @@ module.exports = function( app ) {
       .catch(() => render(req, res, { page: 'index', view: '404' }) );
   });
 
-  app.get('/catalog/:item', function(req, res) {
+  app.get('/category', function(req, res) {
+  render(req, res, {
+    page: 'category',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.item,
+    })
+  });
+
+  app.get('/category/:item', function(req, res) {
   render(req, res, {
     page: 'item',
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',

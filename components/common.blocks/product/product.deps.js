@@ -9,12 +9,6 @@
           }
         },
         {
-          block: 'close-btn',
-          mods: {
-            type: 'product'
-          }
-        },
-        {
           block: 'icon'
         },
         {
