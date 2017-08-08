@@ -61,20 +61,19 @@ module.exports = function( app ) {
   app.get('/cabinet', function(req, res) {
   render(req, res, {
     page: 'cabinet',
-    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-    title: req.params.item,
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop'
     })
   });
 
-  app.get('/category', function(req, res) {
+  app.get('/i/:category', function(req, res) {
   render(req, res, {
     page: 'category',
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-    title: req.params.item,
+    title: req.params.category,
     })
   });
 
-  app.get('/category/:item', function(req, res) {
+  app.get('/i/:category/:item', function(req, res) {
   render(req, res, {
     page: 'item',
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',

@@ -12,7 +12,26 @@ block('page').content()(function() {
       mods: {
         type: 'closed'
       },
-      mix: { block: 'page', elem: 'basket', elemMods: { order: true, hide: true }}
+      mix: {
+        block: 'page',
+        elem: 'basket',
+        elemMods: {
+          hide: true
+        }
+      }
+    },
+    {
+      block: 'basket',
+      mods: {
+        type: 'open'
+      },
+      mix: {
+        block: 'page',
+        elem: 'basket',
+        elemMods: {
+          // hide: true
+        }
+      }
     }
   ];
 });

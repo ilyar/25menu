@@ -1,5 +1,7 @@
 .basket_type_closed {
   padding: 10px 0!important;
+  background-color: #F05565;
+  min-width: 64px;
 }
 
 .basket__cart {

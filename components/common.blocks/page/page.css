@@ -18,8 +18,6 @@ html {
   box-sizing: border-box;
 }
 
-.page__basket_order {
-  background-color: #F05565;
-  min-width: 64px;
+.page__basket_hide {
+  display: none;
 }
-
