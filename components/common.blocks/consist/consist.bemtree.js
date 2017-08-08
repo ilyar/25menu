@@ -71,6 +71,13 @@ block('consist').mod('type', 'product').content()(function() {
                     content: 'Выберите добавки'
                   },
                   {
+                    block: 'close-btn',
+                    mods: {
+                      type: 'popup'
+                    },
+                    mix: { block: 'popup', elem: 'close' }
+                  },
+                  {
                     elem: 'inner',
                     content: [
                     {

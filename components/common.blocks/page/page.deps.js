@@ -10,9 +10,9 @@
       mods: { view: ['404'] }
     },
     {
-      block: 'sidebar',
+      block: 'basket',
       mods: {
-        order: true
+        type: '*'
       }
     },
     'sidebar',

@@ -1,0 +1,20 @@
+.close-btn_type_basket {
+  transform: rotate(45deg);
+}
+
+.close-btn_type_basket::before {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+
+.close-btn_type_basket::after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(90deg);
+}

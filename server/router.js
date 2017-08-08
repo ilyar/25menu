@@ -58,6 +58,14 @@ module.exports = function( app ) {
       .catch(() => render(req, res, { page: 'index', view: '404' }) );
   });
 
+  app.get('/cabinet', function(req, res) {
+  render(req, res, {
+    page: 'cabinet',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.item,
+    })
+  });
+
   app.get('/category', function(req, res) {
   render(req, res, {
     page: 'category',

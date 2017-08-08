@@ -1,12 +1,9 @@
-.sidebar_order {
+.basket_type_closed {
   padding: 10px 0!important;
 }
 
-.sidebar__cart {
+.basket__cart {
   width: 24px;
   height: 24px;
   margin: 0 auto;
 }
-
-
-

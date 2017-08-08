@@ -8,11 +8,11 @@ block('page').content()(function() {
       block: this.data.view
     },
     {
-      block: 'sidebar',
+      block: 'basket',
       mods: {
-        order: true
+        type: 'closed'
       },
-      mix: { block: 'page', elem: 'aside', elemMods: { order: true, hide: true }}
+      mix: { block: 'page', elem: 'basket', elemMods: { order: true, hide: true }}
     }
   ];
 });

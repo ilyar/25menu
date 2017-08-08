@@ -51,14 +51,4 @@ block('sidebar')
   ]
 });
 
-block('sidebar').mod('order', true).content()(function(){
-  return [
-    {
-     block: 'icon',
-     mods: {
-      symbol: 'cart'
-     },
-     mix: {block: 'sidebar', elem: 'cart' }
-    }
-  ]
-});
+

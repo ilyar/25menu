@@ -9,7 +9,7 @@
       {
         block: 'close-btn',
         mods: {
-            type: 'ingridient'
+            type: '*'
           }
       },
       {
