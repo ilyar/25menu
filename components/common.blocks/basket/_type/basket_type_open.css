@@ -3,6 +3,11 @@
   padding: 10px 0 0!important;
   background-color: #363839;
   position: relative;
+}
+
+.basket_type_open .form {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,7 +39,6 @@
 .basket__content {
   flex: 1;
   background-color: #3F3F42;
-  overflow: auto;
 }
 
 .basket__footer {

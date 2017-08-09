@@ -91,24 +91,35 @@ block('basket').mod('type', 'open').content()(function(){
         ]
       },
       {
-        block: 'form-field',
+        block: 'delivery-time',
         content: [
         {
-          block: 'input',
+          block: 'icon',
           mods: {
-            size: 'm',
-            width: 'available'
-          },
-          placeholder: 'Время',
-          icon: {
-            block: 'icon',
-            mods: {
-            symbol: 'basket_account'
-            }
+          symbol: 'basket_time'
           }
         }
         ]
       },
+      // {
+      //   block: 'fieldset',
+      //   content: [
+      //   {
+      //     block: 'input',
+      //     mods: {
+      //       size: 'm',
+      //       width: 'available'
+      //     },
+      //     placeholder: 'Оплата',
+      //     icon: {
+      //       block: 'icon',
+      //       mods: {
+      //       symbol: 'basket_payment'
+      //       }
+      //     }
+      //   }
+      //   ]
+      // },
       {
         block: 'form-field',
         content: [
