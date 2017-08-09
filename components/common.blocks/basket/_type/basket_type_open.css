@@ -20,7 +20,7 @@
   width: 25px;
   height: 25px;
 }
-
+/* Хэдер корзины — поля ввода */
 .basket__header {
   height: 300px;
   padding: 45px 25px 10px;
@@ -35,12 +35,8 @@
   border-radius: 3px;
   display: flex;
 }
-
-.form-field_type_delivery-time {
-  background: transparent;
-}
-
-.delivery-time {
+/* Блок виден, когда пользователь не выбирает время */
+.delivery-default {
   width: 100%;
   height: 30px;
   margin-bottom: 12px;
@@ -49,28 +45,49 @@
   display: none;
 }
 
-.delivery-time__default {
+.delivery-default__time {
   display: flex;
 }
 
-.delivery-time__current {
+.delivery-default__current-time {
   color: white;
   font-size: 14px;
   line-height: 32px;
   margin-left: 10px;
 }
 
-.delivery-time__choose {
+.delivery-default__choose {
   color: rgb(225, 232, 245, 0.43);
   line-height: 32px;
   font-size: 14px;
 }
 
+/* Блок виден, когда пользователь выбирает время */
+.form-field_type_delivery-time {
+  background: transparent;
+  display: flex;
+  /*display: none;*/
+}
+
+.delivery__date {
+  width: 94px;
+}
+
+.delivery__time {
+  width: 80px;
+}
+
+.delivery__default {
+  flex: 1;
+}
+
+/* Содержимое корзины */
 .basket__content {
   flex: 1;
   background-color: #3F3F42;
 }
 
+/* Футер корзины */
 .basket__footer {
   height: 170px;
 }

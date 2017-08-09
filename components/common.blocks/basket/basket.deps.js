@@ -15,11 +15,13 @@
         {
         block: 'input',
           mods: {
-              size: 'm'
+              size: 'm',
+              'has-mask': true,
+              'has-calendar': true,
+              special: true
           }
         },
         'form',
-        'calendar',
         {
             block: 'button',
             mods: {

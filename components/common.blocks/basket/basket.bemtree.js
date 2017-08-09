@@ -91,10 +91,10 @@ block('basket').mod('type', 'open').content()(function(){
         ]
       },
       {
-        block: 'delivery-time',
+        block: 'delivery-default',
         content: [
         {
-          elem: 'default',
+          elem: 'time',
           content: [
           {
             block: 'icon',
@@ -103,7 +103,7 @@ block('basket').mod('type', 'open').content()(function(){
               }
           },
           {
-            elem: 'current',
+            elem: 'current-time',
             content: '55 мин'
           }
           ]
@@ -122,21 +122,26 @@ block('basket').mod('type', 'open').content()(function(){
         content: [
         {
           block: 'input',
+          mix: { block: 'delivery', elem: 'date' },
           mods: {
             'has-mask': true,
             'has-calendar' : true,
              special: true,
-             size: 'm',
+             size: 'm'
           }
         },
         {
           block: 'input',
+          mix: { block: 'delivery', elem: 'time' },
           mods: {
             'has-mask': true,
             special: true,
-            size: 'm',
+            size: 'm'
           },
           placeholder: '11:00',
+          js : {
+              mask : '{{99}}/{{99}}'
+          },
           icon: {
             block: 'icon',
             mods: {
@@ -146,6 +151,7 @@ block('basket').mod('type', 'open').content()(function(){
         },
         {
             block: 'button',
+            mix: { block: 'delivery', elem: 'default' },
             mods: {
                 theme: 'islands',
                 size: 'm',
