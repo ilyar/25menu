@@ -124,7 +124,7 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mix: { block: 'delivery', elem: 'date' },
           mods: {
-            'has-mask': true,
+            // 'has-mask': true,
             'has-calendar' : true,
              special: true,
              size: 'm'
@@ -134,7 +134,7 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mix: { block: 'delivery', elem: 'time' },
           mods: {
-            'has-mask': true,
+            // 'has-mask': true,
             special: true,
             size: 'm'
           },
