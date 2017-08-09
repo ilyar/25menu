@@ -18,6 +18,14 @@
               size: 'm'
           }
         },
-        'form'
+        'form',
+        'calendar',
+        {
+            block: 'button',
+            mods: {
+                size: 'm',
+                view: 'plain'
+            }
+        }
     ]
 })

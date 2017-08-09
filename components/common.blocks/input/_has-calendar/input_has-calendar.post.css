@@ -1,0 +1,12 @@
+block(input).mod(has-calendar) {
+
+  .elem(icon) {
+    cursor: pointer
+  }
+
+  .mod(disabled) {
+    .elem(icon) {
+      cursor: default
+    }
+  }
+}

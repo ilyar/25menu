@@ -94,32 +94,68 @@ block('basket').mod('type', 'open').content()(function(){
         block: 'delivery-time',
         content: [
         {
-          block: 'icon',
-          mods: {
-          symbol: 'basket_time'
+          elem: 'default',
+          content: [
+          {
+            block: 'icon',
+              mods: {
+              symbol: 'basket_time'
+              }
+          },
+          {
+            elem: 'current',
+            content: '55 мин'
           }
+          ]
+        },
+        {
+          elem: 'choose',
+          content: 'Выбрать время'
         }
         ]
       },
-      // {
-      //   block: 'fieldset',
-      //   content: [
-      //   {
-      //     block: 'input',
-      //     mods: {
-      //       size: 'm',
-      //       width: 'available'
-      //     },
-      //     placeholder: 'Оплата',
-      //     icon: {
-      //       block: 'icon',
-      //       mods: {
-      //       symbol: 'basket_payment'
-      //       }
-      //     }
-      //   }
-      //   ]
-      // },
+      {
+        block: 'form-field',
+        mods: {
+          type: 'delivery-time'
+        },
+        content: [
+        {
+          block: 'input',
+          mods: {
+            'has-mask': true,
+            'has-calendar' : true,
+             special: true,
+             size: 'm',
+          }
+        },
+        {
+          block: 'input',
+          mods: {
+            'has-mask': true,
+            special: true,
+            size: 'm',
+          },
+          placeholder: '11:00',
+          icon: {
+            block: 'icon',
+            mods: {
+            symbol: 'basket_time'
+            }
+          }
+        },
+        {
+            block: 'button',
+            mods: {
+                theme: 'islands',
+                size: 'm',
+                view: 'plain',
+
+            },
+            text: 'Через 55 мин'
+        }
+        ]
+      },
       {
         block: 'form-field',
         content: [
