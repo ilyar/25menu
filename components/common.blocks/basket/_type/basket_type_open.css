@@ -81,6 +81,11 @@
   flex: 1;
 }
 
+/*.delivery__default::before {
+  background: transparent;
+}*/
+
+
 /* Содержимое корзины */
 .basket__content {
   flex: 1;
@@ -90,4 +95,37 @@
 /* Футер корзины */
 .basket__footer {
   height: 170px;
+  box-sizing: border-box;
+  padding: 15px 30px 8px;
+}
+
+.form__result {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer__promocode {
+  flex: 1;
+  margin-right: 15px;
+  margin-left: -12px;
+}
+
+.final-price {
+  width: 59px;
+  height: 24px;
+  line-height: 30px;
+  color: white;
+  font-size: 18px;
+}
+
+.basket__buy {
+  width: 296px;
+  height: 48px;
+  background-color: #FF6673;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }

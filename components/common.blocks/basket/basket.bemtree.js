@@ -153,10 +153,8 @@ block('basket').mod('type', 'open').content()(function(){
             block: 'button',
             mix: { block: 'delivery', elem: 'default' },
             mods: {
-                theme: 'islands',
                 size: 'm',
-                view: 'plain',
-
+                view: 'plain'
             },
             text: 'Через 55 мин'
         }
@@ -202,7 +200,39 @@ block('basket').mod('type', 'open').content()(function(){
   },
   {
     elem: 'footer',
-    mix: { block: 'basket', elem: 'footer' }
+    mix: { block: 'basket', elem: 'footer' },
+    content: [
+      {
+        elem: 'result',
+        content: [
+        {
+          block: 'input',
+          mix: { block: 'footer', elem: 'promocode' },
+          mods: {
+            size: 'm',
+            width: 'available'
+          },
+          placeholder: 'Ввести промокод'
+        },
+        {
+          block: 'final-price',
+          content: '2130 Р'
+        }
+        ]
+      },
+      {
+          block: 'button',
+          mix: { block: 'basket', elem: 'buy' },
+          mods: {
+              size: 'm',
+              type: 'submit'
+          },
+          text: 'ЗАКАЗАТЬ'
+      },
+      {
+        block: 'agreement'
+      }
+    ]
   }
   ]
 }

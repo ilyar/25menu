@@ -26,7 +26,9 @@
             block: 'button',
             mods: {
                 size: 'm',
-                view: 'plain'
+                view: 'plain',
+                type: 'submit',
+                theme: 'islands'
             }
         }
     ]
