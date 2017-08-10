@@ -109,8 +109,13 @@ block('basket').mod('type', 'open').content()(function(){
           ]
         },
         {
-          elem: 'choose',
-          content: 'Выбрать время'
+            block: 'button',
+            mix: { block: 'delivery-default', elem: 'choose' },
+            mods: {
+                size: 'm',
+                view: 'plain'
+            },
+            text: 'Выбрать время'
         }
         ]
       },
@@ -140,7 +145,7 @@ block('basket').mod('type', 'open').content()(function(){
           },
           placeholder: '11:00',
           js : {
-              mask : '{{99}}/{{99}}'
+              mask : '{{99}}-{{99}}'
           },
           icon: {
             block: 'icon',
@@ -161,23 +166,28 @@ block('basket').mod('type', 'open').content()(function(){
         ]
       },
       {
-        block: 'form-field',
-        content: [
-        {
-          block: 'input',
+          block: 'select',
           mods: {
-            size: 'm',
-            width: 'available'
+              mode: 'radio',
+              theme: 'islands',
+              size: 'm'
           },
-          placeholder: 'Оплата',
-          icon: {
-            block: 'icon',
-            mods: {
-            symbol: 'basket_payment'
-            }
-          }
-        }
-        ]
+          name: 'select2',
+          val: 2,
+          options: [
+              {
+                  val: 1,
+                  text: 'Картой на сайте'
+              },
+              {
+                  val: 2,
+                  text: 'Картой курьеру'
+              },
+              {
+                  val: 3,
+                  text: 'Наличными курьеру'
+              }
+          ]
       },
       {
         block: 'form-field',

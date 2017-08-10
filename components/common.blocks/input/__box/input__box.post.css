@@ -1,7 +1,0 @@
-block(input).elem(box) {
-  /* all: initial; */
-  display: block;
-  font: inherit;
-  color: inherit;
-  line-height: inherit;
-}

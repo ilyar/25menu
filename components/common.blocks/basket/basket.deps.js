@@ -31,6 +31,14 @@
                 type: 'submit',
                 theme: 'islands'
             }
+        },
+        {
+        block: 'select',
+          mods: {
+              mode: 'radio',
+              theme: 'islands',
+              size: 'm'
+          }
         }
     ]
 })
