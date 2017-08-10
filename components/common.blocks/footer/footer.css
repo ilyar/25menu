@@ -49,11 +49,13 @@ hr {
 
 .footer__social {
   flex: 1;
-  text-align: right;
+  justify-content: flex-end;
   align-items: center;
+  display: flex;
 }
 
 .footer__social .link {
+  display: block;
   width: 24px;
   height: 24px;
   border-radius: 50%;

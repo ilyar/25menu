@@ -1,0 +1,20 @@
+.order-step_type_active {
+  color: black;
+  font-weight: bold;
+  margin-left: 20px;
+  position: relative;
+}
+
+.order-step_type_active::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #66CC77;
+  position: absolute;
+  top: 10px;
+  left: -20px;
+}
+
+

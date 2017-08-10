@@ -1,4 +1,4 @@
-modules.define('select', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('order-step', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {

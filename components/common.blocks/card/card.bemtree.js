@@ -244,3 +244,49 @@ block('card').mod('checked', true).content()(function(){
     }
   ]
 });
+
+block('card').mod('type', 'small').content()(function(){
+  return [
+    {
+      elem: 'header',
+      content: [
+        {
+          block: 'image',
+          url: 'http://lorempixel.com/112/112/cats'
+        }
+      ]
+    },
+    {
+      elem: 'inner',
+      content: [
+      {
+        block: 'description',
+        content: [
+        {
+          elem: 'main-info',
+          content: 'Пицца с овощами и грибами'
+        },
+        {
+          elem: 'topping',
+          content: 'С добавками, 150 Р'
+        },
+        {
+          elem: 'type',
+          content: 'Ø 35 см на толстом тесте'
+        },
+        {
+          elem: 'amount',
+          content: '8 штук'
+        }
+        ]
+      },
+      {
+        block: 'price',
+        mix: { block: 'card', elem: 'price_block'},
+        content: '150 Р'
+      }
+      ]
+    }]
+});
+
+

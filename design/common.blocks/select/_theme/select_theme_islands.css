@@ -1,3 +1,7 @@
-.button_theme_islands {
-
+.button_theme_islands::before {
+  background: transparent!important;
 }
+
+
+
+

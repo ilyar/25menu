@@ -65,11 +65,19 @@ module.exports = function( app ) {
     })
   });
 
+  app.get('/order/', function(req, res) {
+  render(req, res, {
+    page: 'order',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.order
+    })
+  });
+
   app.get('/i/:category', function(req, res) {
   render(req, res, {
     page: 'category',
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-    title: req.params.category,
+    title: req.params.category
     })
   });
 

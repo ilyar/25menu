@@ -4,12 +4,6 @@ block('header').content()(function() {
         elem: 'workinfo',
         content: [
         {
-          block: 'icon',
-          mods: {
-           symbol: 'pizza'
-          }
-        },
-        {
           elem: 'title',
           content: 'Доставка и оплата'
         },

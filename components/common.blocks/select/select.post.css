@@ -1,0 +1,24 @@
+block(select) {
+  /* all: initial */
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  touch-action: manipulation;
+  user-select: none
+}
+
+block(select).elem(arrow) {
+  display: inline-block;
+}
+
+block(select).elem(arrow)::after {
+  content: '\00A0';
+  display: block;
+  background-image: url(../icon/svg/select-arrow-white.svg);
+  visibility: visible!important;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-1px, 0);
+}
+
+

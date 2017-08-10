@@ -12,7 +12,6 @@ html {
 }
 
 .page__aside {
-  background-color: #D0D0D0;
   overflow: auto;
   min-width: 144px;
   box-sizing: border-box;

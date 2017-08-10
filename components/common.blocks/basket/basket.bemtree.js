@@ -167,6 +167,7 @@ block('basket').mod('type', 'open').content()(function(){
       },
       {
           block: 'select',
+          mix: { block: 'basket', elem: 'payment' },
           mods: {
               mode: 'radio',
               theme: 'islands',

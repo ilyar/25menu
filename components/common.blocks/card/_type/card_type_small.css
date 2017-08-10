@@ -1,0 +1,46 @@
+.card_type_small.card {
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  max-height: 218px;
+}
+
+.card_type_small .card__header {
+  all: initial;
+  overflow: hidden;
+}
+
+.card_type_small .card__header img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.card_type_small .description__main-info {
+  text-align: left;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  width: 100%;
+  margin: 5px auto;
+}
+
+.card_type_small .card__price_block {
+  all: initial;
+  font-size: 14px;
+  font-family: 'Lab grotesque';
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+
+.card_type_small .description__topping,
+.card_type_small .description__type,
+.card_type_small .description__amount {
+  font-size: 14px;
+  color: #B4B4B4;
+  font-weight: normal;
+  text-align: left;
+}
+
