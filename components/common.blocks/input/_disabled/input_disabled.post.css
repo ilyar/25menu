@@ -1,0 +1,4 @@
+block(input).mod(disabled) {
+  /* Solved a bug: https://jakearchibald.com/2017/events-and-disabled-form-fields/ */
+  pointer-events: none;
+}

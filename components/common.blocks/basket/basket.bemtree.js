@@ -230,7 +230,8 @@ block('basket').mod('type', 'open').content()(function(){
           text: 'ЗАКАЗАТЬ'
       },
       {
-        block: 'agreement'
+        block: 'agreement',
+        mix: { block: 'basket', elem: 'agreement' }
       }
     ]
   }

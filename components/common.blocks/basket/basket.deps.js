@@ -22,6 +22,7 @@
           }
         },
         'form',
+        'agreement',
         {
             block: 'button',
             mods: {

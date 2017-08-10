@@ -1,0 +1,7 @@
+block(input).elem(control) {
+  /* all: initial */
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
