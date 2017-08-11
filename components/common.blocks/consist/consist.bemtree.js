@@ -58,7 +58,16 @@ block('consist').mod('type', 'product').content()(function() {
               theme: 'islands',
               size: 'm'
           },
-          switcher: 'Добавить топпинг',
+          switcher: {
+            block: 'button',
+            text: 'Добавить топпинг',
+            icon: {
+              block: 'icon',
+              mods: {
+                symbol: 'add'
+              }
+            }
+          },
           popup: {
               block: 'menu',
               mods: {
@@ -126,4 +135,93 @@ block('consist').mod('type', 'product').content()(function() {
     ]
 });
 
+
+block('consist').mod('type', 'basket').content()(function() {
+    return [
+    {
+      elem: 'add_button',
+      content: [
+        {
+          block: 'dropdown',
+          mods: {
+              switcher: 'button',
+              theme: 'islands',
+              size: 'm'
+          },
+          switcher: {
+            block: 'button',
+            text: 'Добавить топпинг',
+            icon: {
+              block: 'icon',
+              mods: {
+                symbol: 'add'
+              }
+            }
+          },
+          popup: {
+              block: 'menu',
+              mods: {
+                  size: 'm',
+                  select: 'check'
+              },
+              content: [
+                  {
+                    elem: 'title',
+                    content: 'Выберите добавки'
+                  },
+                  {
+                    block: 'close-btn',
+                    mods: {
+                      type: 'popup'
+                    },
+                    mix: { block: 'popup', elem: 'close' }
+                  },
+                  {
+                    elem: 'inner',
+                    content: [
+                    {
+                          elem: 'menu-item',
+                          val: 1,
+                          content: [
+                            {
+                              block: 'addon',
+                              mods: {
+                                type: 'product'
+                              }
+                            }
+                          ]
+                    },
+                    {
+                          elem: 'menu-item',
+                          val: 2,
+                          content: [
+                            {
+                              block: 'addon',
+                              mods: {
+                                type: 'product'
+                              }
+                            }
+                          ]
+                    },
+                    {
+                          elem: 'menu-item',
+                          val: 3,
+                          content: [
+                            {
+                              block: 'addon',
+                              mods: {
+                                type: 'product'
+                              }
+                            }
+                          ]
+                      }
+                    ]
+                  }
+              ]
+          }
+        }
+      ]
+    }
+    ]
+});
 

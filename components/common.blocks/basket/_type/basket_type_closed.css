@@ -9,3 +9,11 @@
   height: 24px;
   margin: 0 auto;
 }
+
+.basket_type_closed__bill {
+  font-weight: bold;
+  color: white;
+  width: 60px;
+  margin: 10px auto;
+  text-align: center;
+}

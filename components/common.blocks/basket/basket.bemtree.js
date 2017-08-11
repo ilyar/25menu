@@ -10,9 +10,14 @@ block('basket').mod('type', 'closed').content()(function(){
    block: 'icon',
    mods: {
     symbol: 'cart'
+    },
+    mix: {block: 'basket', elem: 'cart' }
   },
-  mix: {block: 'basket', elem: 'cart' }
-}
+  {
+    block: 'bill',
+    mix: { block: 'basket_type_closed', elem: 'bill' },
+    content: '2130 Р'
+  }
 ]
 });
 
@@ -207,7 +212,21 @@ block('basket').mod('type', 'open').content()(function(){
   },
   {
     elem: 'content',
-    mix: { block: 'basket', elem: 'content' }
+    mix: { block: 'basket', elem: 'content' },
+    content: [
+    {
+      elem: 'empty-block',
+      mix: { block: 'basket', elem: 'is_empty' },
+      content: 'В КОРЗИНЕ ПОКА ПУСТО'
+    },
+    {
+      block: 'product',
+      mix: { block: 'basket', elem: 'good' },
+      mods: {
+        type: 'basket'
+      }
+    }
+    ]
   },
   {
     elem: 'footer',
@@ -226,7 +245,8 @@ block('basket').mod('type', 'open').content()(function(){
           placeholder: 'Ввести промокод'
         },
         {
-          block: 'final-price',
+          block: 'bill',
+          mix: { block: 'final-price' },
           content: '2130 Р'
         }
         ]

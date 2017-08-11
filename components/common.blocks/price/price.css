@@ -8,3 +8,9 @@
   font-weight: bold;
   border-radius: 3px;
 }
+
+
+.price__minus,
+.price__plus {
+  cursor: pointer;
+}

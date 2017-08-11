@@ -21,25 +21,29 @@
 
 .consist__add_button button {
   all: initial;
-  width: 164px;
+  width: 184px;
+  display: flex;
   height: 32px;
   font-family: 'Lab grotesque';
   font-size: 14px;
   padding: 0;
   position: relative;
-  margin-left: 36px;
   cursor: pointer;
 }
 
-.consist__add_button button::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #FF6673;
-  border-radius: 50%;
-  position: absolute;
-  left: -36px;
-  top: 0px;
-  cursor: pointer;
+.consist__add_button .button__text {
+  margin-left: 5px!important;
+}
+
+.consist__add_button .button_hovered {
+  background: none;
+}
+
+.consist__add_button .button_pressed::before {
+  background: none;
+}
+
+.consist__add_button .button_focused-hard.button::before {
+  background: none;
+  box-shadow: none;
 }

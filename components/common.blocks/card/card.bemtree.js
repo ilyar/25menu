@@ -289,4 +289,3 @@ block('card').mod('type', 'small').content()(function(){
     }]
 });
 
-

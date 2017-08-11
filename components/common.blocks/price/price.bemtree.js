@@ -59,14 +59,22 @@ block('price').mod('type', 'product').content()(function(){
           },
           content: [
               {
-                elem: 'minus'
+                block: 'icon',
+                mods: {
+                  symbol: 'minus'
+                },
+                mix: { block: 'price', elem: 'minus' }
               },
               {
                 elem: 'quantity',
                 content: '1'
               },
               {
-                elem: 'plus',
+                block: 'icon',
+                mods: {
+                  symbol: 'plus'
+                },
+                mix: { block: 'price', elem: 'plus' }
               }
           ]
         }
@@ -74,4 +82,36 @@ block('price').mod('type', 'product').content()(function(){
       }
     ]
 });
+
+block('price').mod('type', 'basket').content()(function(){
+  return [
+    {
+      elem: 'counter',
+      elemMods: {
+        product: true
+      },
+      content: [
+          {
+            block: 'icon',
+            mods: {
+              symbol: 'minus'
+            },
+            mix: { block: 'price', elem: 'minus' }
+          },
+          {
+            elem: 'quantity',
+            content: '1'
+          },
+          {
+            block: 'icon',
+            mods: {
+              symbol: 'plus'
+            },
+            mix: { block: 'price', elem: 'plus' }
+          }
+      ]
+    }
+    ]
+});
+
 

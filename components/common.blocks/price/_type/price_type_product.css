@@ -28,10 +28,9 @@
 
 .price__counter_product {
   display: flex;
+  width: 100%;
   padding-top: 8px;
-  padding-left: 25px;
-  padding-bottom: 8px;
-  position: relative;
+  justify-content: space-around;
   /*display: none;*/
 }
 
@@ -42,15 +41,9 @@
   position: relative;
 }
 
-.price__minus::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 14px;
-  height: 2.5px;
-  top: 50%;
-  margin-top: 2px;
-  background-color: white;
+.price__minus,
+.price__plus {
+  top: 7px;
 }
 
 .price__quantity {
@@ -70,29 +63,4 @@
   background-color: rgb(218,226,242,0.2);
   top: 0;
   z-index: 1;
-}
-
-.price__plus::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 14px;
-  height: 2.5px;
-  top: 50%;
-  margin-top: 2px;
-  background-color: white;
-  right: 0;
-}
-
-.price__plus::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 14px;
-  height: 2.5px;
-  top: 50%;
-  margin-top: 2px;
-  background-color: white;
-  right: 0;
-  transform: rotate(90deg);
 }

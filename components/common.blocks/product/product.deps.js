@@ -28,6 +28,14 @@
           mods: {
             type: 'product'
           }
+        },
+        {
+          block: 'dropdown',
+          mods: {
+              switcher: 'button',
+              theme: 'islands',
+              size: 's'
+          }
         }
     ]
 })

@@ -3,16 +3,20 @@
   flex: 1;
   width: 100%;
   position: relative;
+  overflow: auto;
 }
+
+.page-item::-webkit-scrollbar { width: 0; }
+.page-item { -ms-overflow-style: none; }
+.page-item { overflow: -moz-scrollbars-none; }
 
 .page-item .header {
   margin-bottom: 36px;
 }
 
 .page-item .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  margin-top: 110px;
+  width: 99%;
 }
 
 .page-item__back {

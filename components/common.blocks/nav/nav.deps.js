@@ -3,7 +3,8 @@
     {
       block: 'link',
       mods: {
-        active: true
+        active: true,
+        type: 'important'
       }
     }
   ]

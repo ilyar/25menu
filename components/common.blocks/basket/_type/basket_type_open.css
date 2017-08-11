@@ -99,11 +99,27 @@
   text-align: right;
 }
 
+.basket_type_open .button_theme_islands::before {
+  background: transparent!important;
+}
 
 /* Содержимое корзины */
 .basket__content {
   flex: 1;
   background-color: #3F3F42;
+}
+
+.basket__is_empty {
+  color: white;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+.basket__good {
+  width: 308px;
 }
 
 /* Футер корзины */

@@ -114,3 +114,83 @@ block('product').content()(function() {
     }
     ]
 });
+
+
+
+block('product').mod('type', 'basket').content()(function(){
+    return [
+    {
+      elem: 'image',
+      content: [
+      {
+        block: 'image',
+        url: 'http://lorempixel.com/40/40/cats'
+      }
+      ]
+    },
+    {
+      elem: 'info',
+      content: [
+      {
+        elem: 'description',
+        content: [
+          {
+            block: 'title',
+            mix: { block: 'product', elem: 'title' },
+            content: [
+              {
+                elem: 'name',
+                content: 'Котик няшечка в соусе'
+              },
+              {
+                block: 'dropdown',
+                mods: {
+                    switcher: 'button',
+                    theme: 'islands',
+                    size: 's'
+                },
+                switcher: {
+                  block: 'button',
+                  text: '',
+                  icon: {
+                    block: 'icon',
+                    mods: {
+                      symbol: 'more'
+                    }
+                  }
+                },
+                popup: [
+                {
+                  elem: 'chars',
+                  content: 'Ø 35 см на толстом тесте '
+                }
+                ]
+              },
+              ]
+          },
+          {
+            block: 'price',
+            mods:{
+              type: 'basket'
+            }
+          },
+          {
+            block: 'bill',
+            mix: { block: 'basket', elem: 'item-bill' },
+            content: '585 Р'
+
+          },
+        ]
+      },
+      {
+        block: 'consist',
+        mods: {
+          type: 'basket'
+        },
+        mix: { block: 'basket', elem: 'topping' }
+      }
+      ]
+    }
+    ]
+});
+

@@ -7,6 +7,12 @@
           }
         },
         {
+          block: 'product',
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
           block: 'close-btn',
           mods: {
             type: 'basket'
@@ -22,6 +28,7 @@
           }
         },
         'form',
+        'bill',
         'agreement',
         {
             block: 'button',
