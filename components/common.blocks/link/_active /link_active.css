@@ -1,0 +1,13 @@
+.link_active {
+  margin-left: 20px;
+  position: relative;
+  color: red;
+}
+
+.link_active::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: red;
+}

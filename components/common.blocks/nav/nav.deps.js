@@ -1,5 +1,10 @@
 ({
   shouldDeps:[
-      'link'
+    {
+      block: 'link',
+      mods: {
+        active: true
+      }
+    }
   ]
 })

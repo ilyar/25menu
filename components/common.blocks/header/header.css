@@ -6,6 +6,13 @@
   margin-top: 16px;
 }
 
+.header .link {
+  text-decoration: none;
+  color: #363839;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
 .header__workinfo {
   display: flex;
   width: 50%;

@@ -9,9 +9,12 @@
   box-sizing: border-box;
   flex: 1;
   height: 100%;
-  background-color: #D8D8D8;
-  border: 1px solid black;
   margin: 0 auto;
   max-width: 1120px;
 }
 
+
+
+.page-index__inner::-webkit-scrollbar { width: 0; }
+.page-index__inner { -ms-overflow-style: none; }
+.page-index__inner { overflow: -moz-scrollbars-none; }

@@ -3,8 +3,12 @@
   flex: 1;
   width: 100%;
   position: relative;
-  overflow-y: auto;
+  overflow: auto;
 }
+
+.page-order::-webkit-scrollbar { width: 0; }
+.page-order { -ms-overflow-style: none; }
+.page-order { overflow: -moz-scrollbars-none; }
 
 .page-order__header {
   margin-bottom: 40px;

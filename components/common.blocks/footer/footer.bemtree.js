@@ -36,7 +36,7 @@ block('footer').content()(function() {
               type: 'vkontakte'
             },
             content: 'VK',
-            url: 'vk.com'
+            url: 'http://vk.com'
           },
           {
             block: 'link',
@@ -44,7 +44,7 @@ block('footer').content()(function() {
               type: 'facebook'
             },
             content: 'FB',
-            url: 'facebook.com'
+            url: 'http://facebook.com'
           },
           {
             block: 'link',
@@ -52,7 +52,7 @@ block('footer').content()(function() {
               type: 'instagram'
             },
             content: 'IN',
-            url: 'instagram.com'
+            url: 'http://instagram.com'
           }
           ]
         }]
@@ -122,7 +122,7 @@ block('footer').content()(function() {
           'Cделано в',
           {
             block: 'link',
-            url: 'breadhead.ru',
+            url: 'http://breadhead.ru',
             content: 'Breadhead'
           }
           ]

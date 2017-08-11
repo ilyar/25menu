@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    /*overflow: hidden;*/
 }
 
 .slider_type_order .slider__content {

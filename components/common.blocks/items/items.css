@@ -1,6 +1,5 @@
 .items__card-group {
   max-width: 1120px;
-  border: 1px solid black;
   padding: 10px 20px 20px;
   display: flex;
   justify-content: flex-start;
