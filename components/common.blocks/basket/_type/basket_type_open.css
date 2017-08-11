@@ -120,6 +120,7 @@
 
 .basket__good {
   width: 308px;
+  box-sizing: content-box;
 }
 
 /* Футер корзины */

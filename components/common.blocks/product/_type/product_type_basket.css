@@ -21,6 +21,7 @@
 
 .product_type_basket .product__info {
   padding: 0;
+  height: initial;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -28,11 +29,12 @@
 
 .product_type_basket .product__description {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .product_type_basket .product__info .product__title {
   font-size: 14px;
+  padding: initial;
   color: white;
   font-weight: normal;
   max-width: 140px;
@@ -43,5 +45,23 @@
 
 .product_type_basket .product__title .title__name,
 .product_type_basket .product__title .button {
-  display: inline-block;
+  display: inline;
+}
+
+.product_type_basket .product__title .button {
+  all: initial;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.product_type_basket .product__title .button::before {
+  display: none;
+}
+
+.basket__item-bill {
+  color: white;
+  flex: 1;
+  text-align: right;
 }
