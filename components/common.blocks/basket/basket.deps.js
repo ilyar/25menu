@@ -24,10 +24,17 @@
               size: 'm',
               'has-mask': true,
               'has-calendar': true,
-              special: true
+              special: true,
+              theme: '25menu'
           }
         },
         'form',
+        {
+          block: 'form-field',
+          mods: {
+              theme: '25menu'
+          }
+        },
         'bill',
         'agreement',
         {

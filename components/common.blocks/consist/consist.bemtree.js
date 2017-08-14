@@ -72,7 +72,8 @@ block('consist').mod('type', 'product').content()(function() {
               block: 'menu',
               mods: {
                   size: 'm',
-                  select: 'check'
+                  select: 'check',
+                  theme: '25menu'
               },
               content: [
                   {
@@ -162,7 +163,8 @@ block('consist').mod('type', 'basket').content()(function() {
               block: 'menu',
               mods: {
                   size: 'm',
-                  select: 'check'
+                  select: 'check',
+                  theme: '25menu'
               },
               content: [
                   {

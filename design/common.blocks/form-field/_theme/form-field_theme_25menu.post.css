@@ -1,9 +1,9 @@
 @use postcss-map {
   basePath: "./theme/";
-  maps: ["fbs-cabinet.yml"]
+  maps: ["25menu.yml"]
 }
 
-block(form-field).mod(theme fbs-cabinet) {
+block(form-field).mod(theme 25menu) {
   /* display: inline-block; */
   position: relative;
   box-sizing: border-box;
@@ -13,13 +13,13 @@ block(form-field).mod(theme fbs-cabinet) {
   overflow: auto;
 
   & + block(form-field) {
-    margin-top: map(fbs-cabinet, content-padding);
+    margin-top: map(25menu, content-padding);
   }
 
 
   .mod(invalid) {
     block(input) {
-      background-color: map(fbs-cabinet, color, red);
+      background-color: map(25menu, color, red);
 
       &:before {
         background-color: #273c48;
@@ -28,7 +28,7 @@ block(form-field).mod(theme fbs-cabinet) {
 
     block(message) {
       display: block;
-      color: map(fbs-cabinet, color, red);
+      color: map(25menu, color, red);
     }
   }
 }

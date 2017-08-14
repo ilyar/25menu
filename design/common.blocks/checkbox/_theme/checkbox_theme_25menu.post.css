@@ -35,10 +35,10 @@ block(checkbox).mod(theme 25menu) {
     &:before {
       content: '';
       position: absolute;
-      top: map(25menu, line-1px);
-      right: map(25menu, line-1px);
-      bottom: map(25menu, line-1px);
-      left: map(25menu, line-1px);
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
       background: transparent;
       box-shadow: 0 0 0 1px map(25menu, color, bermuda_dark);
     }

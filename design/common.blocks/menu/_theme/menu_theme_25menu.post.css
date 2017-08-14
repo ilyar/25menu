@@ -97,3 +97,15 @@ block(menu).mod(theme 25menu) {
     }
   }
 }
+
+.menu_theme_25menu .menu__title {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.menu_theme_25menu .menu__inner {
+  width: 100%;
+  overflow: auto;
+  margin-top: 12px;
+}

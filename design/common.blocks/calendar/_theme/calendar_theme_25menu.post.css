@@ -1,6 +1,5 @@
 block(calendar).mod(theme 25menu) {
   color: rgba(0, 0, 0, .9);
-  background: rgba(243, 243, 243, .95);
 
   .elem(arrow).mod(direction left) {
     background-image: url(base64/arrow_wl.svg)

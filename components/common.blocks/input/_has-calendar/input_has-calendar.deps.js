@@ -12,7 +12,10 @@
     shouldDeps: [
         {
             block: 'popup',
-            mods: { target: 'anchor' }
+            mods: {
+              target: 'anchor',
+              theme: '25menu'
+            }
         },
         {
             block: 'input',
@@ -36,7 +39,7 @@
     mustDeps: [
         { tech: 'bemhtml', block: 'i-bem' },
         { tech: 'bemhtml', block: 'calendar' },
-        { tech: 'bemhtml', block: 'popup', mods: { target: 'anchor' } }
+        { tech: 'bemhtml', block: 'popup', mods: { target: 'anchor', theme: '25menu' } }
     ]
 },
 {

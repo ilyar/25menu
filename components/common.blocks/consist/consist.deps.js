@@ -31,6 +31,12 @@
         mods: {
             type: 'product'
           }
+      },
+      {
+        block: 'menu',
+        mods: {
+          theme: '25menu'
+        }
       }
     ]
 })

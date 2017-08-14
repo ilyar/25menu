@@ -45,7 +45,8 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mods: {
             size: 'm',
-            width: 'available'
+            width: 'available',
+            theme: '25menu'
           },
           placeholder: 'Имя',
           icon: {
@@ -64,7 +65,8 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mods: {
             size: 'm',
-            width: 'available'
+            width: 'available',
+            theme: '25menu'
           },
           placeholder: 'Телефон',
           icon: {
@@ -83,6 +85,7 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mods: {
             size: 'm',
+            theme: '25menu',
             width: 'available'
           },
           placeholder: 'Адрес',
@@ -137,7 +140,8 @@ block('basket').mod('type', 'open').content()(function(){
             // 'has-mask': true,
             'has-calendar' : true,
              special: true,
-             size: 'm'
+             size: 'm',
+             theme: '25menu'
           }
         },
         {
@@ -146,7 +150,8 @@ block('basket').mod('type', 'open').content()(function(){
           mods: {
             // 'has-mask': true,
             special: true,
-            size: 'm'
+            size: 'm',
+            theme: '25menu'
           },
           placeholder: '11:00',
           js : {
@@ -171,38 +176,42 @@ block('basket').mod('type', 'open').content()(function(){
         ]
       },
       {
-          block: 'select',
-          mix: { block: 'basket', elem: 'payment' },
-          mods: {
-              mode: 'radio',
-              theme: '25menu',
-              size: 'm'
-          },
-          name: 'select2',
-          val: 2,
-          options: [
-              {
-                  val: 1,
-                  text: 'Картой на сайте'
-              },
-              {
-                  val: 2,
-                  text: 'Картой курьеру'
-              },
-              {
-                  val: 3,
-                  text: 'Наличными курьеру'
-              }
-          ]
+        block: 'select',
+        mix: { block: 'basket', elem: 'payment' },
+        mods: {
+            mode: 'radio',
+            theme: '25menu',
+            size: 'm'
+        },
+        name: 'select2',
+        val: 3,
+        options: [
+            {
+                val: 1,
+                text: 'Картой на сайте'
+            },
+            {
+                val: 2,
+                text: 'Картой курьеру'
+            },
+            {
+                val: 3,
+                text: 'Наличными курьеру'
+            }
+        ]
       },
       {
         block: 'form-field',
+        mods: {
+          theme: '25menu'
+        },
         content: [
         {
           block: 'input',
           mods: {
             size: 'm',
-            width: 'available'
+            width: 'available',
+            theme: '25menu'
           },
           placeholder: 'Добавить комментарий'
         }
@@ -247,7 +256,8 @@ block('basket').mod('type', 'open').content()(function(){
           mix: { block: 'footer', elem: 'promocode' },
           mods: {
             size: 'm',
-            width: 'available'
+            width: 'available',
+            theme: '25menu'
           },
           placeholder: 'Ввести промокод'
         },

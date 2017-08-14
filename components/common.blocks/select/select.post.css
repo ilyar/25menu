@@ -4,21 +4,26 @@ block(select) {
   font: inherit;
   color: inherit;
   touch-action: manipulation;
-  user-select: none
+  user-select: none;
+  position: relative;
 }
 
 block(select).elem(arrow) {
   display: inline-block;
+  float: right;
 }
 
-block(select).elem(arrow)::after {
+block(select).elem(arrow):after {
   content: '\00A0';
-  display: block;
+  width: 10px;
   background-image: url(../icon/svg/select-arrow-white.svg);
   visibility: visible!important;
   background-repeat: no-repeat;
   background-position: center;
   transform: translate(-1px, 0);
+  position: absolute;
+  right: 10px;
+  top: 0px;
 }
 
 

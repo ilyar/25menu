@@ -19,7 +19,7 @@ block('input')(
 
             // mods['has-mask'] = true;
             ctx.js = ctx.js || {};
-            ctx.js.mask = '{{99}}.{{99}}.{{9999}}';
+            ctx.js.mask = '{{99}}.{{99}}.{{99}}';
             ctx.js.calendarParams = calendarParams;
             ctx.js.popupDirections = ctx.directions;
 

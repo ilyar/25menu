@@ -22,7 +22,7 @@ block(table).mod(theme 25menu) {
   }
 
   .elem(cell) {
-    border-bottom-width: map(25menu, line-1px);
+    border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: map(25menu, color, grey_transparent_30);
     padding: map(25menu, padding-vertical);

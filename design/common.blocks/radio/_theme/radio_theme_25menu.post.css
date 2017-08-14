@@ -32,7 +32,7 @@ block(radio).mod(theme 25menu) {
     position: relative;
     display: inline-block;
     border-radius: 50%;
-    border-width: map(25menu, line-1px);
+    border-width: 1px;
     border-style: solid;
     border-color: map(25menu, color, bermuda_dark);
     background-color: map(25menu, color, black_transparent_30);

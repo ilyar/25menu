@@ -70,7 +70,7 @@
 
       &.mod(focused) {
         background-color: map(25menu, color, white);
-        box-shadow: inset 0 0 0 map(25menu, line-1px) map(25menu, color, white);
+        box-shadow: inset 0 0 0 1px map(25menu, color, white);
 
         &:before {
           background-color: map(25menu, color, bermuda_dark);

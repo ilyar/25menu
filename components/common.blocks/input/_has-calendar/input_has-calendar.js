@@ -19,7 +19,7 @@ provide( Input.declMod( { modName: 'has-calendar' }, /** @lends input.prototype 
             'inited': function() {
                 this.__base.apply(this, arguments);
                 this._renderCalendar();
-
+                // this.__input = this.setVal(getDate());
                 this._popup = this.findChildBlock(Popup);
                 this._calendar = this.findChildBlock(Calendar);
 
@@ -51,6 +51,11 @@ provide( Input.declMod( { modName: 'has-calendar' }, /** @lends input.prototype 
         this._popup.delMod('visible');
         return this;
     },
+
+    // getDate: function() {
+    //   var today = new Date;
+    //   return today;
+    // },
 
     isShownCalendar: function() {
         return this._popup.hasMod('visible');
