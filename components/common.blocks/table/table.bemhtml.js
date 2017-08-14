@@ -1,0 +1,12 @@
+block('table')(
+  tag()('table'),
+  elem('row')(
+    tag()('tr')
+  ),
+  elem('cell')(
+    tag()('td')
+  ),
+  elem('caption')(
+    tag()('caption')
+  )
+)

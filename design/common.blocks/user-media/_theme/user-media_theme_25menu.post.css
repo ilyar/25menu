@@ -1,0 +1,10 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(user-media).mod(theme 25menu) {
+  padding-left: 1rem;
+  background-color: map(25menu, color, elephant_dark);
+}
+

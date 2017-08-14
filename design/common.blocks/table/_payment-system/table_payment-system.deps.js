@@ -2,7 +2,7 @@
   mustDeps: {
     block: 'table',
     mods: {
-      theme: 'fbs-cabinet'
+      theme: '25menu'
     }
   }
 })

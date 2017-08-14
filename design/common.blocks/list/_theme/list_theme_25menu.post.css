@@ -1,0 +1,111 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(list).mod(theme 25menu) {
+
+  .elem(item) {
+    line-height: 1.5;
+    /* word-break: break-word; */
+    flex-wrap: wrap;
+
+    .mod(vertical-align center) {
+      align-items: center;
+
+      .elem(term),
+      .elem(definition) {
+        vertical-align: middle;
+      }
+
+    }
+
+    .mod(negative) {
+      background-color: rgba(255, 0, 0, .2)
+    }
+
+    .mod(positive) {
+      background-color: rgba(0, 255, 0, .2)
+    }
+  }
+
+  .elem(term) {
+    display: table-cell;
+    text-align: start;
+    color: map(25menu, color, bermuda_light);
+    padding: map(25menu, content-padding);
+  }
+
+  .elem(definition) {
+    display: table-cell;
+    text-align: end;
+    /* word-break: break-word; */
+    hyphens: auto;
+    padding: map(25menu, content-padding);
+    vertical-align: bottom;
+
+    .mod(align center) {
+      text-align: center
+    }
+
+    .mod(align start) {
+      text-align: start
+    }
+
+    .mod(align end) {
+      text-align: end
+    }
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl, xxxl) {
+    .mod(size $(size)) {
+      font-size: map(25menu, font-size, $(size));
+    }
+  }
+
+  .mod(type description) {
+    margin: 0;
+    display: table;
+
+    .elem(item) {
+      display: table-row;
+
+      .mod(footer) {
+        display: table-caption;
+        padding: map(25menu, content-padding);
+        box-sizing: border-box;
+        caption-side: bottom;
+        border-bottom: none;
+        border-top-width: map(25menu, line-1px);
+        border-top-style: solid;
+        border-top-color: map(25menu, color, grey_transparent_30);
+      }
+    }
+
+
+    .elem(item) + .elem(item) {
+      .elem(term),
+      .elem(definition) {
+        border-top-width: map(25menu, line-1px);
+        border-top-style: solid;
+        border-top-color: map(25menu, color, grey_transparent_30)
+      }
+    }
+  }
+
+  .mod(layout flex) {
+    display: flex;
+    flex-direction: column;
+
+    .elem(item) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .elem(term),
+    .elem(definition) {
+      flex: 1;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(link).mod(theme 25menu) {
+  color: map(25menu, color, blue);
+  text-decoration: none;
+
+  &:active,
+  .mod(state active) {
+    color: map(25menu, color, red)
+  }
+
+  &[disabled],
+  .mod(state disabled) {
+    color: map(25menu, color, red);
+    pointer-events: none;
+    cursor: not-allowed
+  }
+
+  &:focus,
+  .mod(state focus) {
+    color: map(25menu, color, red)
+  }
+
+  &:hover,
+  .mod(state hover) {
+    color: map(25menu, color, red)
+  }
+
+  .mod(state visited) {
+    color: map(25menu, color, blue_light-gray);
+  }
+
+  .mod(focused) {
+    outline: none;
+    box-shadow: inset 0 0 0 1px map(25menu, color, yellow);
+  }
+}

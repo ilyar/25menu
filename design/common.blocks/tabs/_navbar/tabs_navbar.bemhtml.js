@@ -7,7 +7,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
         mods: {
           symbol: 'gamepad',
           size: 'l',
-          theme: 'fbs-cabinet'
+          theme: '25menu'
         }
       },
       title: 'Trader area',
@@ -16,7 +16,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
           block: 'content',
           mods: {
             size: 'm',
-            theme: 'fbs-cabinet'
+            theme: '25menu'
           },
           content: [
             {
@@ -26,7 +26,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
                 inverse: true,
                 block: true,
                 size: 'm',
-                theme: 'fbs-cabinet'
+                theme: '25menu'
               },
               text: 'Deposit founds'
             }
@@ -37,7 +37,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
           mods: {
             navbar: true,
             size: 'm',
-            theme: 'fbs-cabinet'
+            theme: '25menu'
           },
           content: [
             {
@@ -150,7 +150,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
                             positive: true,
                             script: 'sup',
                             caps: true,
-                            theme: 'fbs-cabinet'
+                            theme: '25menu'
                           },
                           content: 'new!'
                         }
@@ -272,7 +272,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
         mods: {
           symbol: 'cup',
           size: 'l',
-          theme: 'fbs-cabinet'
+          theme: '25menu'
         }
       },
       title: 'Partner area',
@@ -284,7 +284,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
         mods: {
           symbol: 'earth',
           size: 'l',
-          theme: 'fbs-cabinet'
+          theme: '25menu'
         }
       },
       title: 'Visit FBS site',
@@ -296,7 +296,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
         mods: {
           symbol: 'search',
           size: 'xl',
-          theme: 'fbs-cabinet'
+          theme: '25menu'
         }
       },
       content: [
@@ -305,20 +305,20 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
           mods: {
             inverse: true,
             size: 'm',
-            theme: 'fbs-cabinet'
+            theme: '25menu'
           },
           action: '//192.168.0.81:3004/error',
           method: 'get',
           content: [
             {
               elem: 'content',
-              mix: { block: 'content', mods: { size: 'm', theme: 'fbs-cabinet' } },
+              mix: { block: 'content', mods: { size: 'm', theme: '25menu' } },
               content: [
                 {
                   block: 'form-field',
                   mods: {
                     type: 'input',
-                    theme: 'fbs-cabinet'
+                    theme: '25menu'
                   },
                   name: 'search',
                   id: 'search',
@@ -329,7 +329,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
                         width: 'available',
                         'has-clear': true,
                         size: 'm',
-                        theme: 'fbs-cabinet'
+                        theme: '25menu'
                       },
                       placeholder: 'Search'
                     }
@@ -347,7 +347,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
         mods: {
           flag: 'ru',
           size: 'xl',
-          theme: 'fbs-cabinet'
+          theme: '25menu'
         }
       },
       content: [
@@ -356,7 +356,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
           mods: {
             navbar: true,
             size: 'm',
-            theme: 'fbs-cabinet'
+            theme: '25menu'
           },
           val: 'Русский',
           content: [ 'Арабский', 'Бенгальский', 'Английский', 'Испанский', 'Индонезийский', 'Японский', 'Корейский', 'Лаосский', 'Литовский', 'Малайский', 'Бирманский', 'Португальский', 'Русский', 'Тайский', 'Урду', 'Вьетнамский', 'Китайский' ].map( function ( lang ) {
@@ -374,7 +374,7 @@ block('tabs').mod('navbar', true).match( function() { return typeof this.ctx.tab
                       mods: {
                         flag: 'ru',
                         size: 'm',
-                        theme: 'fbs-cabinet'
+                        theme: '25menu'
                       }
                     },
                     lang

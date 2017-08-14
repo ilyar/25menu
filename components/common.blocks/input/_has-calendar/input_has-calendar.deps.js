@@ -5,7 +5,7 @@
         },
         {
             block: 'calendar',
-            mods: { theme: ['fbs-cabinet', 'hotoption'] }
+            mods: { theme: ['25menu', 'hotoption'] }
         },
         'objects'
     ],

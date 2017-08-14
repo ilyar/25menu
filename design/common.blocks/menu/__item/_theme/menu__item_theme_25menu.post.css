@@ -1,0 +1,52 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(menu).elem(item).mod(theme 25menu) {
+  position: relative;
+  cursor: pointer;
+  padding: map(25menu, padding-horizontal) map(25menu, content-padding);
+
+  .mod(disabled) {
+    opacity: 0.3
+  }
+
+  block(icon) {
+    margin-right: map(25menu, content-padding)
+  }
+
+  .mod(checked) {
+    background: right map(25menu, content-padding) top 50% no-repeat svg-load('../../../icon/_symbol/icon_symbol_tip.svg', fill="map(25menu, color, green)")
+  }
+
+  .mod(hovered) {
+    background-color: map(25menu, color, black_transparent_30)
+  }
+
+  .mod(type link) {
+    padding: 0;
+
+    block(link) {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      position: relative;
+      padding: map(25menu, content-padding);
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+
+      /* Fit clickable area to `menu__item` size */
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: ''
+      }
+    }
+  }
+
+}

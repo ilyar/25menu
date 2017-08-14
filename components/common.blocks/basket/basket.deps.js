@@ -36,7 +36,7 @@
                 size: 'm',
                 view: 'plain',
                 type: 'submit',
-                theme: 'islands'
+                theme: '25menu'
             }
         },
         {

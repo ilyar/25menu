@@ -1,0 +1,24 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(radio-group).mod(theme 25menu) {
+  display: flex;
+
+  @each $size in (xs, s, m, l, xl, xxl, xxxl) {
+    .mod(size $(size)) {
+      font-size: map(25menu, font-size, $(size));
+    }
+  }
+
+  .mod(vertical) {
+    flex-direction: column;
+  }
+
+  .mod(navbar) {
+    block(radio):nth-child(4) {
+      margin-top: auto;
+    }
+  }
+}

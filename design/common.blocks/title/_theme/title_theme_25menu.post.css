@@ -1,0 +1,47 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+@use postcss-custom-media;
+
+block(title).mod(theme 25menu) {
+  display: block;
+  font-weight: map(25menu, font-weight, semi-bold);
+  width: 100%;
+  line-height: 1.5;
+  /* padding: map(25menu, content-padding) 0; */
+  margin: 0;
+  padding: 0;
+
+  /* h1 */
+  .mod(size xxl) {
+    font-size: 2.25rem
+  }
+
+  /* h2 */
+  .mod(size xl) {
+    font-size: 2rem
+  }
+
+  /* h3 */
+  .mod(size l) {
+    font-size: 1.75rem
+  }
+
+  /* h4 */
+  .mod(size m) {
+    font-size: 1.5rem
+  }
+
+  /* h5 */
+  .mod(size s) {
+    font-size: 1.25rem
+  }
+
+  /* h6 */
+  .mod(size xs) {
+    font-size: 1rem
+  }
+
+  /* TODO: https://webref.ru/css/target */
+}

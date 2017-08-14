@@ -1,0 +1,3 @@
+.block(tabs).elem(box).mod(selected) {
+  display: block
+}

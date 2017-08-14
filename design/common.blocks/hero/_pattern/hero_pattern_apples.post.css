@@ -1,5 +1,0 @@
-block(hero).mod(pattern apples) {
-  background: radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark));
-  background: url(hero_pattern_apples.svg), radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark)) center repeat;
-  background-size: 25px 25px, 100% 100%
-}

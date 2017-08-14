@@ -1,8 +1,0 @@
-@use postcss-map {
-  basePath: "./theme/";
-  maps: ["fbs-cabinet.yml"]
-}
-
-block(icon).mod(symbol phone) {
-  background-image: svg-load( 'icon_symbol_phone.svg', fill="map(fbs-cabinet, color, bermuda_light)" );
-}

@@ -1,0 +1,151 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(radio).mod(theme 25menu) {
+  display: flex;
+  color: map(25menu, color, bermuda_light);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: map(25menu, content-padding);
+  box-sizing: border-box;
+  line-height: 1.5;
+
+  &:hover {
+    cursor: pointer
+  }
+
+  & + & {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: map(25menu, color, grey_transparent_30)
+  }
+
+  .elem(control) {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    opacity: 0
+  }
+
+  .elem(box) {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border-width: map(25menu, line-1px);
+    border-style: solid;
+    border-color: map(25menu, color, bermuda_dark);
+    background-color: map(25menu, color, black_transparent_30);
+    line-height: 1.5;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .5em;
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      border-radius: 50%;
+      background: transparent
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: map(25menu, line-2px);
+      left: map(25menu, line-2px);
+      bottom: map(25menu, line-2px);
+      right: map(25menu, line-2px);
+      display: block;
+      border-radius: 50%;
+      background-color: map(25menu, color, green);
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0);
+      transition: transform .05s ease-out
+                , opacity .05s ease-out
+                , visibility 0s linear .05s
+    }
+  }
+
+  .elem(text) {
+    flex: 1
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $(size)) {
+      font-size: map(25menu, font-size, $(size));
+    }
+  }
+
+  .mod(checked) {
+    color: map(25menu, color, black);
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .elem(box) {
+      background: rgba(153, 122, 0, 0.5);
+
+      &:before {
+        background: map(25menu, color, elephant_light)
+      }
+
+      &:after {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        transition-delay: 0s
+      }
+    }
+
+    .elem(text) {}
+  }
+
+  .mod(focused) {
+    .elem(box):before {
+      box-shadow: 0 0 0 1px #ffcc00
+       /* , inset 0 0 0 1px #ffcc00 */
+    }
+  }
+
+  .mod(hovered) {
+    .elem(box) {
+      background: rgba(0, 0, 0, 0.3)
+    }
+
+    .mod(checked) .elem(box) {
+      background: rgba(129, 103, 0, 0.6)
+    }
+  }
+
+  .mod(disabled) {
+    cursor: default;
+    color: map(25menu, color, black_transparent_30);
+
+    .elem(box) {
+      background: rgba(0, 0, 0, 0.08);
+
+      &:before {
+        display: none
+      }
+    }
+
+    .mod(checked) .elem(box) {
+      background: rgba(0, 0, 0, 0.15);
+
+      &:after {
+        opacity: 1
+      }
+    }
+  }
+
+  .mod(type button) {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    padding: 0
+  }
+}

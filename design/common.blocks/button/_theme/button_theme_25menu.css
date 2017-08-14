@@ -1,0 +1,16 @@
+.button__text {
+  margin-left: 5px!important;
+}
+
+.button_hovered {
+  background: none!important;
+}
+
+.button_pressed::before {
+  background: none!important;
+}
+
+.button_focused-hard.button::before {
+  background: none!important;
+  box-shadow: none!important;
+}

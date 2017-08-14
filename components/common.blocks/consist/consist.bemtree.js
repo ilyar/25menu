@@ -55,7 +55,7 @@ block('consist').mod('type', 'product').content()(function() {
           block: 'dropdown',
           mods: {
               switcher: 'button',
-              theme: 'islands',
+              theme: '25menu',
               size: 'm'
           },
           switcher: {

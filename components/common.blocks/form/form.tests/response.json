@@ -1,0 +1,30 @@
+{
+  "error": {
+      "loginform-email": [
+          "Email cannot be blank."
+      ],
+      "loginform-password": [
+          "Password cannot be blank."
+      ]
+  },
+  "error2": {
+      "loginform-email": [
+          "Email cannot be blank.",
+          "Olololo"
+      ],
+      "loginform-password": [
+          "Password cannot be blank."
+      ]
+  },
+  "error3": {
+      "loginform-email": [
+          "Email cannot be blank."
+      ]
+  },
+  "error4": {
+      "loginform-password": [
+          "Password cannot be blank."
+      ]
+  },
+  "success": {}
+}

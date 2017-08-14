@@ -1,0 +1,68 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(table).mod(theme 25menu) {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .elem(row) {
+    &:last-of-type .elem(cell) {
+      border-bottom: none;
+    }
+
+    .mod(negative) {
+      background-color: rgba(255, 0, 0, .2)
+    }
+
+    .mod(positive) {
+      background-color: rgba(0, 255, 0, .2)
+    }
+  }
+
+  .elem(cell) {
+    border-bottom-width: map(25menu, line-1px);
+    border-bottom-style: solid;
+    border-bottom-color: map(25menu, color, grey_transparent_30);
+    padding: map(25menu, padding-vertical);
+    box-sizing: border-box;
+    height: 3em;
+
+    &:first-of-type {
+      /* padding-left: map(25menu, content-padding); */
+      /* width: 1% */
+    }
+
+    &:last-of-type {
+      /* padding-right: map(25menu, content-padding); */
+      text-align: end
+    }
+
+    .mod(align start) {
+      text-align: start
+    }
+    .mod(align center) {
+      text-align: center
+    }
+    .mod(align end) {
+      text-align: end
+    }
+  }
+
+  .elem(caption) {
+    display: table-caption;
+    padding: map(25menu, content-padding);
+    box-sizing: border-box;
+
+    .mod(footer) {
+      caption-side: bottom;
+    }
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl, xxxl) {
+    .mod(size $(size)) {
+      font-size: map(25menu, font-size, $(size));
+    }
+  }
+}

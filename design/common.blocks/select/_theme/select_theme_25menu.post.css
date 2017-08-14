@@ -25,7 +25,7 @@ block(select).mod(theme fbs-cabinet) {
     }
   }
 
-  .elem(tick) {
+/*  .elem(tick) {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -38,7 +38,7 @@ block(select).mod(theme fbs-cabinet) {
     &:empty:after {
       content: none
     }
-  }
+  }*/
 
   @each $size in (xs, s, m, l, xl, xxl) {
     .mod(size $(size)) {
