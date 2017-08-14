@@ -1,0 +1,5 @@
+block(hero).mod(pattern t-shirt) {
+  background: radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark));
+  background: url(hero_pattern_t-shirt.svg), radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark)) center repeat;
+  background-size: 80px 80px, 100% 100%
+}

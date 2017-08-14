@@ -1,0 +1,5 @@
+block(hero).mod(pattern bonus-888) {
+  background: radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark));
+  background: url(hero_pattern_bonus-888.svg), radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark)) center repeat;
+  background-size: 50px 50px, 100% 100%
+}

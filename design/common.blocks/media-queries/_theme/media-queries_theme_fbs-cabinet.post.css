@@ -1,0 +1,10 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+@custom-media --phone            ( max-width: calc( map( fbs-cabinet, media-queries, phone ) - 1px ) );
+@custom-media --tablet           ( min-width: map( fbs-cabinet, media-queries, phone ) );
+@custom-media --tablet_landscape ( min-width: map( fbs-cabinet, media-queries, tablet ) );
+@custom-media --desktop          ( min-width: map( fbs-cabinet, media-queries, desktop ) );
+@custom-media --desktop_large    ( min-width: map( fbs-cabinet, media-queries, desktop_large ) )

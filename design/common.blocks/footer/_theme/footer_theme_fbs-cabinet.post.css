@@ -1,0 +1,8 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(footer).mod(theme fbs-cabinet) {
+
+}

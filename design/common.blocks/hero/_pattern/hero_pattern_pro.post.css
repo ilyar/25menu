@@ -1,0 +1,10 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(hero).mod(pattern pro) {
+  /* background: radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark)) */
+  background: svg-load('hero_pattern_pro.svg'), radial-gradient(map(fbs-cabinet, color, cyan_desaturated), map(fbs-cabinet, color, blue_dark)) center repeat;
+  background-size: 50px 50px, 100% 100%
+}

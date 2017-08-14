@@ -1,0 +1,27 @@
+.consist_type_basket {
+
+}
+
+
+.consist_type_basket .consist__add_button {
+  display: flex;
+  margin-top: 6px;
+}
+
+.consist_type_basket .consist__add_button button {
+  all: initial;
+  width: 184px;
+  color: rgb(218, 226, 226, 0.4);
+  display: flex;
+  height: 32px;
+  font-family: 'Lab grotesque';
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.consist_type_basket button .icon_symbol_add {
+  width: 17px!important;
+}
+

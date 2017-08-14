@@ -1,0 +1,62 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(select).mod(theme fbs-cabinet) {
+  max-width: 100%;
+  vertical-align: bottom;
+
+  .elem(button) {
+    width: 100%;
+    text-align: left;
+    vertical-align: top;
+
+  }
+
+  block(button).elem(text) {
+    display: block;
+    text-align: left;
+    padding-right: 2em;
+    /* padding-left: map(fbs-cabinet, content-padding); */
+
+    &:empty:before {
+      content: '\00a0'
+    }
+  }
+
+  .elem(tick) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: svg-load('../../icon/_symbol/icon_symbol_chevron-down.svg', fill="map(fbs-cabinet, color, bermuda_light)");
+    transition: transform 0.1s ease-out;
+    width: 2em;
+    padding: calc( map(fbs-cabinet, content-padding) / 2 );
+
+    &:empty:after {
+      content: none
+    }
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $(size)) {
+      font-size: map(fbs-cabinet, font-size, $(size));
+    }
+  }
+
+  .mod(opened) .elem(tick) {
+    transform: rotate(-180deg)
+  }
+
+  .mod(width available) {
+    width: 100%
+  }
+
+  .mod(has-error) {
+    block(button) {
+      border-color: map(fbs-cabinet, color, red)
+    }
+  }
+}

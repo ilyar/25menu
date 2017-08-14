@@ -1,0 +1,35 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(label).mod(theme fbs-cabinet) {
+  display: block;
+  color: map( fbs-cabinet, color, bermuda_light);
+  margin-bottom: .2em; /* magic */
+  width: 100%;
+
+  .mod(size xs) {
+    font-size: map(fbs-cabinet, font-size, xs)
+  }
+
+  .mod(size s) {
+    font-size: map(fbs-cabinet, font-size, s)
+  }
+
+  .mod(size m) {
+    font-size: map(fbs-cabinet, font-size, m)
+  }
+
+  .mod(size l) {
+    font-size: map(fbs-cabinet, font-size, l)
+  }
+
+  .mod(size xl) {
+    font-size: map(fbs-cabinet, font-size, xl)
+  }
+
+  .mod(size xxl) {
+    font-size: map(fbs-cabinet, font-size, xxl)
+  }
+}

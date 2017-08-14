@@ -175,7 +175,7 @@ block('basket').mod('type', 'open').content()(function(){
           mix: { block: 'basket', elem: 'payment' },
           mods: {
               mode: 'radio',
-              theme: 'islands',
+              theme: '25menu',
               size: 'm'
           },
           name: 'select2',
@@ -218,6 +218,13 @@ block('basket').mod('type', 'open').content()(function(){
       elem: 'empty-block',
       mix: { block: 'basket', elem: 'is_empty' },
       content: 'В КОРЗИНЕ ПОКА ПУСТО'
+    },
+    {
+      block: 'product',
+      mix: { block: 'basket', elem: 'good' },
+      mods: {
+        type: 'basket'
+      }
     },
     {
       block: 'product',

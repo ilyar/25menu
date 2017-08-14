@@ -1,0 +1,20 @@
+block(popup).mod(theme fbs-cabinet) {
+  display: none;
+  visibility: hidden;
+  margin: -9999px 0 0 -9999px;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  background-color: rgba(255,255,255,.4);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1)
+            , 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+  animation-fill-mode: forwards;
+
+  .mod(js inited) {
+    display: block
+  }
+
+  .mod(visible) {
+    visibility: visible;
+    margin: 0
+  }
+}

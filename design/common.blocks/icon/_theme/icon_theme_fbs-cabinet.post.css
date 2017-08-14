@@ -1,0 +1,45 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(icon).mod(theme fbs-cabinet) {
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  padding: .25em;
+  max-width: 100%;
+  vertical-align: baseline;
+  text-transform: none;
+  background-size: cover;
+
+  &:empty:after {
+    visibility: hidden;
+    content: '\00A0';
+    padding: 50% 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 0
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl, xxxl) {
+    .mod(size $(size)) {
+      font-size: map(fbs-cabinet, font-size, $(size));
+    }
+  }
+
+  .mod(state positive) {
+    background-color: map(fbs-cabinet, color, green_dark)
+  }
+
+  .mod(state negative) {
+    background-color: map(fbs-cabinet, color, red);
+    color: map(fbs-cabinet, color, white);
+  }
+
+  .mod(bordered) {
+    border-width: 2px;
+    border-color: map(fbs-cabinet, color, bermuda_light);
+  }
+}

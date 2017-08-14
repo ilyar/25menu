@@ -1,0 +1,15 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(progressbar).mod(theme fbs-cabinet) {
+  overflow: hidden;
+  width: 100%;
+  background-color: map(fbs-cabinet, color, grey);
+
+  .elem(bar) {
+    height: 2px;
+    background-color: map(fbs-cabinet, color, green)
+  }
+}

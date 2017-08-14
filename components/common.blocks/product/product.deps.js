@@ -20,7 +20,7 @@
         {
           block: 'consist',
           mods: {
-            type: 'product'
+            type: '*'
           }
         },
         {

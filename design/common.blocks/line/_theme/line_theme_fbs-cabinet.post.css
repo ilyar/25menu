@@ -1,0 +1,46 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(line).mod(theme fbs-cabinet) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  border: none;
+
+  &:before,
+  &:after {
+    background-color: map(fbs-cabinet, color, grey_transparent_30);
+    content: '\a0';
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+    top: 1em;
+    margin: 0 auto
+  }
+
+  .mod(size s) {
+    font-size: map(fbs-cabinet, font-size, s)
+  }
+
+  .mod(size m) {
+    font-size: map(fbs-cabinet, font-size, m)
+  }
+
+  .mod(size l) {
+    font-size: map(fbs-cabinet, font-size, l)
+  }
+
+  .elem(content) {
+    background-color: map(fbs-cabinet, color, grey_transparent_30);
+    line-height: 2;
+    border-radius: 1em;
+    min-width: 1em;
+    font-weight: map(fbs-cabinet, font-weight);
+    display: inline-block;
+    text-align: center;
+    padding: 0 map(fbs-cabinet, content-padding)
+  }
+}

@@ -23,7 +23,7 @@
 /* Хэдер корзины — поля ввода */
 .basket__header {
   height: 300px;
-  padding: 45px 25px 10px;
+  padding: 45px 25px 15px 25px;
   box-sizing: border-box;
 }
 
@@ -38,6 +38,7 @@
 
 .basket__payment {
   width: 100%;
+  margin-bottom: 12px;
 }
 
 /* Блок виден, когда пользователь не выбирает время */
@@ -107,6 +108,7 @@
 .basket__content {
   flex: 1;
   background-color: #3F3F42;
+  padding: 8px 0;
 }
 
 .basket__is_empty {
@@ -121,6 +123,7 @@
 .basket__good {
   width: 308px;
   box-sizing: content-box;
+  margin-bottom: 8px;
 }
 
 /* Футер корзины */

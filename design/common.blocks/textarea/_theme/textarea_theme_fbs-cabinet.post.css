@@ -1,0 +1,22 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+block(textarea).mod(theme fbs-cabinet) {
+  font: inherit;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  resize: vertical;
+  padding: .25em .5em;
+  box-sizing: border-box;
+  border: 1px solid map(fbs-cabinet, color, bermuda_dark);
+
+  @each $size in (xs, s, m, l, xl, xxl, xxxl) {
+    .mod(size $(size)) {
+      font-size: map(fbs-cabinet, font-size, $(size));
+    }
+  }
+
+}

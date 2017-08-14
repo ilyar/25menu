@@ -1,0 +1,35 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["fbs-cabinet.yml"]
+}
+
+@use postcss-custom-media;
+
+block(header-area).mod(theme fbs-cabinet) {
+  vertical-align: top;
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .elem(user) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  .elem(menu).block(button) {
+    background-color: map(fbs-cabinet, color, bermuda_dark);
+
+    @media (--tablet) {
+      display: none;
+    }
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $(size)) {
+      font-size: map(fbs-cabinet, font-size, $(size));
+    }
+  }
+}

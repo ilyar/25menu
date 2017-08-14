@@ -43,7 +43,7 @@
         block: 'select',
           mods: {
               mode: 'radio',
-              theme: 'islands',
+              theme: '25menu',
               size: 'm'
           }
         }
