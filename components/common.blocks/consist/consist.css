@@ -6,32 +6,6 @@
   text-align: center;
 }
 
-.page_theme_25menu .popup {
-  border-radius: 6px;
-  width: 320px;
-  height: 276px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 12px 20px;
-}
 
-.page_theme_25menu .popup .menu__title {
-  font-weight: bold;
-}
 
-.page_theme_25menu .popup .menu__inner {
-  width: 100%;
-  height: 200px;
-  overflow: auto;
-  margin-top: 12px;
-}
-
-.popup__close {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 5%;
-  right: 5%;
-}
 

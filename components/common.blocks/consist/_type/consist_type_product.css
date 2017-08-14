@@ -3,32 +3,34 @@
   line-height: 20px;
 }
 
-.ingridient__remove {
+.consist_type_product .ingridient__remove {
   display: inline-block;
   margin-left: 5px;
   vertical-align: baseline;
 }
 
-.remove__text {
+.consist_type_product .remove__text {
   display: inline-block;
   border-bottom: 1px dotted #808080;
 }
 
-.consist__add_button {
-  display: flex;
+.consist_type_product .consist__add_button {
   margin-top: 6px;
 }
 
-.consist__add_button button {
+.consist_type_product .consist__add_button button {
   all: initial;
   width: 184px;
-  display: flex;
   height: 32px;
+  display: flex;
   font-family: 'Lab grotesque';
   font-size: 14px;
   padding: 0;
   position: relative;
   cursor: pointer;
+  line-height: 32px;
 }
 
-
+.consist_type_product button .icon_symbol_add {
+  width: 32px;
+}

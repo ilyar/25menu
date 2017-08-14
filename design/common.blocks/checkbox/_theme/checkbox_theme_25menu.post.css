@@ -1,9 +1,9 @@
 @use postcss-map {
   basePath: "./theme/";
-  maps: ["fbs-cabinet.yml"]
+  maps: ["25menu.yml"]
 }
 
-block(checkbox).mod(theme fbs-cabinet) {
+block(checkbox).mod(theme 25menu) {
   display: flex;
   position: relative; /* fix #1538 */
   font-size: 1em;
@@ -35,12 +35,12 @@ block(checkbox).mod(theme fbs-cabinet) {
     &:before {
       content: '';
       position: absolute;
-      top: map(fbs-cabinet, line-1px);
-      right: map(fbs-cabinet, line-1px);
-      bottom: map(fbs-cabinet, line-1px);
-      left: map(fbs-cabinet, line-1px);
+      top: map(25menu, line-1px);
+      right: map(25menu, line-1px);
+      bottom: map(25menu, line-1px);
+      left: map(25menu, line-1px);
       background: transparent;
-      box-shadow: 0 0 0 1px map(fbs-cabinet, color, bermuda_dark);
+      box-shadow: 0 0 0 1px map(25menu, color, bermuda_dark);
     }
 
     &:after {
@@ -50,8 +50,8 @@ block(checkbox).mod(theme fbs-cabinet) {
       left: .125em;
       width: 100%;
       height: 100%;
-      color: map(fbs-cabinet, color, green);
-      background-image: svg-load('../../icon/_symbol/icon_symbol_tip.svg', fill=map(fbs-cabinet, color, green));
+      color: map(25menu, color, green);
+      background-image: svg-load('../../icon/_symbol/icon_symbol_tip.svg', fill=map(25menu, color, green));
       background-size: cover;
       visibility: hidden;
       opacity: 0;
@@ -64,7 +64,7 @@ block(checkbox).mod(theme fbs-cabinet) {
 
   .elem(text) {
     flex: 1;
-    color: map(fbs-cabinet, color, bermuda_light);
+    color: map(25menu, color, bermuda_light);
     font-size: 1em;
     line-height: 1.5
   }
@@ -76,7 +76,7 @@ block(checkbox).mod(theme fbs-cabinet) {
 
   @each $size in (xs, s, m, l, xl, xxl) {
     .mod(size $(size)) {
-      font-size: map(fbs-cabinet, font-size, $(size));
+      font-size: map(25menu, font-size, $(size));
       /* min-width: 1.5em;
       min-height: 1.5em; */
     }
@@ -87,7 +87,7 @@ block(checkbox).mod(theme fbs-cabinet) {
       /* background: rgba(153, 122, 0, 0.5); */
 
       &:before {
-        /* background: map(fbs-cabinet, color, elephant_light) */
+        /* background: map(25menu, color, elephant_light) */
       }
 
       &:after {
@@ -101,8 +101,8 @@ block(checkbox).mod(theme fbs-cabinet) {
 
   .mod(focused) {
     .elem(box):before {
-      box-shadow: 0 0 0 1px map(fbs-cabinet, color, yellow)
-          , inset 0 0 0 1px map(fbs-cabinet, color, yellow)
+      box-shadow: 0 0 0 1px map(25menu, color, yellow)
+          , inset 0 0 0 1px map(25menu, color, yellow)
     }
   }
 
@@ -177,7 +177,7 @@ block(checkbox).mod(theme fbs-cabinet) {
         opacity: 1;
         top: 0;
         left: 0;
-        background-color: map(fbs-cabinet, color, grey_dark);
+        background-color: map(25menu, color, grey_dark);
         box-sizing: border-box;
         background-clip: content-box;
         padding: 3px;
@@ -192,7 +192,7 @@ block(checkbox).mod(theme fbs-cabinet) {
     &.mod(checked) {
 
       .elem(box):after {
-        background-color: map(fbs-cabinet, color, green);
+        background-color: map(25menu, color, green);
         transform: translateX(100%);
       }
     }
