@@ -48,6 +48,7 @@ block(input).mod(theme 25menu) {
     border: 0;
     outline: none;
     background: 0 0;
+    line-height: 25px;
 
     -webkit-appearance: none;
 

@@ -1,0 +1,55 @@
+  .auth {
+
+ }
+
+ .button__auth {
+   display: flex;
+   align-items: center;
+ }
+
+ .auth__step-one {
+   padding: 10px 35px 38px;
+ }
+
+ .auth__title {
+   font-size: 32px;
+ }
+
+ .auth__input {
+   margin-top: 20px;
+ }
+
+ .auth__input .input {
+   line-height: 40px;
+   border: 1px solid #D9D9D9;
+   border-radius: 4px;
+   margin-top: 12px;
+ }
+
+ .auth__input .input .input__control {
+   color: black;
+ }
+
+ .auth__resend_password {
+   margin: 8px 0 12px ;
+   display: inline-block;
+   color: #F05565;
+ }
+
+ .auth__enter {
+   background-color: black;
+   display: block;
+   width: 100%;
+   height: 48px;
+   color: white;
+   border-radius: 4px;
+   font-size: 14px;
+   cursor: pointer;
+   margin-bottom: 15px;
+ }
+
+ .auth__text {
+   font-size: 16px;
+   max-width: 336px;
+   text-align: center;
+ }
