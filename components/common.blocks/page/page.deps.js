@@ -21,9 +21,15 @@
     'items',
     {
     block: 'product',
-    mods: {
-      type: 'item'
-    }
+      mods: {
+        type: 'item'
+      },
+    },
+    {
+      block: 'input',
+      mods: {
+        size: '*'
+      }
     }
   ]
 })

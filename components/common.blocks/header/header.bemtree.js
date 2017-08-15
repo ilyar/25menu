@@ -19,19 +19,8 @@ block('header').content()(function() {
         ]
       },
       {
-        elem: 'login-area',
-        content: [
-          {
-            block: 'icon',
-            mods: {
-              symbol: 'account'
-            }
-          },
-          {
-            elem: 'login',
-            content: 'Войти'
-          },
-        ]
+        block: 'auth',
+        mix: { block: 'header', elem: 'login-area' }
       }
       ]
 });

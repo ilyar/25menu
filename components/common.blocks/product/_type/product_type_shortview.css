@@ -1,0 +1,33 @@
+.product_type_shortview {
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.product_type_shortview .product__image {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product_type_shortview .image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.product__short-counter {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  color: white;
+  top: 2px;
+  right: 1px;
+  background-color: #363839;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 90;
+}

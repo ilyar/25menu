@@ -1,10 +1,10 @@
-modules.define('addon', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('auth', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-
+                
             }
         }
     }

@@ -11,26 +11,6 @@ block('page').content()(function() {
       block: 'basket',
       mods: {
         type: 'closed'
-      },
-      mix: {
-        block: 'page',
-        elem: 'basket',
-        elemMods: {
-          hide: true
-        }
-      }
-    },
-    {
-      block: 'basket',
-      mods: {
-        type: 'open'
-      },
-      mix: {
-        block: 'page',
-        elem: 'basket',
-        elemMods: {
-          // hide: true
-        }
       }
     }
   ];
