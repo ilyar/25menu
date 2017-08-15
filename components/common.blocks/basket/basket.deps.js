@@ -9,7 +9,7 @@
         {
           block: 'product',
           mods: {
-            type: 'basket'
+            type: '*'
           }
         },
         {

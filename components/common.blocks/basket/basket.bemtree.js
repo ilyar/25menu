@@ -17,6 +17,27 @@ block('basket').mod('type', 'closed').content()(function(){
     block: 'bill',
     mix: { block: 'basket_type_closed', elem: 'bill' },
     content: '2130 Р'
+  },
+  {
+    block: 'product',
+    mods: {
+      type: 'shortview'
+    },
+    mix: { block: 'basket', elem: 'item-shortview' }
+  },
+  {
+    block: 'product',
+    mods: {
+      type: 'shortview'
+    },
+    mix: { block: 'basket', elem: 'item-shortview' }
+  },
+  {
+    block: 'product',
+    mods: {
+      type: 'shortview'
+    },
+    mix: { block: 'basket', elem: 'item-shortview' }
   }
 ]
 });
