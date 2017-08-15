@@ -16,7 +16,7 @@ block('page').content()(function() {
         block: 'page',
         elem: 'basket',
         elemMods: {
-          hide: true
+          // hide: true
         }
       }
     },
@@ -29,7 +29,7 @@ block('page').content()(function() {
         block: 'page',
         elem: 'basket',
         elemMods: {
-          // hide: true
+          hide: true
         }
       }
     }
