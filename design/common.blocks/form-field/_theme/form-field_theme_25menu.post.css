@@ -1,0 +1,34 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(form-field).mod(theme 25menu) {
+  /* display: inline-block; */
+  position: relative;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 0;
+  max-height: 40vh;
+  overflow: auto;
+
+  & + block(form-field) {
+    margin-top: map(25menu, content-padding);
+  }
+
+
+  .mod(invalid) {
+    block(input) {
+      background-color: map(25menu, color, red);
+
+      &:before {
+        background-color: #273c48;
+      }
+    }
+
+    block(message) {
+      display: block;
+      color: map(25menu, color, red);
+    }
+  }
+}

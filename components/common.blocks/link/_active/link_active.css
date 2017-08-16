@@ -1,0 +1,16 @@
+.link_active {
+  margin-left: 20px;
+  position: relative;
+}
+
+.link_active::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}

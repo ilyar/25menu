@@ -1,4 +1,11 @@
 .nav__item {
-  margin: 10px;
+  margin-bottom: 10px;
   display: block;
 }
+
+.link {
+  color: #363839;
+  text-decoration: none;
+  cursor: pointer;
+}
+

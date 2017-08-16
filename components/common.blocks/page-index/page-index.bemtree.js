@@ -1,3 +1,8 @@
 block('page-index').content()(function() {
-  return 'Index page content';
+  return [
+    {
+      block: 'items',
+      mix: { block: 'page-index', elem: 'inner' }
+    }
+  ];
 });

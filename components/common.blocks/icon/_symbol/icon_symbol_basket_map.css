@@ -1,0 +1,11 @@
+.icon_symbol_basket_map {
+  background-image: url(../svg/map-16.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 10px;
+  margin-top: 7px;
+  display: block;
+}
+

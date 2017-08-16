@@ -1,0 +1,5 @@
+block(list).mod(type description) {
+  display: block;
+  list-style-type: none;
+  padding-left: 0;
+}

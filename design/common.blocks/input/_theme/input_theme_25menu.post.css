@@ -1,0 +1,169 @@
+.input {
+
+}
+
+
+
+
+:root {
+
+}
+
+block(input).mod(theme 25menu) {
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+  }
+
+  .elem(box) {
+    position: relative;
+    user-select: none;
+    left: -12px;
+    -webkit-touch-callout: none;
+  }
+
+  .elem(control) {
+    position: relative;
+    width: 100%;
+    padding: .25em 0.1em .25em .5em;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background: 0 0;
+    line-height: 25px;
+    -webkit-appearance: none;
+
+    &::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgb(218, 226, 240, 0.4);
+      text-indent: 0
+    }
+
+    &::-moz-placeholder {
+      color: rgb(218, 226, 240, 0.4);
+      opacity: 1
+    }
+
+    &::-ms-clear {
+      display: none
+    }
+
+    &:-webkit-autofill {
+      border: 1px solid transparent;
+      background-color: transparent;
+      box-shadow: 0 0 0 1em inherit inset;
+      background-clip: padding-box;
+    }
+
+  }
+
+  .elem(clear) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 2em;
+    background-image: svg-load('../../icon/_symbol/icon_symbol_times.svg', fill: black);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+
+    .mod(visible) {
+      opacity: 0.3;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1
+      }
+    }
+  }
+
+  .mod(has-clear) .elem(control) {
+    text-overflow: ellipsis;
+    padding-right: 2em;
+  }
+
+  .mod(focused) {
+    z-index: 1;
+    background-color: rgb(218, 226, 242, 0.4);
+    border-radius: 3px;
+
+    .elem(control) {
+      text-overflow: clip
+    }
+  }
+
+  .mod(disabled) {
+    background: rgba(0, 0, 0, 0.08);
+
+    &:before,
+    .elem(clear) {
+      display: none
+    }
+
+    .elem(box),
+    .elem(control) {
+      color: rgba(0, 0, 0, 0.4);
+      cursor: default
+    }
+  }
+
+  .mod(invalid) {
+    background-color: red;
+
+    &:before {
+      background-color: #273c48;
+    }
+  }
+
+  .mod(width available) {
+    width: 100%
+  }
+
+  .mod(type password) .elem(control) {
+    text-overflow: clip
+  }
+
+  .mod(inverse) {
+
+    .elem(clear) {
+      background-image: svg-load('../../icon/_symbol/icon_symbol_times.svg', fill: map(25menu, color, white));
+    }
+  }
+
+}
+
+block(control-group) {
+  block(input).mod(theme 25menu) {
+    &:before {
+      right: 0
+    }
+  }
+
+  > block(input).mod(theme 25menu):last-child,
+  > :last-child block(input).mod(theme 25menu) {
+    &:before {
+      right: 1px
+    }
+  }
+}
+
+

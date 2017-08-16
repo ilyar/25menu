@@ -10,6 +10,7 @@ module.exports = {
     require('postcss-for'),
     require('postcss-simple-vars')(),
     require('postcss-nested'),
+    require('lost'),
     require('pobem'),
     require('postcss-url')({ url: 'inline' }),
     require('postcss-cssnext')(),

@@ -8,7 +8,10 @@ block('page').content()(function() {
       block: this.data.view
     },
     {
-      block: 'footer'
+      block: 'basket',
+      mods: {
+        type: 'open'
+      }
     }
   ];
 });

@@ -1,0 +1,50 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(text).mod(theme 25menu) {
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $size) {
+      font-size: map(25menu, font-size, $(size));
+    }
+  }
+
+
+  .mod(negative) {
+    color: map(25menu, color, red)
+  }
+
+  .mod(positive) {
+    color: map(25menu, color, green)
+  }
+
+  .mod(inverse) {
+    color: map(25menu, color, white)
+  }
+
+  .mod(nude) {
+    color: map(25menu, color, bermuda_light)
+  }
+
+  .mod(special) {
+    color: map(25menu, color, yellow)
+  }
+
+  .mod(strikeout) {
+    color: map(25menu, color, grey_dark)
+  }
+
+  .mod(script sup) {
+    line-height: 1;
+    font-size: .7em;
+    padding: 0 map(25menu, padding-horizontal);
+  }
+
+  .mod(script sub) {
+    line-height: 1;
+    font-size: .7em;
+    padding: 0 map(25menu, padding-horizontal);
+  }
+}

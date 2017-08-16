@@ -1,0 +1,224 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(checkbox).mod(theme 25menu) {
+  display: flex;
+  position: relative; /* fix #1538 */
+  font-size: 1em;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:hover {
+    cursor: pointer
+  }
+
+  .elem(control) {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    opacity: 0;
+    left: 0;
+    top: 0
+  }
+
+  .elem(box) {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 1em;
+    line-height: 1.5;
+    width: 1.5em;
+    height: 1.5em;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      background: transparent;
+      box-shadow: 0 0 0 1px map(25menu, color, bermuda_dark);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -.3em;
+      left: .125em;
+      width: 100%;
+      height: 100%;
+      color: map(25menu, color, green);
+      background-image: svg-load('../../icon/_symbol/icon_symbol_tip.svg', fill=map(25menu, color, green));
+      background-size: cover;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-.3em);
+      transition: transform .05s ease-out
+                , opacity .05s ease-out
+                , visibility 0s linear .05s
+    }
+  }
+
+  .elem(text) {
+    flex: 1;
+    color: map(25menu, color, bermuda_light);
+    font-size: 1em;
+    line-height: 1.5
+  }
+
+  .elem(box) + .elem(text),
+  .elem(text) + .elem(box) {
+    margin-left: .5em;
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $(size)) {
+      font-size: map(25menu, font-size, $(size));
+      /* min-width: 1.5em;
+      min-height: 1.5em; */
+    }
+  }
+
+  .mod(checked) {
+    .elem(box) {
+      /* background: rgba(153, 122, 0, 0.5); */
+
+      &:before {
+        /* background: map(25menu, color, elephant_light) */
+      }
+
+      &:after {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0s
+      }
+    }
+  }
+
+  .mod(focused) {
+    .elem(box):before {
+      box-shadow: 0 0 0 1px map(25menu, color, yellow)
+          , inset 0 0 0 1px map(25menu, color, yellow)
+    }
+  }
+
+  .mod(hovered) {
+    .elem(box) {
+      /* background: rgba(0, 0, 0, 0.3) */
+    }
+
+    .mod(checked) .elem(box) {
+      /* background: rgba(129, 103, 0, 0.6) */
+    }
+  }
+
+  .mod(disabled) {
+    cursor: default;
+    color: #999;
+
+    .elem(box) {
+      background: rgba(0, 0, 0, 0.08);
+
+      &:before {
+        display: none
+      }
+    }
+
+    .mod(checked) .elem(box) {
+      background: rgba(0, 0, 0, 0.15);
+
+      &:after {
+        opacity: 0.4
+      }
+    }
+  }
+
+  .mod(loading) {
+    .elem(box) {
+      animation-name: pulse;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite
+    }
+  }
+
+  .mod(type button) {
+    display: inline-block
+  }
+
+  .mod(type line) {
+    margin-right: 1em
+  }
+
+  .mod(type switch) {
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0
+    }
+
+    .elem(box) {
+      display: block;
+      border-radius: 1em;
+      width: 3em;
+
+      &:before {
+        border-radius: 1em;
+      }
+
+      &:after {
+        content: '';
+        width: 1.5em;
+        height: 1.5em;
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        background-color: map(25menu, color, grey_dark);
+        box-sizing: border-box;
+        background-clip: content-box;
+        padding: 3px;
+        background-image: none;
+        border-radius: 1em;
+        transform: translateX(0);
+        transition: transform .05s ease-out,
+                    background-color .05s ease-out;
+      }
+    }
+
+    &.mod(checked) {
+
+      .elem(box):after {
+        background-color: map(25menu, color, green);
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.7
+  }
+}
+
+/* hack for Safari only */
+_::-webkit-full-page-media,
+_:future,
+:root block(checkbox).mod(theme islands) .elem(box) {
+  pointer-events: none /* NOTE: Fix #1472 and #1590 */
+}

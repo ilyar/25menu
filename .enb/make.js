@@ -107,6 +107,10 @@ function getSourceLevels(platform) {
   });
 
   platformNames.forEach(function(name) {
+    levels.push({ path: path.join('node_modules', 'bem-forms', name + '.blocks'), check: false });
+  });
+
+  platformNames.forEach(function(name) {
     levels.push({ path: path.join('components', name + '.blocks'), check: true });
   });
 

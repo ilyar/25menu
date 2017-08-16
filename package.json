@@ -19,9 +19,12 @@
     "axios": "^0.16.2",
     "bem-components": "^6.0.1",
     "bem-core": "^4.2.1",
+    "bem-forms": "github:realetive/bem-forms#feature/xjst-v8",
     "ym": "^0.1.2"
   },
   "devDependencies": {
+    "bem-tools-core": "0.0.3",
+    "bem-tools-create": "^2.2.0",
     "bemhint": "^0.9.1",
     "bemhint-css-naming": "^1.0.1",
     "bemhint-deps-specification": "^1.0.0",
@@ -48,6 +51,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.4",
     "lodash": "^4.17.4",
+    "lost": "^8.2.0",
     "morgan": "^1.8.2",
     "node-eval": "^1.1.0",
     "node-notifier": "^5.1.2",

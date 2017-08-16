@@ -1,0 +1,21 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(fieldset).mod(theme 25menu) {
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+
+  .elem(legend) {
+    margin: 0;
+    text-transform: uppercase;
+
+    /* Blink bugfix */
+    padding: .75rem;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+  }
+}

@@ -1,0 +1,35 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(label).mod(theme 25menu) {
+  display: block;
+  color: map( 25menu, color, bermuda_light);
+  margin-bottom: .2em; /* magic */
+  width: 100%;
+
+  .mod(size xs) {
+    font-size: map(25menu, font-size, xs)
+  }
+
+  .mod(size s) {
+    font-size: map(25menu, font-size, s)
+  }
+
+  .mod(size m) {
+    font-size: map(25menu, font-size, m)
+  }
+
+  .mod(size l) {
+    font-size: map(25menu, font-size, l)
+  }
+
+  .mod(size xl) {
+    font-size: map(25menu, font-size, xl)
+  }
+
+  .mod(size xxl) {
+    font-size: map(25menu, font-size, xxl)
+  }
+}

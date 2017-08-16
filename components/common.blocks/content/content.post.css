@@ -1,0 +1,7 @@
+block(content) {
+  width: 100%;
+  box-sizing: border-box;
+  align-items: baseline;
+  vertical-align: baseline;
+  margin: 0
+}

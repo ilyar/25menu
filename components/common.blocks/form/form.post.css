@@ -1,0 +1,24 @@
+block(form) {
+  /* all: initial */
+  font: inherit;
+  color: inherit;
+
+  .elem(content) {
+    /* all: initial */
+    display: block;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0
+  }
+
+  .elem(footer) {
+    /* all: initial */
+    display: block;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    box-sizing: border-box
+  }
+}

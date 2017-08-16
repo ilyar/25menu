@@ -1,0 +1,76 @@
+.status {
+}
+
+.status__title {
+  font-size: 44px;
+  margin-bottom: 40px;
+}
+
+.status__delivery-info {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.status__time-box {
+  width: 50%;
+}
+
+.status__current-time {
+  width: 50%;
+}
+
+.status__offer-time {
+  display: flex;
+  width: 183px;
+  justify-content: space-between;
+  color: #363839;
+  margin-bottom: 5px;
+}
+
+.status__timer {
+  color: #66CC77;
+  font-size: 176px;
+  line-height: 140px;
+  font-weight: bold;
+}
+
+.goods {
+  width: 99%;
+  height: 552px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.goods__title {
+  font-size: 24px;
+  display: flex;
+  margin-bottom: 25px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.goods-result {
+  position: absolute;
+  display: flex;
+  top: 105px;
+}
+
+.goods-result div {
+  margin-right: 15px;
+}
+
+.order-info {
+  display: flex;
+}
+
+.order-info div {
+  width: 148px;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.order-info .title {
+  margin-bottom: 5px;
+}

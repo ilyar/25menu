@@ -1,0 +1,20 @@
+.close-btn_type_popup {
+  transform: rotate(45deg);
+}
+
+.close-btn_type_popup::before {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: #808080;
+  position: absolute;
+}
+
+.close-btn_type_popup::after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: #808080;
+  position: absolute;
+  transform: rotate(90deg);
+}

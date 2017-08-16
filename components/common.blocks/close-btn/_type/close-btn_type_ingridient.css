@@ -1,0 +1,10 @@
+.close-btn_type_ingridient {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+}

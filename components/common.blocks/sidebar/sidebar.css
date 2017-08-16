@@ -1,0 +1,16 @@
+.sidebar {
+  padding: 16px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar__header .link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #363839;
+}
+
+.sidebar__content {
+  height: 412px;
+  width: 100%;
+}
+

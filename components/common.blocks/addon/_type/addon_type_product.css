@@ -1,0 +1,31 @@
+.addon_type_product {
+    cursor: pointer;
+    width: 260px;
+    height: 33px;
+    display: flex;
+}
+
+.addon_type_product * {
+  align-self: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.addon__button {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.addon__descr {
+  margin-right: 5px;
+}
+
+.addon__weight {
+  color: #B4B4B4;
+}
+
+.addon__price {
+  flex: 1;
+  text-align: right;
+}

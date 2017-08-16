@@ -1,0 +1,15 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(progressbar).mod(theme 25menu) {
+  overflow: hidden;
+  width: 100%;
+  background-color: map(25menu, color, grey);
+
+  .elem(bar) {
+    height: 2px;
+    background-color: map(25menu, color, green)
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "modules": {
+        "bem-tools": {
+            "plugins": {
+                "create": {
+                    "techs": [
+                      "bemtree.js",
+                      "css",
+                      "js",
+                      "deps.js"
+                    ],
+                    "techsTemplates": {
+                        "bemtree.js": "bemhtml.js"
+                    },
+                    "levels": {
+                        "components/common.blocks": {
+                            "default": true
+                        },
+                        "design/common.blocks": {
+                            "techs": [ "css" ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

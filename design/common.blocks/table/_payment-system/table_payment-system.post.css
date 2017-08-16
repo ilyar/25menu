@@ -1,0 +1,14 @@
+block(table).mod(payment-system) {
+  table-layout: fixed;
+
+  .elem(cell).mod(image) {
+    width: 30%;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+
+    block(image) {
+      max-height: 50px;
+    }
+  }
+}

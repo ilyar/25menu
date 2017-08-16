@@ -1,0 +1,8 @@
+.logo_small {
+  width: 40px;
+  height: 40px;
+  background-image: url(fake-sign.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+}

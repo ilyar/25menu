@@ -1,0 +1,111 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(menu).mod(theme 25menu) {
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+  background-color: map(25menu, color, white);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */
+  &:before,
+  &:after {
+    display: block;
+    content: ''
+  }
+
+  @each $size in (xs, s, m, l, xl, xxl) {
+    .mod(size $size) {
+      font-size: map(25menu, font-size, $(size));
+
+      &:before,
+      &:after {
+        height: .25em;
+      }
+    }
+  }
+
+  .elem(group) {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-width: 1px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0
+    }
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0
+    }
+
+    & + & {
+      border-top: 0
+    }
+  }
+
+  .elem(group-title) {
+    padding: map(25menu, content-padding);
+    box-sizing: border-box;
+  }
+
+  .mod(navbar) {
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    .elem(item):nth-child(1) block(link) {
+      border: 1rem solid #21343e;
+      border-left: none;
+      border-right-width: 3rem;
+      background-color: #17252c;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        right: -1rem;
+        position: absolute;
+        bottom: 0px;
+        border: 1rem solid #17252c;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        box-sizing: border-box;
+        border-top-width: 1.4rem;
+        border-right-width: 0;
+        border-bottom-width: 1.35rem;
+      }
+    }
+
+    .elem(group) {
+      padding: 0;
+      border: none;
+    }
+
+    .elem(group-title) {
+      text-transform: uppercase;
+      color: map(25menu, color, bermuda_light);
+      background-color: map(25menu, color, elephant);
+    }
+  }
+}
+
+.menu_theme_25menu .menu__title {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.menu_theme_25menu .menu__inner {
+  width: 100%;
+  overflow: auto;
+  margin-top: 12px;
+}

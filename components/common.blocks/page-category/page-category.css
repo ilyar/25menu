@@ -1,0 +1,32 @@
+
+.page-category {
+  max-width: 1120px;
+  flex: 1;
+  width: 100%;
+}
+
+.page-category__inner {
+  overflow: scroll;
+  box-sizing: border-box;
+  flex: 1;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 20px;
+}
+
+.page-category__card-group {
+  max-width: 1120px;
+  padding: 10px 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+
+.page-category__inner::-webkit-scrollbar { width: 0; }
+.page-category__inner { -ms-overflow-style: none; }
+.page-category__inner { overflow: -moz-scrollbars-none; }

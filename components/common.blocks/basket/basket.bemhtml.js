@@ -1,0 +1,1 @@
+block('basket').js()( true )

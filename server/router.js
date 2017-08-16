@@ -2,7 +2,7 @@ const render = require('./render').render,
   axios = require('axios');
 
 const client = axios.create({
-  baseURL: 'https://api.github.com/'
+  baseURL: 'http://delivery.breadhead.ru'
 });
 
 const request = options => {
@@ -39,7 +39,17 @@ const isCallerMobile = req => {
 module.exports = function( app ) {
 
   app.get( '/', function( req, res ) {
-    render( req, res, { page: 'index', bundle: isCallerMobile( req ) ? 'touch' : 'desktop' } )
+    render( req, res, {
+      page: 'index',
+      bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+      items: [
+        {
+          title: 'Title',
+          price: 500,
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores amet, pariatur obcaecati vel perspiciatis aspernatur nam, voluptatum, nemo eveniet maiores, velit quidem natus beatae? Ut eos reiciendis tenetur, fugiat minima.'
+        }
+      ]
+    } )
   });
 
   app.get( '/about/', function( req, res ) {
@@ -48,10 +58,34 @@ module.exports = function( app ) {
       .catch(() => render(req, res, { page: 'index', view: '404' }) );
   });
 
-  app.get('/:item', function(req, res) {
+  app.get('/cabinet', function(req, res) {
+  render(req, res, {
+    page: 'cabinet',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop'
+    })
+  });
+
+  app.get('/order/', function(req, res) {
+  render(req, res, {
+    page: 'order',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.order
+    })
+  });
+
+  app.get('/i/:category', function(req, res) {
+  render(req, res, {
+    page: 'category',
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.category
+    })
+  });
+
+  app.get('/i/:category/:item', function(req, res) {
   render(req, res, {
     page: 'item',
-    title: 'it\'s ' + req.params.item,
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.item,
     })
   });
 

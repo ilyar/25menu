@@ -1,0 +1,140 @@
+block(calendar) {
+  color: rgba(0, 0, 0, .9);
+  background: #fff;
+
+  display: inline-block;
+
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+  padding: 0;
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  .elem(name) {
+    text-align: center
+  }
+
+  .elem(layout) {
+    border-spacing: 0;
+    border-collapse: separate
+  }
+
+  .elem(title) {
+    padding: 20px 15px 5px;
+    line-height: 20px;
+    vertical-align: middle
+  }
+
+  .elem(layout) {
+    padding: 0 15px 15px
+  }
+
+  .elem(dayname),
+  .elem(day) {
+    font-size: 13px
+  }
+
+  .elem(dayname) {
+    line-height: 34px;
+    font-weight: 300;
+
+    font-size: 11px;
+    cursor: default;
+    text-align: center;
+    text-transform: uppercase
+  }
+
+  .elem(day) {
+    line-height: 30px;
+
+    width: 30px;
+
+    text-align: center
+  }
+
+  .elem(inner) {
+    cursor: pointer
+  }
+
+  .elem(arrow) {
+    width: 18px;
+    height: 18px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    background-repeat: no-repeat;
+    background-position: center
+  }
+
+  .elem(arrow):hover {
+    opacity: 1
+  }
+
+  .elem(arrow).mod(direction left) {
+    float: left
+  }
+
+  .elem(arrow).mod(direction right) {
+    float: right
+  }
+
+  .elem(day).mod(type weekend) {
+    font-weight: bold
+  }
+
+  .elem(day).mod(state current) {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+
+    margin: 0 -1px 0 0;
+
+    text-align: center;
+
+    outline: 0;
+
+    user-select: none
+  }
+
+  .elem(day).mod(state current):after {
+    background: rgba(178, 12, 0, 1)
+  }
+
+  .elem(day).mod(state current):after,
+  .elem(day).mod(state current):before {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    left: -1px;
+
+    content: '';
+
+    border-radius: 3px
+  }
+
+  .elem(day).mod(state current):after {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px
+  }
+
+  .elem(day).mod(state current) .elem(inner) {
+    position: relative;
+    z-index: 1
+  }
+
+  .elem(day).mod(type off) .elem(inner),
+  .elem(day).mod(type weekend-off) .elem(inner) {
+    cursor: default;
+    opacity: .3
+  }
+
+  .elem(arrow).mod(disabled) {
+    visibility: hidden
+  }
+}

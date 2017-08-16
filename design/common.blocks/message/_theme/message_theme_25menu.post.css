@@ -1,0 +1,13 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+.block(message).mod(theme 25menu) {
+  font-size: .75rem;
+  padding-top: .5em;
+
+  .mod(invalid) {
+    color: map(25menu, color, red);
+  }
+}

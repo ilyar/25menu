@@ -1,0 +1,18 @@
+html {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.page {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.page__aside {
+  overflow: auto;
+  min-width: 144px;
+  box-sizing: border-box;
+}

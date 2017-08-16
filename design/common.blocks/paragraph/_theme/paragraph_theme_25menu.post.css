@@ -1,0 +1,44 @@
+@use postcss-map {
+  basePath: "./theme/";
+  maps: ["25menu.yml"]
+}
+
+block(paragraph).mod(theme 25menu) {
+  margin: 0;
+
+  & + & {
+    margin-top: .5em;
+    margin-bottom: 0
+  }
+  
+  .mod(size xs) {
+    font-size: map(25menu, font-size, xs);
+    line-height: map(25menu, line-height, xs)
+  }
+
+  .mod(size s) {
+    font-size: map(25menu, font-size, s);
+    line-height: map(25menu, line-height, s)
+  }
+
+  .mod(size m) {
+    font-size: map(25menu, font-size, m);
+    line-height: map(25menu, line-height, m)
+  }
+
+  .mod(size l) {
+    font-size: map(25menu, font-size, l);
+    line-height: map(25menu, line-height, l)
+  }
+
+  .mod(size xl) {
+    font-size: map(25menu, font-size, xl);
+    line-height: map(25menu, line-height, xl)
+  }
+
+  .mod(size xxl) {
+    font-size: map(25menu, font-size, xxl);
+    line-height: map(25menu, line-height, xxl)
+  }
+}
+
