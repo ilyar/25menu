@@ -1,20 +1,20 @@
 ({
-    shouldDeps: [
-        'form',
-        'form-field',
-        {
-            block: 'input',
-            mods: {
-                theme: '25menu',
-                size: 'm',
-                type: '*'
-            }
-        },
-        {
-          block: 'close-btn',
+  shouldDeps: [
+      'form',
+      'form-field',
+      {
+          block: 'input',
           mods: {
-            type: 'popup'
+              theme: '25menu',
+              size: 'm',
+              type: '*'
           }
+      },
+      {
+        block: 'close-btn',
+        mods: {
+          type: 'popup'
         }
-    ]
+      }
+  ]
 })

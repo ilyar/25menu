@@ -3,8 +3,7 @@ block('basket').content()(function() {
 });
 
 
-
-block('basket').mod('type', 'closed').content()(function(){
+block('basket').mod('type', 'open').content()(function(){
   return [
   {
    block: 'icon',
@@ -18,33 +17,6 @@ block('basket').mod('type', 'closed').content()(function(){
     mix: { block: 'basket_type_closed', elem: 'bill' },
     content: '2130 Р'
   },
-  {
-    block: 'product',
-    mods: {
-      type: 'shortview'
-    },
-    mix: { block: 'basket', elem: 'item-shortview' }
-  },
-  {
-    block: 'product',
-    mods: {
-      type: 'shortview'
-    },
-    mix: { block: 'basket', elem: 'item-shortview' }
-  },
-  {
-    block: 'product',
-    mods: {
-      type: 'shortview'
-    },
-    mix: { block: 'basket', elem: 'item-shortview' }
-  }
-]
-});
-
-
-block('basket').mod('type', 'open').content()(function(){
-  return [
   {
    block: 'close-btn',
    mods: {
@@ -238,56 +210,55 @@ block('basket').mod('type', 'open').content()(function(){
         }
         ]
       }
-    ]
-  },
-  {
-    elem: 'content',
-    mix: { block: 'basket', elem: 'content' },
-    content: [
-    {
-      elem: 'empty-block',
-      mix: { block: 'basket', elem: 'is_empty' },
-      content: 'В КОРЗИНЕ ПОКА ПУСТО'
+      ]
     },
     {
-      block: 'product',
-      mix: { block: 'basket', elem: 'good' },
-      mods: {
-        type: 'basket'
-      }
-    },
-    {
-      block: 'product',
-      mix: { block: 'basket', elem: 'good' },
-      mods: {
-        type: 'basket'
-      }
-    }
-    ]
-  },
-  {
-    elem: 'footer',
-    mix: { block: 'basket', elem: 'footer' },
-    content: [
+      elem: 'content',
+      mix: { block: 'basket', elem: 'content' },
+      content: [
       {
-        elem: 'result',
-        content: [
-        {
-          block: 'input',
-          mix: { block: 'footer', elem: 'promocode' },
-          mods: {
-            size: 'm',
-            width: 'available',
-            theme: '25menu'
-          },
-          placeholder: 'Ввести промокод'
-        },
-        {
-          block: 'bill',
-          mix: { block: 'final-price' },
-          content: '2130 Р'
+        elem: 'empty-block',
+        mix: { block: 'basket', elem: 'is_empty' },
+        content: 'В КОРЗИНЕ ПОКА ПУСТО'
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
         }
-        ]
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
+      }]
+    },
+    {
+      elem: 'footer',
+      mix: { block: 'basket', elem: 'footer' },
+      content: [
+        {
+          elem: 'result',
+          content: [
+          {
+            block: 'input',
+            mix: { block: 'footer', elem: 'promocode' },
+            mods: {
+              size: 'm',
+              width: 'available',
+              theme: '25menu'
+            },
+            placeholder: 'Ввести промокод'
+          },
+          {
+            block: 'bill',
+            mix: { block: 'final-price' },
+            content: '2130 Р'
+          }
+          ]
       },
       {
           block: 'button',
@@ -301,12 +272,10 @@ block('basket').mod('type', 'open').content()(function(){
       {
         block: 'agreement',
         mix: { block: 'basket', elem: 'agreement' }
-      }
+      }]
+    }
     ]
   }
-  ]
-}
 ]
 });
-
 

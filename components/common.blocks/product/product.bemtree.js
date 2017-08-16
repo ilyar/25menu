@@ -129,6 +129,10 @@ block('product').mod('type', 'basket').content()(function(){
       ]
     },
     {
+      elem: 'short-counter',
+      content: '2'
+    },
+    {
       elem: 'info',
       content: [
       {
@@ -195,16 +199,16 @@ block('product').mod('type', 'basket').content()(function(){
 });
 
 
-block('product').mod('type', 'shortview').content()(function(){
-    return [
-    {
-      block: 'image',
-      url: 'http://lorempixel.com/40/40/cats'
-    },
-    {
-      elem: 'short-counter',
-      content: '2'
-    }
-    ]
-});
+// block('product').mod('type', 'shortview').content()(function(){
+//     return [
+//     {
+//       block: 'image',
+//       url: 'http://lorempixel.com/40/40/cats'
+//     },
+//     {
+//       elem: 'short-counter',
+//       content: '2'
+//     }
+//     ]
+// });
 

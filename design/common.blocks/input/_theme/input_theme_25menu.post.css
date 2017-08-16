@@ -6,19 +6,11 @@
 
 
 :root {
-  --color: map(25menu, color, black);
-  --background-color: map(25menu, color, white);
-  --border-color: map(25menu, color, bermuda_dark);
-  --border-color_focus: 0 0 0 1px map(25menu, color, yellow);
-  --border-radius: 0;
+
 }
 
 block(input).mod(theme 25menu) {
   position: relative;
-  color: var(--color);
-  background-color: var(--border-color);
-  border-radius: var(--border-radius);
-
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:before {
@@ -28,8 +20,6 @@ block(input).mod(theme 25menu) {
     right: 1px;
     bottom: 1px;
     left: 1px;
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
   }
 
   .elem(box) {
@@ -49,7 +39,6 @@ block(input).mod(theme 25menu) {
     outline: none;
     background: 0 0;
     line-height: 25px;
-
     -webkit-appearance: none;
 
     &::-webkit-search-decoration {
@@ -61,12 +50,12 @@ block(input).mod(theme 25menu) {
     }
 
     &::-webkit-input-placeholder {
-      color: map(25menu, color, blue_light-gray);
+      color: rgb(218, 226, 240, 0.4);
       text-indent: 0
     }
 
     &::-moz-placeholder {
-      color: map(25menu, color, blue_light-gray);
+      color: rgb(218, 226, 240, 0.4);
       opacity: 1
     }
 
@@ -77,7 +66,7 @@ block(input).mod(theme 25menu) {
     &:-webkit-autofill {
       border: 1px solid transparent;
       background-color: transparent;
-      box-shadow: 0 0 0 1em var(--background-color) inset;
+      box-shadow: 0 0 0 1em inherit inset;
       background-clip: padding-box;
     }
 
@@ -89,7 +78,7 @@ block(input).mod(theme 25menu) {
     bottom: 0;
     right: 0;
     width: 2em;
-    background-image: svg-load('../../icon/_symbol/icon_symbol_times.svg', fill: map(25menu, color, black));
+    background-image: svg-load('../../icon/_symbol/icon_symbol_times.svg', fill: black);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,7 +127,7 @@ block(input).mod(theme 25menu) {
   }
 
   .mod(invalid) {
-    background-color: map(25menu, color, red);
+    background-color: red;
 
     &:before {
       background-color: #273c48;
@@ -154,11 +143,6 @@ block(input).mod(theme 25menu) {
   }
 
   .mod(inverse) {
-    --color: map(25menu, color, white);
-    --background-color: map(25menu, color, black_transparent_30);
-    --border-color: map(25menu, color, bermuda_dark);
-    --border-color_focus: 0 0 0 1px map(25menu, color, white);
-    --border-radius: 0;
 
     .elem(clear) {
       background-image: svg-load('../../icon/_symbol/icon_symbol_times.svg', fill: map(25menu, color, white));

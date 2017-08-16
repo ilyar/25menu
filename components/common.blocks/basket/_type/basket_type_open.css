@@ -191,3 +191,13 @@
   height: 28px;
   margin-top: 8px;
 }
+
+
+/* Стили для скрытого состояния закрытого стейта корзины */
+.basket_type_open .basket__cart {
+  display: none;
+}
+
+.basket_type_open .basket_type_closed__bill {
+  display: none;
+}
