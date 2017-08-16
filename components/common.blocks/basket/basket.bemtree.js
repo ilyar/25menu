@@ -234,6 +234,41 @@ block('basket').mod('type', 'open').content()(function(){
         mods: {
           type: 'basket'
         }
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
+      },
+      {
+        block: 'product',
+        mix: { block: 'basket', elem: 'good' },
+        mods: {
+          type: 'basket'
+        }
       }]
     },
     {

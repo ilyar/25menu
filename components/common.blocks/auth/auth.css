@@ -26,6 +26,11 @@
    margin-top: 12px;
  }
 
+ .auth__input .input_focused {
+   background-color: #fff!important;
+   border: 1px solid rgb(63, 63, 66, 0.6);
+ }
+
  .auth__input .input .input__control {
    color: black;
  }
@@ -34,6 +39,7 @@
    margin: 8px 0 12px ;
    display: inline-block;
    color: #F05565;
+   outline: none;
  }
 
  .auth__enter {

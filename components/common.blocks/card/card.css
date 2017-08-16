@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.card:not(.card_type_special):hover {
+  border: 1px solid rgb(63, 63, 66, 0.6);
+}
+
 .card__header {
   height: 50%;
   overflow: hidden;
@@ -50,3 +54,4 @@
   margin-left: -32px;
   width: 64px;
 }
+
