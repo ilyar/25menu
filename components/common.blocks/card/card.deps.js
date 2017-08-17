@@ -20,7 +20,7 @@
     {
       block: 'price',
       mods: {
-        type: '*'
+        type: 'card'
       }
     }
   ]

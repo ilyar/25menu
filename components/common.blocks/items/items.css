@@ -13,6 +13,7 @@
   lost-column: 1/4;
   z-index: 1;
 }
+
 .items__title {
   font-size: 56px;
   margin-bottom: 30px;
@@ -59,4 +60,25 @@
 
 .items__footer {
   margin-top: 80px;
+  max-width: 1118px;
+}
+
+/* Стили для основного каталога на маленьких экранах*/
+@media screen and (max-width: 1280px) {
+  .items__card-group {
+      max-width: 780px;
+  }
+
+  .page-index {
+      max-width: 780px;
+  }
+
+  .page-index__inner {
+      max-width: 780px;
+  }
+
+  .items__card {
+    lost-column: 1/3;
+  }
+
 }

@@ -3,4 +3,9 @@
     height: 48px;
     border-radius: 50%;
     background-color: #363839;
+    background-image: url(../../icon/svg/close-popup.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 28px;
+    background-size: 28px;
 }

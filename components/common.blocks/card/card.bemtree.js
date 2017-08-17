@@ -66,6 +66,9 @@ block('card').mod('type', 'usual').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'}
       }
       ]
@@ -151,6 +154,9 @@ block('card').mod('type', 'pizza').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
@@ -214,6 +220,9 @@ block('card').mod('type', 'roll').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
@@ -258,6 +267,9 @@ block('card').mod('type', 'small').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }

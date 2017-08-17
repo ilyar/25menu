@@ -1,0 +1,1 @@
+block('price').js()( true )

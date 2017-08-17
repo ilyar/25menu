@@ -14,7 +14,7 @@
         {
           block: 'price',
           mods: {
-            type: 'product'
+            type: '*'
           }
         },
         {
