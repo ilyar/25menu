@@ -183,19 +183,6 @@ block('card').mod('type', 'info').content()(function(){
     }]
 });
 
-block('card').mod('chosen', true).content()(function(){
-  return [
-  applyNext(),
-    {
-      block: 'icon',
-      mods: {
-        symbol: 'cart'
-      },
-      mix: { block: 'card', elem: 'popup' }
-    }
-    ]
-});
-
 block('card').mod('type', 'roll').content()(function(){
   return [ {
       elem: 'header',
@@ -233,16 +220,6 @@ block('card').mod('type', 'roll').content()(function(){
       }
       ]
     }]
-});
-
-block('card').mod('checked', true).content()(function(){
-  return [
-    applyNext(),
-    {
-      block: 'arrow',
-      mix: { block: 'card', elem: 'arrow' }
-    }
-  ]
 });
 
 block('card').mod('type', 'small').content()(function(){

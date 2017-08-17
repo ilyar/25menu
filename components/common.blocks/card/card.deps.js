@@ -10,7 +10,6 @@
     },
     'image',
     'button',
-    'arrow',
     'price',
     {
       block: 'icon',

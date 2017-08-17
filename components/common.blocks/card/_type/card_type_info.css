@@ -1,0 +1,10 @@
+.card_type_info {
+
+}
+
+
+.card_type_info .description__main-info {
+  height: 160px;
+  display: block;
+  overflow: hidden;
+}

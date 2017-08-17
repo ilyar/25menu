@@ -1,0 +1,1 @@
+block('items').js()( true )

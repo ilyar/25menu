@@ -12,13 +12,6 @@ provide(bemDom.declBlock(this.name, {
       }
     },
     type:{
-      // open: function() {
-      //   let _this = this;
-      //   this._domEvents('close').on('click', function() {
-      //     console.log('22')
-      //     _this.setMod('type','closed');
-      //   })
-      // },
       closed: function() {
         this._domEvents().on('click', function() {
           this.setMod('type','open');
@@ -26,6 +19,7 @@ provide(bemDom.declBlock(this.name, {
       }
     }
   }
+
 }));
 
 });
