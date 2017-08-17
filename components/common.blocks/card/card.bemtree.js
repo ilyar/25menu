@@ -66,8 +66,7 @@ block('card').mod('type', 'usual').content()(function(){
       },
       {
         block: 'price',
-        mix: { block: 'card', elem: 'price_block'},
-        content: '150 Р'
+        mix: { block: 'card', elem: 'price_block'}
       }
       ]
     }]

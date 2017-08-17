@@ -139,7 +139,7 @@ block('items').content()(function() {
           block: 'card',
           mix: { block: 'items', elem: 'card' },
           mods: {
-            type: 'usual',
+            type: 'usual'
           }
         },
         {

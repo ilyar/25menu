@@ -1,6 +1,6 @@
 .price {
   padding: 8px 12px;
-  width: 100%;
+  width: 64px;
   box-sizing: border-box;
   background-color: #363839;
   color: white;
@@ -8,7 +8,29 @@
   font-weight: bold;
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
 }
+
+.price:hover {
+  background-color: #FF6673;
+  transition: 0.2s;
+  width: 88px;
+}
+
+.price:hover::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../icon/svg/cart-plus.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+}
+
+
 
 
 .price__minus,
