@@ -2,9 +2,30 @@
   position: relative;
 }
 
-.card__arrow {
+.card_checked::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: -18px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.card_checked::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -22px;
   left: 50%;
   margin-left: -17px;
+  width: 17px;
+  height: 17px;
+  z-index: 2;
+  border-top: 1px solid #363839;
+  border-left: 1px solid #363839;
+  transform: rotate(45deg);
+  background-color: white;
 }

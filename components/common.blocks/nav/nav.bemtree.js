@@ -3,76 +3,73 @@ block('nav').content()(function() {
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Акции'
     },
     {
       block: 'link',
-      mods: {
-        active: true
-      },
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Пиццы'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Роллы'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Суши'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Вок'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Паста'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Боулы'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Закуски'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Супы'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Горячее'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Десерты'
     },
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Напитки'
     },
     {
@@ -81,7 +78,7 @@ block('nav').content()(function() {
         type: 'important'
       },
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Обеды'
     },
     {
@@ -90,7 +87,7 @@ block('nav').content()(function() {
         type: 'important'
       },
       mix: { block: 'nav', elem: 'item' },
-      url: 'https://babeholder.com',
+      url: '#',
       content: 'Наборы'
     }
   ]

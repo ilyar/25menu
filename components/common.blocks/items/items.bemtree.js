@@ -84,17 +84,11 @@ block('items').content()(function() {
           mix: { block: 'items', elem: 'title' }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'usual',
-                checked: true
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'usual'
+          }
         },
         {
           elem: 'popup',
@@ -105,76 +99,32 @@ block('items').content()(function() {
           ]
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                chosen: true
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'info'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'info'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'pizza'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'pizza'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'special'
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                checked: true
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'roll'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'roll'
+          }
         }
       ]
     },
@@ -182,94 +132,44 @@ block('items').content()(function() {
       content: [
         {
           block: 'title',
-          content: 'Пиццы',
+          content: 'Cалаты',
           mix: { block: 'items', elem: 'title' }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'usual',
-                checked: true
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'usual',
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                chosen: true
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'info'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'info'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'pizza'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'pizza'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special'
+          }
         },
         {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'special'
-              }
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'roll'
+          }
         },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                checked: true
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'roll'
-              }
-            }
-          ]
-        }
       ]
     },
     {
