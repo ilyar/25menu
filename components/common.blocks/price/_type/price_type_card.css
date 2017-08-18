@@ -28,24 +28,55 @@
   top: 6px;
 }
 
-
 .price_type_card:not(.price_pressed) .price__button_part_right {
   display: none;
 }
 
 /* Нажатый стейт кнопки*/
 .price_pressed {
+  padding: 0;
+  height: 32px;
   width: 144px;
   margin-left: -72px;
   background-color: #FF6673;
   transition: 0.2s;
 }
 
-.price_pressed {
-  display: flex;
+.price_type_card.price_pressed .price__button_part_left {
+  width: 30%;
+  line-height: 32px;
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  padding: 0px 12px;
 }
 
-.price_type_card .price__button_part_right {
-  width: 100%;
+.price_type_card.price_pressed .price__value{
+  height: 100%;
+}
+
+.price_type_card.price_pressed .price__button_part_right  {
+  width: 70%;
+}
+
+.price_type_card.price_pressed .price__counter {
   display: flex;
+  justify-content: space-around;
+  padding-top: 3px;
+}
+
+.price_type_card.price_pressed .price__quantity {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: initial;
+  line-height: 24px;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+
+.price_type_card.price_pressed .price__minus,
+.price_type_card.price_pressed .price__plus {
+  width: 24px;
+  height: 24px;
+  position: relative;
 }

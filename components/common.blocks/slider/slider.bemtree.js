@@ -15,8 +15,9 @@ block('slider').content()(function() {
       },
       {
         elem: 'right'
-      },
-    ]},
+      }
+      ]
+    },
     {
       elem: 'content',
       content: this.ctx.items.map( item => {
@@ -33,6 +34,10 @@ block('slider').content()(function() {
           ]
         }
       })
+    },
+    {
+      block: 'pagination',
+      mix: { block: 'slider', elem: 'pagination' }
     }
   ]
 });

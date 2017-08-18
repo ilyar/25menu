@@ -1,7 +1,5 @@
 .card_type_special {
   background: linear-gradient(180deg, rgb(180, 38, 71), rgb(255, 137, 108));
-  border: 0;
-/*  overflow: hidden;*/
 }
 
 .card_type_special .description__main-info {
@@ -21,4 +19,14 @@
   margin: 10px 0 0 25px;
   color: white;
   text-align: left;
+}
+
+.card_type_special .card__wrapper {
+  border: 5px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
 }

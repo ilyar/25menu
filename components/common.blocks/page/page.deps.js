@@ -17,13 +17,6 @@
     },
     'sidebar',
     'body',
-    'footer',
-    'items',
-    {
-    block: 'product',
-    mods: {
-      type: 'item'
-    }
-    }
+    'footer'
   ]
 })

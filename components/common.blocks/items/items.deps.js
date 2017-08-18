@@ -10,17 +10,18 @@
         block: 'title'
       },
       {
-        block: 'product',
-        mods: {
-          type: 'item'
-        }
-      },
-      {
         block: 'card',
         mods: {
           type: '*',
-          checked: true,
-          chosen: true
+          checked: true
+        }
+      },
+      {
+        block: 'product',
+        mods: {
+          type: 'item',
+          special: true,
+          info: true
         }
       },
       {

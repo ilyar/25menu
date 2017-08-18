@@ -1,10 +1,35 @@
 .card_type_info {
-
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
 }
 
 
 .card_type_info .description__main-info {
-  height: 160px;
   display: block;
   overflow: hidden;
+  font-weight: bold;
+}
+
+
+.card_type_info .card__header .image {
+  border-radius: 50%;
+  width: 135px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -65px;
+}
+
+.card_type_info .card__header {
+  position: absolute;
+  bottom: 40px;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.card_type_info .description__main-info {
+    overflow: hidden;
+    height: 96px;
 }

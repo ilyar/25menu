@@ -1,12 +1,11 @@
 .card {
   height: 336px;
-  border: 1px solid #E6E6E6;
   display: block;
   box-sizing: border-box;
   position: relative;
 }
 
-.card:not(.card_type_special):hover {
+.card:hover {
   border: 1px solid rgb(63, 63, 66, 0.6);
 }
 

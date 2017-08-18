@@ -12,6 +12,7 @@
 .items__card {
   lost-column: 1/4;
   z-index: 1;
+  border: 1px solid #e6e6e6;
 }
 
 .items__title {
@@ -22,6 +23,7 @@
 .items__popup {
   position: relative;
   z-index: 0;
+  width: 100%;
 }
 
 .items__arrow {
@@ -33,15 +35,21 @@
 .items__info-block {
   width: 100%;
   display: flex;
-  justify-content: space-around;
   margin-top: 30px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .items__info-block_card {
-  max-width: 336px;
+  width: 50%;
   height: 128px;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
+}
+
+.items__info-block_card:first-child {
+  border-right: 1px solid #e6e6e6;
 }
 
 .items__info-block_card_title {
@@ -50,12 +58,14 @@
 
 .items__info-block_card_offer {
   font-weight: normal;
+  display: inline-block;
 }
 
 .items__info-block_card .link {
   text-decoration: none;
   color: #F05565;
   font-weight: normal;
+  margin-left: 10px;
 }
 
 .items__footer {

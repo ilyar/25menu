@@ -24,15 +24,13 @@
 .price_type_product .call-to-action {
   padding-top: 15px;
   padding-left: 35px;
-  display: none;
 }
 
 .price_type_product .price__counter_product {
-  display: flex;
   width: 100%;
   padding-top: 8px;
   justify-content: space-around;
-  /*display: none;*/
+  display: none;
 }
 
 .price_type_product .price__minus,
@@ -48,20 +46,21 @@
 }
 
 .price_type_product .price__quantity {
-  padding-top: 8px;
+  padding-top: 7px;
   box-sizing: border-box;
   z-index: 2;
   text-align: center;
-}
-
-.price_type_product .price__quantity::before {
-  content: '';
-  display: block;
-  position: absolute;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: rgb(218,226,242,0.2);
-  top: 0;
-  z-index: 1;
+  border: 1px solid rgb(255,255,255,0.2);
+}
+
+/* стили для нажатого стейта кнопки */
+.price_type_product.price_pressed .call-to-action {
+  display: none;
+}
+
+.price_type_product.price_pressed .price__counter_product {
+  display: flex;
 }

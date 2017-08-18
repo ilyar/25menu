@@ -8,8 +8,6 @@
     box-sizing: border-box;
     display: flex;
     overflow: hidden;
-    top: 12px;
-    margin-bottom: 12px;
 }
 
 .product_hide {
@@ -133,3 +131,5 @@
 .product__topping {
   margin-bottom: 40px;
 }
+
+

@@ -44,8 +44,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   z-index: 9999;
 }

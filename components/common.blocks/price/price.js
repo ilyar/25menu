@@ -1,5 +1,5 @@
 modules.define('price',
-  ['i-bem-dom', 'BEMHTML'],
+  ['i-bem-dom', 'BEMHTML', ],
   function(provide, bemDom, BEMHTML) {
 
 provide(bemDom.declBlock(this.name, {

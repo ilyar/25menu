@@ -17,61 +17,52 @@ block('items').content()(function() {
       },
       {
         elem: 'info-block',
-        content: [{
-          elem: 'info-block_card',
-          mods: {
-            delivery_info: true
-          },
-          content: [{
-                block: 'icon'
-              },{
-                elem: 'info-block_card_title',
-                content: 'Доставка в Петербурге.'
-              },
-              {
-                elem: 'info-block_card_offer',
-                content: 'Калининский, Васильеостровский и ещё 6 районов'
-              },
-              {
-                block: 'link',
-                url: "#",
-                content: 'Зоны доставки'
-          }]
-        },{
+        content: [
+        {
           elem: 'info-block_card',
           mods: {
             points_info: true
           },
-          content: [{
-                block: 'icon'
-              },{
-                elem: 'info-block_card_title',
-                content: 'Платите баллами'
-              },
-              {
-                elem: 'info-block_card_offer',
-                content: 'Возращаем 5% от стоимости заказа. Накапливайте и оплачивайте заказы'
-              }]
-        },{
+          content: [
+          {
+            block: 'icon'
+          },{
+            elem: 'info-block_card_title',
+            content: 'Начисляем баллы за заказ'
+          },
+          {
+            elem: 'info-block_card_offer',
+            content: 'Копите и платите меньше'
+          },
+          {
+            block: 'link',
+            url: "#",
+            content: 'Подробнее'
+          }
+          ]
+        },
+        {
           elem: 'info-block_card',
           mods: {
             sale_info: true
           },
-          content: [{
-                block: 'icon'
-              },{
-                elem: 'info-block_card_title',
-                content: 'Получите скидку '
-              },
-              {
-                elem: 'info-block_card_offer',
-                content: 'пригласите друзей '
-              },
-              {
-                block: 'link',
-                url: "#",
-                content: 'Смотреть карту'
-          }]
+          content: [
+          {
+            block: 'icon'
+          },{
+            elem: 'info-block_card_title',
+            content: 'Расскажите о нас друзьям'
+          },
+          {
+            elem: 'info-block_card_offer',
+            content: 'И мы подарим скидку 300 Р'
+          },
+          {
+            block: 'link',
+            url: "#",
+            content: 'Подробнее'
+          }
+          ]
         },
         ]
       }]
@@ -150,6 +141,17 @@ block('items').content()(function() {
           }
         },
         {
+          elem: 'popup',
+          content: [
+          {
+            block: 'product',
+            mods: {
+              info: true
+            }
+          }
+          ]
+        },
+        {
           block: 'card',
           mix: { block: 'items', elem: 'card' },
           mods: {
@@ -162,6 +164,61 @@ block('items').content()(function() {
           mods: {
             type: 'special'
           }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'roll'
+          }
+        }
+      ]
+    },
+    { elem: 'card-group',
+      content: [
+        {
+          block: 'title',
+          content: 'Cалаты',
+          mix: { block: 'items', elem: 'title' }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'usual'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'info'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'pizza'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special'
+          }
+        },
+        {
+          elem: 'popup',
+          content: [
+          {
+            block: 'product',
+            mods: {
+              special: true
+            }
+          }
+          ]
         },
         {
           block: 'card',

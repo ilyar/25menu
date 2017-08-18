@@ -7,21 +7,23 @@
   margin-bottom: 40px;
 }
 
-.header .link {
-  text-decoration: none;
-  color: #363839;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
 .header__workinfo {
   display: flex;
   width: 50%;
 }
 
-.header__title {
-  color: #F05565;
-  margin: 0 15px 0 10px;
+.header .link {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.header__hours {
+  color: #808080;
+  opacity: 0.8;
+  font-size: 12px;
+  line-height: 22px;
+  margin: 0 10px 0 10px;
 }
 
 .header__login-area {

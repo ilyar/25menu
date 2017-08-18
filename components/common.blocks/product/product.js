@@ -1,6 +1,6 @@
 modules.define('product',
-  ['i-bem-dom', 'BEMHTML', 'close-btn'],
-  function(provide, bemDom, BEMHTML, Close) {
+  ['i-bem-dom', 'BEMHTML', 'close-btn', 'price'],
+  function(provide, bemDom, BEMHTML, Close, Price) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
@@ -8,6 +8,10 @@ provide(bemDom.declBlock(this.name, {
       inited: function() {
         this._domEvents('close').on('click', ( event ) => {
           this.setMod('hide');
+        })
+        this._domEvents('price-block').on('click', ( event ) => {
+          let priceBtn = event.bemTarget.findMixedBlock(Price);
+          priceBtn.setMod('pressed');
         })
       }
     }

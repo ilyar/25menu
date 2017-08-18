@@ -32,6 +32,7 @@
 
 .slider__control div {
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .slider__left, .slider__right {
@@ -68,5 +69,9 @@
   -webkit-background-position: 47% 50%;
   background-position: 47% 50%;
   transform: rotate(180deg);
+}
+
+.slider__pagination {
+  margin: 16px auto 0;
 }
 

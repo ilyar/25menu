@@ -8,6 +8,7 @@ provide(bemDom.declBlock(this.name, {
       inited: function() {
         this._domEvents('price_block').on('click', ( event ) => {
           var priceBtn = event.bemTarget.findMixedBlock(Price);
+          event.stopPropagation();
           priceBtn.setMod('pressed');
         })
       }

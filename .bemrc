@@ -6,6 +6,7 @@
                 "create": {
                     "techs": [
                       "bemtree.js",
+                      "bemhtml.js",
                       "css",
                       "js",
                       "deps.js"
