@@ -6,7 +6,7 @@
 block(menu).elem(item).mod(theme 25menu) {
   position: relative;
   cursor: pointer;
-  padding: map(25menu, padding-horizontal) map(25menu, content-padding);
+  padding: 0 20px;
 
   .mod(disabled) {
     opacity: 0.3

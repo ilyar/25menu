@@ -27,6 +27,16 @@
 
 .product_special .product__image {
   padding: 0;
+  max-width: 50%;
+  width: 100%;
+}
+
+.product_special .product__info {
+  max-width: 50%;
 }
 
 
+.product_special .product__image .image {
+  display: block;
+  width: 100%;
+}

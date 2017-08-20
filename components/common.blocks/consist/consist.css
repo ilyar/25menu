@@ -2,5 +2,10 @@
 
 }
 
+.consist__changer {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+}
 
 

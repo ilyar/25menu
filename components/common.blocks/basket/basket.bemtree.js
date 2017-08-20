@@ -173,8 +173,7 @@ block('basket').mod('type', 'open').content()(function(){
         mix: { block: 'basket', elem: 'payment' },
         mods: {
             mode: 'radio',
-            theme: '25menu',
-            size: 'm'
+            theme: '25menu'
         },
         name: 'select2',
         val: 3,

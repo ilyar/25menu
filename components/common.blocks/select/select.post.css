@@ -16,7 +16,7 @@ block(select).elem(arrow) {
 block(select).elem(arrow):after {
   content: '\00A0';
   width: 10px;
-  background-image: url(../icon/svg/select-arrow-white.svg);
+  background-image: url(../icon/svg/select-arrow-black.svg);
   visibility: visible!important;
   background-repeat: no-repeat;
   background-position: center;
