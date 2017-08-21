@@ -9,8 +9,8 @@ block('basket').content()(function() {
   },
   {
     block: 'bill',
-    mix: { block: 'basket_closed', elem: 'bill' },
-    content: '2130 Р'
+    mix: { block: 'basket_type_closed', elem: 'bill' },
+    content: '2130 ₽'
   },
   {
    block: 'close-btn',

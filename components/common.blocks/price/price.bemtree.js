@@ -13,7 +13,7 @@ block('price').mod('type', 'card').content()(function(){
       content:
         {
           elem: 'value',
-          content: '150 Р'
+          content: '150 ₽'
         }
     },
     {
@@ -61,7 +61,7 @@ block('price').mod('type', 'product').content()(function(){
       content:
         {
           elem: 'value',
-          content: '585 P'
+          content: '585 ₽'
         }
     },
     {

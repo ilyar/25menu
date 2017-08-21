@@ -111,7 +111,8 @@ block('consist').mod('type', 'product').content()(function() {
             block: 'icon',
             mods: {
               symbol: 'add'
-            }
+            },
+            mix:{ block: 'consist', elem: 'add-icon' }
           }
         },
         popup: {
