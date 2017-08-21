@@ -9,11 +9,11 @@ provide(bemDom.declBlock(this.name, {
         this._render();
         var add = this._elem('plus');
         var remove = this._elem('minus');
-        this._domEvents(add).on('click', () => {
+        this._domEvents(add).on('click', (event) => {
           this.params.quantity += 1;
           this._render();
         })
-        this._domEvents(remove).on('click', () => {
+        this._domEvents(remove).on('click', (event) => {
           this.params.quantity -= 1;
           this._render();
         })
