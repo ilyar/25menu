@@ -1,19 +1,19 @@
 modules.define('consist',
-  ['i-bem-dom', 'BEMHTML', 'addon'],
-  function(provide, bemDom, BEMHTML, Addon ) {
+  ['i-bem-dom', 'BEMHTML', 'icon', 'addon'],
+  function(provide, bemDom, BEMHTML, Icon, Addon ) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
     js: {
       inited: function() {
-        // this._domEvents('adder').on('click', () => {
-          // console.log('hello')
-          // this.setMod('type','closed');
-        // })
+            // this._events(this.Addon).on('click', function(){
+            //   console.log('hello')
+            // })
+        }
       }
     }
-  }
 
-}));
+
+  }));
 
 });

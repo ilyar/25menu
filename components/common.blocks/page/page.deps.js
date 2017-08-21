@@ -12,7 +12,8 @@
     {
       block: 'basket',
       mods: {
-        type: '*'
+        type: '*',
+        closingAnimation: true
       }
     },
     'sidebar',
@@ -20,3 +21,5 @@
     'footer'
   ]
 })
+
+
