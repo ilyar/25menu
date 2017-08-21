@@ -38,10 +38,21 @@ const isCallerMobile = req => {
 
 module.exports = function( app ) {
 
+  let menu = [];
+  request({url: '/api/catalog'}).then(request => {
+    menu = request;
+  })
+
+  // let basket = [];
+  // request({url: '/api/basket'}).then(request => {
+  //   basket = request;
+  // })
+
   app.get( '/', function( req, res ) {
     render( req, res, {
       page: 'index',
       bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+      menu: menu,
       items: [
         {
           title: 'Title',

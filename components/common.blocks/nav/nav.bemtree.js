@@ -1,5 +1,14 @@
 block('nav').content()(function() {
   return [
+    // this.data.menu.map(item => {
+    //   console.log(item);
+    //   return {
+    //     block: 'link',
+    //     mix: { block: 'nav', elem: 'item' },
+    //     url: '#',
+    //     content: item.name
+    //   }
+    // })
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
@@ -9,7 +18,7 @@ block('nav').content()(function() {
     {
       block: 'link',
       mix: { block: 'nav', elem: 'item' },
-      url: '#',
+      url: '#pizza',
       content: 'Пиццы'
     },
     {

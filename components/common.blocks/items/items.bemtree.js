@@ -123,7 +123,10 @@ block('items').content()(function() {
       content: [
         {
           block: 'title',
-          content: 'Cалаты',
+          content: 'Пиццы',
+          attrs: {
+            id: 'pizza'
+          },
           mix: { block: 'items', elem: 'title' }
         },
         {

@@ -7,9 +7,13 @@ provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-              var topping = this.findChildBlock(Icon);
+              var toppingAdd = this.findChildBlock(Icon);
               this._domEvents().on('click', () => {
-              topping.setMod('added');
+                if ( toppingAdd.hasMod('added')) {
+                  toppingAdd.setMod('added', false);
+                } else {
+                  toppingAdd.setMod('added');
+                }
               })
             }
         }

@@ -36,8 +36,7 @@ block('price').mod('type', 'card').content()(function(){
                 mix: { block: 'price', elem: 'minus' }
               },
               {
-                elem: 'quantity',
-                content: '1'
+                elem: 'quantity'
               },
               {
                 block: 'icon',
@@ -89,8 +88,7 @@ block('price').mod('type', 'product').content()(function(){
                 mix: { block: 'price', elem: 'minus' }
               },
               {
-                elem: 'quantity',
-                content: '1'
+                elem: 'quantity'
               },
               {
                 block: 'icon',
@@ -122,8 +120,7 @@ block('price').mod('type', 'basket').content()(function(){
             mix: { block: 'price', elem: 'minus' }
           },
           {
-            elem: 'quantity',
-            content: '1'
+            elem: 'quantity'
           },
           {
             block: 'icon',

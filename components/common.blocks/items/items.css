@@ -13,6 +13,7 @@
   lost-column: 1/4;
   z-index: 1;
   border: 1px solid #e6e6e6;
+  box-sizing: border-box;
 }
 
 .items__title {
@@ -87,8 +88,8 @@
       max-width: 780px;
   }
 
-  .items__card {
+/*  .items__card {
     lost-column: 1/3;
-  }
-
+  }*/
 }
+

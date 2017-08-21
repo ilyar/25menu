@@ -1,4 +1,3 @@
-
 .page-category {
   max-width: 1120px;
   flex: 1;
@@ -30,3 +29,4 @@
 .page-category__inner::-webkit-scrollbar { width: 0; }
 .page-category__inner { -ms-overflow-style: none; }
 .page-category__inner { overflow: -moz-scrollbars-none; }
+
