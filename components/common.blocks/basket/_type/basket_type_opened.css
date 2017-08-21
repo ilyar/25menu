@@ -1,0 +1,67 @@
+.basket_type_opened {
+  -webkit-animation: slide-in-right 1.5s ease-in-out;
+          animation: slide-in-right 1.5s ease-in-out;
+  transition: max-width 1.5s;
+}
+
+/* Анимация открытия корзины */
+@-webkit-keyframes slide-in-right {
+  0% {
+    max-width: 64px;
+    background-color: #F05565
+  }
+
+  100% {
+    max-width: 352px;
+    background-color: #363839;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    max-width: 64px;
+    background-color: #F05565
+  }
+
+  100% {
+    max-width: 352px;
+    background-color: #363839;
+  }
+}
+
+
+.basket_type_opened .basket__header,
+.basket_type_opened .basket__content,
+.basket_type_opened .basket__footer {
+  -webkit-animation: fade-in 1.5s ease-in-out forwards;
+          animation: fade-in 1.5s ease-in-out forwards;
+  transition: opacity 1.5s;
+}
+
+/* Анимация появления формы */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

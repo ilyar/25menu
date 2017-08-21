@@ -1,6 +1,4 @@
 .price {
-  padding: 8px 12px;
-  width: 100%;
   box-sizing: border-box;
   background-color: #363839;
   color: white;
@@ -8,6 +6,7 @@
   font-weight: bold;
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
 }
 
 
@@ -15,3 +14,6 @@
 .price__plus {
   cursor: pointer;
 }
+
+
+

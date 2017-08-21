@@ -1,30 +1,52 @@
 block('price').content()(function() {
-    return
-    {
-      block: price
-    }
+    return ;
 });
 
-block('price').mod('type', 'active').content()(function(){
+
+block('price').mod('type', 'card').content()(function(){
   return [
     {
-      block: 'price',
+      elem: 'button_part',
+      elemMods: {
+        left: true,
+      },
+      content:
+        {
+          elem: 'value',
+          content: '150 Р'
+        }
     },
     {
-      elem: 'counter',
+      elem: 'button_part',
+      elemMods: {
+        right: true,
+      },
       content: [
-          {
-            elem: 'minus',
-            content: '-'
+        {
+          elem: 'counter',
+          elemMods: {
+            card: true
           },
-          {
-            elem: 'quantity',
-            content: '25'
-          },
-          {
-            elem: 'plus',
-            content: '+'
-          }
+          content: [
+              {
+                block: 'icon',
+                mods: {
+                  symbol: 'minus'
+                },
+                mix: { block: 'price', elem: 'minus' }
+              },
+              {
+                elem: 'quantity'
+              },
+              {
+                block: 'icon',
+                mods: {
+                  symbol: 'plus'
+                },
+                mix: { block: 'price', elem: 'plus' }
+              }
+          ]
+        }
       ]
     }
   ]
@@ -66,8 +88,7 @@ block('price').mod('type', 'product').content()(function(){
                 mix: { block: 'price', elem: 'minus' }
               },
               {
-                elem: 'quantity',
-                content: '1'
+                elem: 'quantity'
               },
               {
                 block: 'icon',
@@ -79,8 +100,8 @@ block('price').mod('type', 'product').content()(function(){
           ]
         }
       ]
-      }
-    ]
+    }
+  ]
 });
 
 block('price').mod('type', 'basket').content()(function(){
@@ -99,8 +120,7 @@ block('price').mod('type', 'basket').content()(function(){
             mix: { block: 'price', elem: 'minus' }
           },
           {
-            elem: 'quantity',
-            content: '1'
+            elem: 'quantity'
           },
           {
             block: 'icon',

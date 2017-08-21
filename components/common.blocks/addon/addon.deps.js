@@ -3,7 +3,9 @@
       {
         block: 'icon',
         mods: {
-            symbol: '*'
+            symbol: '*',
+            checked: true,
+            added: true
           }
       }
     ]

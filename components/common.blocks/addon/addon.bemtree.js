@@ -4,6 +4,3 @@ block('addon').content()(function() {
 });
 
 
-
-
-

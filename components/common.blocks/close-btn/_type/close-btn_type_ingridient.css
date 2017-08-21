@@ -7,4 +7,9 @@
   display: inline-block;
   line-height: 20px;
   vertical-align: middle;
+  background-image: url(../../icon/svg/close-popup.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 10px;
+  background-size: 10px;
 }

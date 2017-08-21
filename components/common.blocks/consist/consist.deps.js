@@ -23,7 +23,9 @@
       {
         block: 'icon',
         mods: {
-            symbol: '*'
+            added: true,
+            symbol: '*',
+            checked: true
           }
       },
       {
@@ -31,6 +33,13 @@
         mods: {
             type: 'product'
           }
+      },
+      {
+        block: 'select',
+        mods: {
+          theme: '25menu',
+          size: '*'
+        }
       },
       {
         block: 'menu',

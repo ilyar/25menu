@@ -1,0 +1,1 @@
+block('pagination').js()( true )

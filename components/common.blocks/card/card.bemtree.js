@@ -10,7 +10,8 @@ block('card').content()(function() {
 });
 
 block('card').mod('type', 'special').content()(function(){
-  return [ {
+  return [
+    {
       elem: 'header',
       content: [
         {
@@ -21,19 +22,24 @@ block('card').mod('type', 'special').content()(function(){
     },
     {
       elem: 'inner',
-      content: [ {
-        block: 'description',
-        content: [
+      content: [
         {
-          elem: 'main-info',
-          content: 'Скидка 15 % на все пиццы в день рождения'
-        },{
-          elem: 'add-info',
-          content: 'Промокод #partytime'
+          block: 'description',
+          content: [
+            {
+              elem: 'main-info',
+              content: 'Скидка 15 % на все пиццы в день рождения'
+            },
+            {
+              elem: 'add-info',
+              content: 'Промокод #partytime'
+            }
+          ]
         }
-        ]
-      }
       ]
+    },
+    {
+      elem: 'wrapper'
     }]
 });
 
@@ -66,8 +72,10 @@ block('card').mod('type', 'usual').content()(function(){
       },
       {
         block: 'price',
-        mix: { block: 'card', elem: 'price_block'},
-        content: '150 Р'
+        mods: {
+          type: 'card'
+        },
+        mix: { block: 'card', elem: 'price_block'}
       }
       ]
     }]
@@ -152,6 +160,9 @@ block('card').mod('type', 'pizza').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
@@ -160,15 +171,7 @@ block('card').mod('type', 'pizza').content()(function(){
 });
 
 block('card').mod('type', 'info').content()(function(){
-  return [ {
-      elem: 'header',
-      content: [
-        {
-          block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
-        }
-      ]
-    },
+  return [
     {
       elem: 'inner',
       content: [ {
@@ -180,7 +183,17 @@ block('card').mod('type', 'info').content()(function(){
         }]
         }
       ]
-    }]
+    },
+    {
+      elem: 'header',
+      content: [
+        {
+          block: 'image',
+          url: 'http://lorempixel.com/196/196/cats'
+        }
+      ]
+    }
+    ]
 });
 
 block('card').mod('type', 'roll').content()(function(){
@@ -215,6 +228,9 @@ block('card').mod('type', 'roll').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }
@@ -259,6 +275,9 @@ block('card').mod('type', 'small').content()(function(){
       },
       {
         block: 'price',
+        mods: {
+          type: 'card'
+        },
         mix: { block: 'card', elem: 'price_block'},
         content: '150 Р'
       }

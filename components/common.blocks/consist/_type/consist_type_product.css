@@ -15,8 +15,9 @@
 }
 
 .consist_type_product .consist__add_button {
-  margin-top: 6px;
+  width: 148px;
 }
+
 
 .consist_type_product .consist__add_button button {
   all: initial;
@@ -34,3 +35,5 @@
 .consist_type_product button .icon_symbol_add {
   width: 32px;
 }
+
+

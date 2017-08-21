@@ -9,8 +9,12 @@ provide(bemDom.declBlock(this.name, {
         this._domEvents('card').on('click', ( event ) => {
           var chosenCard = event.bemTarget.findMixedBlock(Card);
           var otherCards = this.findChildBlocks(Card);
-          otherCards.setMod('checked', false);
-          chosenCard.setMod('checked');
+          if (chosenCard.hasMod('checked')) {
+              chosenCard.setMod('checked', false);
+          } else {
+            otherCards.setMod('checked', false);
+            chosenCard.setMod('checked');
+          }
         })
       }
     }

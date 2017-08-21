@@ -1,1 +1,4 @@
-block('page').js()( true )
+block('*').js()(function() {
+return applyNext(true)
+})
+

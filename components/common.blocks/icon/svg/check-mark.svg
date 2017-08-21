@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>plus-20 icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="plus-24-btn-selected">
+            <g id="plus-20-icon">
+                <circle id="plus-20-icon-bg" fill="#FF6673" cx="12" cy="12" r="12"></circle>
+                <polyline id="Path-3" stroke="#FFFFFF" stroke-width="2" points="6 11.9524227 10.3063743 16.5 18 7.5"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

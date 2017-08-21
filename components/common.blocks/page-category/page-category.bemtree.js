@@ -21,31 +21,6 @@ block('page-category').content()(function() {
             {
               block: 'card',
               mods: {
-                type: 'usual',
-                checked: true
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                chosen: true
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
                 type: 'info'
               }
             }
@@ -71,18 +46,6 @@ block('page-category').content()(function() {
               block: 'card',
               mods: {
                 type: 'special'
-              }
-            }
-          ]
-        },
-        {
-          block: 'items',
-          elem: 'card',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                checked: true
               }
             }
           ]

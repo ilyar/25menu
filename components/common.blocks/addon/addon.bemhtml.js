@@ -1,3 +1,5 @@
+block('addon').js()( true )
+
 block('addon').mod('type', 'product').content()(function(){
   return [
     {

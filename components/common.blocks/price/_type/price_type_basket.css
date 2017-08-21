@@ -1,8 +1,7 @@
 .price_type_basket {
   width: 56px;
   height: 24px;
-  display: block;
-  padding: 0 5px 0;
+  padding: 0 3px;
 }
 
 .price_type_basket.price {
@@ -17,6 +16,9 @@
 
 .price_type_basket .price__counter_product {
   padding-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price_type_basket .price__minus,
@@ -32,4 +34,5 @@
   z-index: 2;
   text-align: center;
 }
+
 

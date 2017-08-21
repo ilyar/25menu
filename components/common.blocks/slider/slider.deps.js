@@ -1,11 +1,13 @@
 ({
     shouldDeps: [
-        'card',
         {
           block: 'card',
           mods: {
             type: '*'
           }
+        },
+        {
+          block: 'pagination'
         }
     ]
 })

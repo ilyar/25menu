@@ -9,7 +9,7 @@
         {
           block: 'product',
           mods: {
-            type: '*'
+            type: 'basket'
           }
         },
         {
@@ -55,23 +55,25 @@
           }
         }
     ]
-},{
-  tech: 'js',
-  mustDeps: [
-    {
-      tech: 'bemhtml',
-      block: 'form'
-    },
-    {
-      tech: 'bemhtml',
-      block: 'image'
-    },
-    {
-      tech: 'bemhtml',
-      block: 'basket',
-      mods: {
-        type: [ 'open', 'closed' ]
-      },
-    }
-  ]
-}]
+},
+// {
+//   tech: 'js',
+//   mustDeps: [
+//     {
+//       tech: 'bemhtml',
+//       block: 'form'
+//     },
+//     {
+//       tech: 'bemhtml',
+//       block: 'image'
+//     },
+//     {
+//       tech: 'bemhtml',
+//       block: 'basket',
+//       mods: {
+//         type: [ 'open', 'closed' ]
+//       },
+//     }
+//   ]
+// }
+]

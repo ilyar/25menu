@@ -4,4 +4,6 @@
   background-image: url(logo_big.svg);
   background-repeat: no-repeat;
   display: block;
+  -webkit-background-size: contain;
+  background-size: contain;
 }

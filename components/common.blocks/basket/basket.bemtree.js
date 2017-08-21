@@ -1,9 +1,4 @@
 block('basket').content()(function() {
-  return;
-});
-
-
-block('basket').mod('type', 'open').content()(function(){
   return [
   {
    block: 'icon',
@@ -14,13 +9,13 @@ block('basket').mod('type', 'open').content()(function(){
   },
   {
     block: 'bill',
-    mix: { block: 'basket_type_closed', elem: 'bill' },
+    mix: { block: 'basket_closed', elem: 'bill' },
     content: '2130 Р'
   },
   {
    block: 'close-btn',
-   mods: {
-    type: 'basket'
+    mods: {
+      type: 'basket'
     },
     mix: { block: 'basket', elem: 'close' }
   },
@@ -45,7 +40,7 @@ block('basket').mod('type', 'open').content()(function(){
           icon: {
             block: 'icon',
             mods: {
-            symbol: 'basket_account'
+              symbol: 'basket_account'
             }
           }
         }
@@ -65,7 +60,7 @@ block('basket').mod('type', 'open').content()(function(){
           icon: {
             block: 'icon',
             mods: {
-            symbol: 'basket_phone'
+              symbol: 'basket_phone'
             }
           }
         }
@@ -85,7 +80,7 @@ block('basket').mod('type', 'open').content()(function(){
           icon: {
             block: 'icon',
             mods: {
-            symbol: 'basket_map'
+              symbol: 'basket_map'
             }
           }
         }
@@ -99,9 +94,9 @@ block('basket').mod('type', 'open').content()(function(){
           content: [
           {
             block: 'icon',
-              mods: {
+            mods: {
               symbol: 'basket_time'
-              }
+            }
           },
           {
             elem: 'current-time',
@@ -110,13 +105,13 @@ block('basket').mod('type', 'open').content()(function(){
           ]
         },
         {
-            block: 'button',
-            mix: { block: 'delivery-default', elem: 'choose' },
-            mods: {
-                size: 'm',
-                view: 'plain'
-            },
-            text: 'Выбрать время'
+          block: 'button',
+          mix: { block: 'delivery-default', elem: 'choose' },
+          mods: {
+            size: 'm',
+            view: 'plain'
+          },
+          text: 'Выбрать время'
         }
         ]
       },
@@ -130,151 +125,150 @@ block('basket').mod('type', 'open').content()(function(){
           block: 'input',
           mix: { block: 'delivery', elem: 'date' },
           mods: {
-            // 'has-mask': true,
-            'has-calendar' : true,
-             special: true,
-             size: 'm',
-             theme: '25menu'
-          }
-        },
-        {
-          block: 'input',
-          mix: { block: 'delivery', elem: 'time' },
-          mods: {
-            // 'has-mask': true,
-            special: true,
-            size: 'm',
-            theme: '25menu'
-          },
-          placeholder: '11:00',
-          js : {
-              mask : '{{99}}-{{99}}'
-          },
-          icon: {
-            block: 'icon',
-            mods: {
-            symbol: 'basket_time'
+              // 'has-mask': true,
+              'has-calendar' : true,
+              special: true,
+              size: 'm',
+              theme: '25menu'
             }
-          }
-        },
-        {
+          },
+          {
+            block: 'input',
+            mix: { block: 'delivery', elem: 'time' },
+            mods: {
+              // 'has-mask': true,
+              special: true,
+              size: 'm',
+              theme: '25menu'
+            },
+            placeholder: '11:00',
+            js : {
+              mask : '{{99}}-{{99}}'
+            },
+            icon: {
+              block: 'icon',
+              mods: {
+                symbol: 'basket_time'
+              }
+            }
+          },
+          {
             block: 'button',
             mix: { block: 'delivery', elem: 'default' },
             mods: {
-                size: 'm',
-                view: 'plain'
+              size: 'm',
+              view: 'plain'
             },
             text: 'Через 55 мин'
-        }
-        ]
-      },
-      {
-        block: 'select',
-        mix: { block: 'basket', elem: 'payment' },
-        mods: {
-            mode: 'radio',
-            theme: '25menu',
-            size: 'm'
+          }
+          ]
         },
-        name: 'select2',
-        val: 3,
-        options: [
-            {
-                val: 1,
-                text: 'Картой на сайте'
-            },
-            {
-                val: 2,
-                text: 'Картой курьеру'
-            },
-            {
-                val: 3,
-                text: 'Наличными курьеру'
-            }
-        ]
-      },
-      {
-        block: 'form-field',
-        mods: {
-          theme: '25menu'
-        },
-        content: [
         {
-          block: 'input',
+          block: 'select',
+          mix: { block: 'basket', elem: 'payment' },
           mods: {
-            size: 'm',
-            width: 'available',
+            mode: 'radio',
             theme: '25menu'
           },
-          placeholder: 'Добавить комментарий'
+          name: 'select2',
+          val: 3,
+          options: [
+          {
+            val: 1,
+            text: 'Картой на сайте'
+          },
+          {
+            val: 2,
+            text: 'Картой курьеру'
+          },
+          {
+            val: 3,
+            text: 'Наличными курьеру'
+          }
+          ]
+        },
+        {
+          block: 'form-field',
+          mods: {
+            theme: '25menu'
+          },
+          content: [
+          {
+            block: 'input',
+            mods: {
+              size: 'm',
+              width: 'available',
+              theme: '25menu'
+            },
+            placeholder: 'Добавить комментарий'
+          }
+          ]
         }
         ]
-      }
-      ]
-    },
-    {
-      elem: 'content',
-      mix: { block: 'basket', elem: 'content' },
-      content: [
-      {
-        elem: 'empty-block',
-        mix: { block: 'basket', elem: 'is_empty' },
-        content: 'В КОРЗИНЕ ПОКА ПУСТО'
       },
       {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
+        elem: 'content',
+        mix: { block: 'basket', elem: 'content' },
+        content: [
+        {
+          elem: 'empty-block',
+          mix: { block: 'basket', elem: 'is_empty' },
+          content: 'В КОРЗИНЕ ПОКА ПУСТО'
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        },
+        {
+          block: 'product',
+          mix: { block: 'basket', elem: 'good' },
+          mods: {
+            type: 'basket'
+          }
+        }]
       },
       {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      },
-      {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      },
-      {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      },
-      {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      },
-      {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      },
-      {
-        block: 'product',
-        mix: { block: 'basket', elem: 'good' },
-        mods: {
-          type: 'basket'
-        }
-      }]
-    },
-    {
-      elem: 'footer',
-      mix: { block: 'basket', elem: 'footer' },
-      content: [
+        elem: 'footer',
+        mix: { block: 'basket', elem: 'footer' },
+        content: [
         {
           elem: 'result',
           content: [
@@ -294,23 +288,25 @@ block('basket').mod('type', 'open').content()(function(){
             content: '2130 Р'
           }
           ]
-      },
-      {
+        },
+        {
           block: 'button',
           mix: { block: 'basket', elem: 'buy' },
           mods: {
-              size: 'm',
-              type: 'submit'
+            size: 'm',
+            type: 'submit'
           },
           text: 'ЗАКАЗАТЬ'
-      },
-      {
-        block: 'agreement',
-        mix: { block: 'basket', elem: 'agreement' }
-      }]
+        },
+        {
+          block: 'agreement',
+          mix: { block: 'basket', elem: 'agreement' }
+        }]
+      }
+      ]
     }
-    ]
-  }
-]
+  ]
 });
+
+
 
