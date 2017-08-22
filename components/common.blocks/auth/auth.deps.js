@@ -11,6 +11,9 @@
           }
       },
       {
+        block: 'button'
+      },
+      {
         block: 'close-btn',
         mods: {
           type: 'popup'

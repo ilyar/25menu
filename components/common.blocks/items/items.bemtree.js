@@ -107,7 +107,79 @@ block('items').content()(function() {
           block: 'card',
           mix: { block: 'items', elem: 'card' },
           mods: {
-            type: 'special'
+            type: 'special',
+            color: 'gray'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'pink'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'black'
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'black',
+            gradient: true,
+            new: true
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'pink',
+            gradient: true
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'gray',
+            gradient: true
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'black',
+            full: true
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'pink',
+            full: true
+          }
+        },
+        {
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'special',
+            color: 'gray',
+            full: true
           }
         },
         {
@@ -218,7 +290,8 @@ block('items').content()(function() {
           {
             block: 'product',
             mods: {
-              special: true
+              special: true,
+              color: 'pink'
             }
           }
           ]

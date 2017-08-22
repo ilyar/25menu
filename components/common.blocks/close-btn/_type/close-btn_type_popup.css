@@ -8,6 +8,7 @@
   height: 2px;
   background-color: #808080;
   position: absolute;
+  top: 50%;
 }
 
 .close-btn_type_popup::after {
@@ -17,4 +18,5 @@
   background-color: #808080;
   position: absolute;
   transform: rotate(90deg);
+  top: 50%;
 }

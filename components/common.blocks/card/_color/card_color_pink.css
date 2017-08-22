@@ -1,0 +1,24 @@
+.card_color_pink {
+  color: white;
+  background-color: #F05565;
+}
+
+
+.card_color_pink .card__inner {
+  background-color: #F05565;
+}
+
+
+.card_gradient.card_color_pink {
+  background-color: #F2F2F2;
+}
+
+.card_gradient.card_color_pink .card__inner {
+  height: 40%;
+  background: linear-gradient(to top, rgb(240, 85, 101)70%, rgb(242, 242, 242)100%)!important;
+}
+
+.card_full.card_color_pink .card__inner {
+  height: 60%;
+  background: linear-gradient(to top, rgb(240, 85, 101)40%, rgb(242, 242, 242, 0)100%)!important;
+}

@@ -1,0 +1,12 @@
+.product_color_gray {
+
+}
+
+.product_color_gray .product__info {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.product_color_gray .product__title {
+  color: #F05565;
+}

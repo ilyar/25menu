@@ -1,14 +1,10 @@
-  .auth {
+.auth {
 
- }
+}
 
- .button__auth {
+ .auth__status {
    display: flex;
    align-items: center;
- }
-
- .auth__step-one {
-   padding: 10px 35px 38px;
  }
 
  .auth__title {
@@ -16,7 +12,7 @@
  }
 
  .auth__input {
-   margin-top: 20px;
+   margin: 20px 0;
  }
 
  .auth__input .input {
@@ -35,13 +31,6 @@
    color: black;
  }
 
- .auth__resend_password {
-   margin: 8px 0 12px ;
-   display: inline-block;
-   color: #F05565;
-   outline: none;
- }
-
  .auth__enter {
    background-color: black;
    display: block;
@@ -52,6 +41,12 @@
    font-size: 14px;
    cursor: pointer;
    margin-bottom: 15px;
+   letter-spacing: 1px;
+ }
+
+ .popup__label {
+  max-width: 336px;
+  display: block;
  }
 
  .auth__text {
@@ -59,3 +54,14 @@
    max-width: 336px;
    text-align: center;
  }
+
+.popup__error-step_hide,
+.popup__reset-step_hide,
+.popup__first-step_hide,
+.popup__second-step_hide,
+.popup__third-step_hide,
+.popup__fourth-step_hide,
+.popup__fifth-step_hide {
+  display: none;
+}
+

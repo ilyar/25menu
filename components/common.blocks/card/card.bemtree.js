@@ -27,6 +27,10 @@ block('card').mod('type', 'special').content()(function(){
           block: 'description',
           content: [
             {
+              elem: 'new-mark',
+              content: 'NEW'
+            },
+            {
               elem: 'main-info',
               content: 'Скидка 15 % на все пиццы в день рождения'
             },

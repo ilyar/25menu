@@ -20,8 +20,11 @@ block('header').content()(function() {
         ]
       },
       {
-      block: 'auth',
-      mix: { block: 'header', elem: 'login-area' }
+        block: 'auth',
+        mods: {
+          type: 'logged'
+        },
+        mix: { block: 'header', elem: 'login-area' }
       }
       ]
 });

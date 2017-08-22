@@ -2,6 +2,17 @@
   shouldDeps: [
   'logo',
   'link',
-  'auth'
+  {
+    block: 'auth',
+    mods: {
+      type: '*'
+    }
+  },
+  {
+    block: 'icon',
+    mods: {
+      logged: true
+    }
+  }
   ]
 })
