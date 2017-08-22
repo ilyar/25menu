@@ -298,7 +298,7 @@ block('auth').content()(function() {
             {
               block: 'form-field',
               mix: { block: 'auth', elem: 'input' },
-              id: 'password',
+              id: 'code',
               mods : {
                   type : 'input',
                   required : true,
@@ -344,11 +344,65 @@ block('auth').content()(function() {
         {
           elem: 'fourth-step',
           elemMods: {
-            hide: true
+            hide: false
           },
           content: [
-
-          ]
+          {
+            block: 'form',
+            mix: { block: 'auth', elem: 'password-input' },
+            mods: {
+              'has-validation' : true
+            },
+            content: [
+              {
+                block: 'title',
+                mix: { block: 'auth', elem: 'title' },
+                content: 'Придумайте пароль'
+              },
+              {
+                block: 'comment',
+                content: 'Чтобы в следующий раз заходить в профиль сразу, без ожидания смс',
+                mix: { block: 'popup', elem: 'comment' }
+              },
+              {
+                block: 'form-field',
+                mix: { block: 'auth', elem: 'input' },
+                id: 'password',
+                mods : {
+                    type : 'input',
+                    required : true,
+                    message : 'text'
+                },
+                content: [
+                {
+                  block: 'label',
+                  content: 'Пароль',
+                  for: 'password'
+                },
+                {
+                  block: 'input',
+                  mods: {
+                    size: 'l',
+                    width: 'available',
+                    theme: '25menu',
+                    type: 'password'
+                  },
+                  name : 'password'
+                }
+                ]
+              },
+              {
+                  block: 'button',
+                  mix: { block: 'auth', elem: 'enter' },
+                  mods: {
+                      size: 'm',
+                      type: 'submit'
+                  },
+                  text: 'OK'
+              }
+            ]
+          }
+        ]
         }
       ]
     }

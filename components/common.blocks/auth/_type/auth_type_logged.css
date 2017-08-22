@@ -36,3 +36,9 @@
   top: 50%;
   line-height: 22px;
 }
+
+
+.popup__comment {
+  margin-top: 20px;
+  max-width: 336px;
+}
