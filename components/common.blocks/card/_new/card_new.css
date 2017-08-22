@@ -1,0 +1,20 @@
+.card_new .description__new-mark {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 176px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+
+.card_color_black .descpription__new-mark {
+  color: white;
+}
+
+
+.card_color_gray .descpription__new-mark,
+.card_color_pink .descpription__new-mark {
+  color: black;
+}

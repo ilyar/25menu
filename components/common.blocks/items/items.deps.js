@@ -13,7 +13,11 @@
         block: 'card',
         mods: {
           type: '*',
-          checked: true
+          checked: true,
+          gradient: true,
+          color: '*',
+          full: true,
+          new: true
         }
       },
       {
@@ -21,7 +25,8 @@
         mods: {
           type: 'item',
           special: true,
-          info: true
+          info: true,
+          color: '*'
         }
       },
       {

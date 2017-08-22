@@ -1,0 +1,18 @@
+.card_color_black {
+  background-color: #3F3F42;
+  color: white;
+}
+
+.card_color_black .card__inner{
+  background-color: #3F3F42;
+}
+
+.card_gradient.card_color_black .card__inner {
+  height: 40%;
+  background: linear-gradient(to top, rgb(54, 56, 57)70%, rgb(242, 242, 242)100%)!important;
+}
+
+.card_full.card_color_black .card__inner {
+  height: 60%;
+  background: linear-gradient(to top, rgb(54, 56, 57)40%, rgb(242, 242, 242, 0)100%)!important;
+}

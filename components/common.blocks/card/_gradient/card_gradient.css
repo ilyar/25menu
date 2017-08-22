@@ -1,0 +1,16 @@
+.card_gradient {
+
+}
+
+.card_gradient .card__header {
+  height: 60%;
+}
+
+.card_gradient .card__inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+}
+

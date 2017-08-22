@@ -10,6 +10,12 @@
             include : false,
             mods : { switcher : 'button' },
             shouldDeps : { block : 'button', mod : 'theme', val : '25menu' }
+        },
+        {
+          block: 'icon',
+          mods: {
+            symbol: '*'
+          }
         }
     ]
 })

@@ -19,6 +19,10 @@
   margin-right: 5px!important;
 }
 
+.slider .card_type_special:hover {
+  border: none;
+}
+
 .slider__control {
   width: 80px;
   height: 36px;

@@ -1,7 +1,7 @@
 .basket_closingAnimation.basket_type_closed {
-  -webkit-animation: slide-out-right 1.5s ease-in-out forwards;
-          animation: slide-out-right 1.5s ease-in-out forwards;
-  transition: min-width 1.5s;
+  -webkit-animation: slide-out-right 0.5s ease-in-out forwards;
+          animation: slide-out-right 0.5s ease-in-out forwards;
+  transition: min-width 0.5s;
 }
 
 
@@ -31,9 +31,9 @@
 
 
 .basket_closingAnimation.basket_type_closed * {
-  -webkit-animation: fade-out 1.5s ease-in-out forwards;
-          animation: fade-out 1.5s ease-in-out forwards;
-  transition: opacity 1.5s;
+  -webkit-animation: fade-out 0.5s ease-in-out forwards;
+          animation: fade-out 0.5s ease-in-out forwards;
+  transition: opacity 0.5s;
 }
 
 /* Анимация появления формы */
