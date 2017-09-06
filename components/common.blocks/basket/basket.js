@@ -1,6 +1,6 @@
 modules.define('basket',
-  ['i-bem-dom', 'BEMHTML'],
-  function(provide, bemDom, BEMHTML) {
+  ['i-bem-dom'],
+  function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{

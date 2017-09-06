@@ -1,1 +1,1 @@
-block('card').js()( true )
+// block('card').js()( true )

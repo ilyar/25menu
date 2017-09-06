@@ -26,7 +26,8 @@ block('items').content()(function() {
           content: [
           {
             block: 'icon'
-          },{
+          },
+          {
             elem: 'info-block_card_title',
             content: 'Начисляем баллы за заказ'
           },
@@ -67,247 +68,297 @@ block('items').content()(function() {
         ]
       }]
     },
-    { elem: 'card-group',
-      content: [
-        {
-          block: 'title',
-          content: 'Cалаты',
-          mix: { block: 'items', elem: 'title' }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'usual'
-          }
-        },
-        {
-          elem: 'popup',
+    this.data.products.map(( item, index ) => {
+      return [
+        { elem: 'card-group',
           content: [
           {
-            block: 'product'
-          }
-          ]
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'info'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'pizza'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'gray'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'pink'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'black'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'black',
-            gradient: true,
-            new: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'pink',
-            gradient: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'gray',
-            gradient: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'black',
-            full: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'pink',
-            full: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special',
-            color: 'gray',
-            full: true
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'roll'
-          }
-        }
-      ]
-    },
-    { elem: 'card-group',
-      content: [
-        {
-          block: 'title',
-          content: 'Пиццы',
-          attrs: {
-            id: 'pizza'
+            block: 'title',
+            attrs: { id: item.name || item.code},
+            content: item.name,
+            mix: { block: 'items', elem: 'title' }
           },
-          mix: { block: 'items', elem: 'title' }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'usual'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'info'
-          }
-        },
-        {
-          elem: 'popup',
-          content: [
-          {
-            block: 'product',
-            mods: {
-              info: true
+          item.products && item.products.map( (product, index) => {
+            return {
+             block: 'card',
+             js: {
+              index: index + 1,
+              product: {
+                name: product.name,
+                price: product.price,
+                image: product.images[0],
+                weight: product.weight,
+                description: product.description,
+                energy: product.energyAmount,
+                fat: product.fatAmount,
+                fiber: product.fiberAmount,
+                hydrates: product.carbohydrateAmount
+              }
+             },
+             mix: { block: 'items', elem: 'card' },
+             mods: {
+              type: 'usual'
+             },
+              name: product.name,
+              price: product.price,
+              image: product.images[0],
+              weight: product.weight,
+              description: product.description,
+              energy: product.energyAmount,
+              fat: product.fatAmount,
+              fiber: product.fiberAmount,
+              hydrates: product.carbohydrateAmount
             }
-          }
+          } )
           ]
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'pizza'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'roll'
-          }
         }
-      ]
-    },
-    { elem: 'card-group',
-      content: [
-        {
-          block: 'title',
-          content: 'Cалаты',
-          mix: { block: 'items', elem: 'title' }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'usual'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'info'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'pizza'
-          }
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'special'
-          }
-        },
-        {
-          elem: 'popup',
-          content: [
-          {
-            block: 'product',
-            mods: {
-              special: true,
-              color: 'pink'
-            }
-          }
-          ]
-        },
-        {
-          block: 'card',
-          mix: { block: 'items', elem: 'card' },
-          mods: {
-            type: 'roll'
-          }
-        },
-      ]
-    },
+    ]}),
+
+
+
+
+    // { elem: 'card-group',
+    //   content: [
+    //     {
+    //       block: 'title',
+    //       content: 'Cалаты',
+    //       mix: { block: 'items', elem: 'title' }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'usual'
+    //       }
+    //     },
+    //     {
+    //       elem: 'popup',
+    //       content: [
+    //       {
+    //         block: 'product'
+    //       }
+    //       ]
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'info'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'pizza'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'gray'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'pink'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'black'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'black',
+    //         gradient: true,
+    //         new: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'pink',
+    //         gradient: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'gray',
+    //         gradient: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'black',
+    //         full: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'pink',
+    //         full: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special',
+    //         color: 'gray',
+    //         full: true
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'roll'
+    //       }
+    //     }
+    //   ]
+    // },
+    // { elem: 'card-group',
+    //   content: [
+    //     {
+    //       block: 'title',
+    //       content: 'Пиццы',
+    //       attrs: {
+    //         id: 'pizza'
+    //       },
+    //       mix: { block: 'items', elem: 'title' }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'usual'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'info'
+    //       }
+    //     },
+    //     {
+    //       elem: 'popup',
+    //       content: [
+    //       {
+    //         block: 'product',
+    //         mods: {
+    //           info: true
+    //         }
+    //       }
+    //       ]
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'pizza'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'roll'
+    //       }
+    //     }
+    //   ]
+    // },
+    // { elem: 'card-group',
+    //   content: [
+    //     {
+    //       block: 'title',
+    //       content: 'Cалаты',
+    //       mix: { block: 'items', elem: 'title' }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'usual'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'info'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'pizza'
+    //       }
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'special'
+    //       }
+    //     },
+    //     {
+    //       elem: 'popup',
+    //       content: [
+    //       {
+    //         block: 'product',
+    //         mods: {
+    //           special: true,
+    //           color: 'pink'
+    //         }
+    //       }
+    //       ]
+    //     },
+    //     {
+    //       block: 'card',
+    //       mix: { block: 'items', elem: 'card' },
+    //       mods: {
+    //         type: 'roll'
+    //       }
+    //     },
+    //   ]
+    // },
     {
       block: 'footer',
       mix: { block: 'items', elem: 'footer' }
     }
+
     ]
 });

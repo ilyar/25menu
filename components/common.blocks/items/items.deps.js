@@ -1,4 +1,4 @@
-({
+[{
     shouldDeps: [
       {
         block:'header'
@@ -42,4 +42,20 @@
         block: 'footer'
       }
     ]
-})
+},
+{
+  tech: 'js',
+  shouldDeps: [
+    {
+      block: 'product',
+      tech: 'bemhtml',
+      mods: {
+        type: 'item',
+        special: true,
+        info: true,
+        color: '*'
+      }
+    },
+  ]
+}
+]

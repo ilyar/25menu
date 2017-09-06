@@ -53,7 +53,7 @@ block('card').mod('type', 'usual').content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
+          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -65,10 +65,10 @@ block('card').mod('type', 'usual').content()(function(){
         {
           elem: 'main-info',
           content: [
-          'Борщик, с капусткой, но не красной',
+          this.ctx.name,
           {
           elem: 'weight',
-          content: '300 мг.',
+          content: (this.ctx.weight*1000) + ' г.',
           tag: 'span'
           }
           ]
@@ -79,7 +79,8 @@ block('card').mod('type', 'usual').content()(function(){
         mods: {
           type: 'card'
         },
-        mix: { block: 'card', elem: 'price_block'}
+        mix: { block: 'card', elem: 'price_block'},
+        price: this.ctx.price
       }
       ]
     }]

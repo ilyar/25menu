@@ -2,6 +2,7 @@
     shouldDeps: [
         'title',
         'link',
+        'image',
         {
           block: 'close-btn',
           mods: {

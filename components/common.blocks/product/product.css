@@ -89,6 +89,11 @@
   margin-bottom: 30px;
 }
 
+.product__info .description {
+  max-height: 100px;
+  overflow: hidden;
+}
+
 .product .description__weight_special {
   display: inline-block;
   font-size: 12px;

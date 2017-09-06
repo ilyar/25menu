@@ -18,7 +18,7 @@ block('value').mod('type', 'product').content()(function(){
     },
     {
       elem:'value',
-      content: '456'
+      content: this.ctx.energy
     }
     ]
   },
@@ -31,7 +31,7 @@ block('value').mod('type', 'product').content()(function(){
     },
     {
       elem:'value',
-      content: '456'
+      content: this.ctx.fiber
     }
     ]
   },
@@ -44,7 +44,7 @@ block('value').mod('type', 'product').content()(function(){
     },
     {
       elem:'value',
-      content: '456'
+      content: this.ctx.fat
     }
     ]
   },
@@ -57,7 +57,7 @@ block('value').mod('type', 'product').content()(function(){
     },
     {
       elem:'value',
-      content: '456'
+      content: this.ctx.hydrates
     }
     ]
   }

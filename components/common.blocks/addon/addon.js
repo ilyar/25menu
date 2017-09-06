@@ -11,7 +11,7 @@ provide(bemDom.declBlock(this.name, {
               var allTopping = this.findParentBlock(Dropdown);
 
               this._domEvents().on('click', () => {
-                this._checkToppings;
+                // this._checkToppings;
                 if ( toppingAdded.hasMod('added')) {
                   toppingAdded.setMod('added', false);
                 } else {
@@ -23,11 +23,11 @@ provide(bemDom.declBlock(this.name, {
         }
     },
 
-    _checkToppings: function() {
-      if ( this.findChildBlocks(Icon).hasMod('added')) {
-          console.log('hello');
-      }
-    }
+    // _checkToppings: function() {
+    //   if ( this.findChildBlocks(Icon).hasMod('added')) {
+    //       console.log('hello');
+    //   }
+    // }
 }));
 
 });
