@@ -1,6 +1,6 @@
 .addon_type_product{
     cursor: pointer;
-    width: 260px;
+    min-width: 260px;
     height: 33px;
     display: flex;
 }
@@ -23,6 +23,7 @@
 
 .addon__weight {
   color: #B4B4B4;
+  margin-right: 15px;
 }
 
 .addon__price {

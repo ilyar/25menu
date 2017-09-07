@@ -5,7 +5,10 @@
 .consist__changer {
   display: flex;
   margin-top: 16px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 
+.consist__changer .select {
+  margin-right: 5px;
+}

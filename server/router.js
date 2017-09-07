@@ -91,22 +91,25 @@ module.exports = function( app ) {
   });
 
   app.get('/i/:category', function(req, res) {
-    // request({url: 'api/catalog'}).then(request => {
-    //  category = request;
-    // })
+    request({url: 'api/catalog'}).then(request => {
+     category = request;
+    })
   render(req, res, {
     page: 'category',
-    // menu: menu,
+    menu: menu,
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
     title: req.params.category
     })
   });
 
   app.get('/i/:category/:item', function(req, res) {
+  request({url: 'api/catalog'}).then(request => {
+     category = request;
+    })
   render(req, res, {
     page: 'item',
-    // menu: menu,
-    // products: products,
+    menu: menu,
+    products: products,
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
     title: req.params.item,
     })

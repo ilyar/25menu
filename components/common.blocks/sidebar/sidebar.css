@@ -14,3 +14,6 @@
   width: 100%;
 }
 
+.sidebar__scroll-area_hide {
+  display: none;
+}

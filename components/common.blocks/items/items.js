@@ -1,11 +1,12 @@
 modules.define('items',
-  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn'],
-  function(provide, bemDom, BEMHTML, Card, Product, Close) {
+  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn', 'header', 'page', 'sidebar'],
+  function(provide, bemDom, BEMHTML, Card, Product, Close, Header, Page, Sidebar) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
     js: {
       inited: function() {
+
         this._domEvents('card').on('click', ( event ) => {
           this.allCards = event.bemTarget.findParentElem('card-group').findChildElems('card');
           this.chosenCard = event.bemTarget.findMixedBlock(Card);
@@ -24,10 +25,19 @@ provide(bemDom.declBlock(this.name, {
               this._showProduct(this.chosenCard);
           }
         }),
-        //  Refactor (move inside block:product)
-        this._domEvents(Close).on('click', ( event ) => {
+
+        this._domEvents('product_close').on('click', ( event ) => {
           this.chosenCard.setMod('checked', false);
           this._hideProduct();
+        }),
+
+        this._domEvents('product__control_left').on('click', ( event ) => {
+          console.log('hello')
+          // this._showProduct()
+        }),
+
+        this._domEvents().on('scroll', () => {
+          this._showSideLogo();
         })
 
 
@@ -58,6 +68,8 @@ provide(bemDom.declBlock(this.name, {
             fat: card.params.product.fat,
             fiber: card.params.product.fiber,
             hydrates: card.params.product.hydrates,
+            ingridients: card.params.product.ingridients,
+            modifiers: card.params.product.modifiers
           }
           ]
         }));
@@ -66,6 +78,16 @@ provide(bemDom.declBlock(this.name, {
 
   _hideProduct: function() {
       bemDom.destruct(this.findChildElem('popup').domElem);
+  },
+
+  _showSideLogo: function() {
+    var scrolled = this.domElem.scrollTop();
+    var hiddenLogo = this.findParentBlock(Page).findChildBlock(Sidebar).findChildElem('scroll-area');
+    if ( scrolled > 220 ) {
+      hiddenLogo.setMod('hide', false)
+    } else {
+      hiddenLogo.setMod('hide', true)
+    }
   }
 
 }));

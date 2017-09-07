@@ -11,15 +11,15 @@ block('addon').mod('type', 'product').content()(function(){
     },
     {
       elem: 'descr',
-      content: 'Ананасы'
+      content: this.ctx.name
     },
     {
       elem: 'weight',
-      content: '40г'
+      content: (this.ctx.weight * 1000) + ' г.'
     },
     {
       elem: 'price',
-      content: '50 Р'
+      content: this.ctx.price + ' ₽'
     }
   ]
 });

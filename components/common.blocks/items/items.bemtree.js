@@ -92,7 +92,9 @@ block('items').content()(function() {
                 energy: product.energyAmount,
                 fat: product.fatAmount,
                 fiber: product.fiberAmount,
-                hydrates: product.carbohydrateAmount
+                hydrates: product.carbohydrateAmount,
+                ingridients: product.additionalInfo,
+                modifiers: product.modifiers
               }
              },
              mix: { block: 'items', elem: 'card' },
@@ -107,7 +109,9 @@ block('items').content()(function() {
               energy: product.energyAmount,
               fat: product.fatAmount,
               fiber: product.fiberAmount,
-              hydrates: product.carbohydrateAmount
+              hydrates: product.carbohydrateAmount,
+              ingridients: product.additionalInfo,
+              modifiers: product.modifiers
             }
           } )
           ]

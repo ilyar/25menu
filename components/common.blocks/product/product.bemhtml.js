@@ -8,10 +8,14 @@ block('product').content()(function() {
       mods: {
         type: 'product'
       },
-      mix: { block: 'product', elem: 'close' }
+      mix: [
+      { block: 'product', elem: 'close' },
+      { block: 'items', elem: 'product_close'}
+      ]
     },
     {
       elem: 'control',
+      js: true,
       elemMods: {
         left: true
       },
@@ -23,6 +27,7 @@ block('product').content()(function() {
     },
     {
       elem: 'control',
+      js: true,
       elemMods: {
         right: true
       },
@@ -45,7 +50,9 @@ block('product').content()(function() {
         mods: {
           type: 'product'
         },
-        mix: { block: 'product', elem: 'topping' }
+        mix: { block: 'product', elem: 'topping' },
+        ingridients: this.ctx.ingridients,
+        modifiers: this.ctx.modifiers
       },
       {
         block: 'price',

@@ -1,33 +1,30 @@
 modules.define('addon',
-  ['i-bem-dom', 'icon', 'dropdown'],
+  ['i-bem-dom', 'icon', 'page', 'button'],
 
-function(provide, bemDom, Icon, Dropdown) {
+function(provide, bemDom, Icon, Page, Button) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-              var toppingAdded = this.findChildBlock(Icon);
-              var allTopping = this.findParentBlock(Dropdown);
-
+              this.toppingAdded = this.findChildBlock(Icon);
+              this.allTopping = this.findParentBlock('consist').findChildElem('add_button').findChildBlock(Icon);
               this._domEvents().on('click', () => {
-                // this._checkToppings;
-                if ( toppingAdded.hasMod('added')) {
-                  toppingAdded.setMod('added', false);
-                } else {
-                  toppingAdded.setMod('added');
-                  allTopping.findChildBlock(Icon).setMod('checked');
-                }
+                  this.toppingAdded.toggleMod('symbol', 'add', 'added');
+                  this._checkToppings();
               })
             }
         }
     },
 
-    // _checkToppings: function() {
-    //   if ( this.findChildBlocks(Icon).hasMod('added')) {
-    //       console.log('hello');
-    //   }
-    // }
+    _checkToppings: function() {
+      if ( this.toppingAdded.hasMod('symbol', 'added')) {
+          this.allTopping.setMod('checked');
+      }
+    }
 }));
 
 });
+
+
+

@@ -4,8 +4,7 @@ html {
 }
 
 .page {
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
   display: flex;
   overflow: hidden;
   justify-content: space-between;
@@ -15,4 +14,8 @@ html {
   overflow: auto;
   min-width: 144px;
   box-sizing: border-box;
+}
+
+.scroll-area_hide {
+  display: none;
 }

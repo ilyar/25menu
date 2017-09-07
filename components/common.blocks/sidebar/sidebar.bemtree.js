@@ -11,15 +11,23 @@ block('sidebar')
           }
         },
         {
-          block: 'logo',
-          mods: {
-            title: true
-          }
+         elem: 'scroll-area',
+         elemMods: {
+          hide: true
         },
-        {
-          block: 'link',
-          url: 'tel:+7812200-20-20',
-          content: '8 812 200-20-20'
+         content: [
+          {
+            block: 'logo',
+            mods: {
+              title: true
+            }
+          },
+          {
+            block: 'link',
+            url: 'tel:+7812200-20-20',
+            content: '8 812 200-20-20'
+          }
+         ]
         }
       ]
     },

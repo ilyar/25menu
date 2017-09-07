@@ -15,38 +15,7 @@ block('consist').mod('type', 'product').content()(function() {
       block: 'ingridient',
       elem: 'text',
       content: [
-      'Томатный соус, брынза, базилик, сладкий перец, томаты, грибы,шампиньоны, красный лук,',
-      {
-        elem: 'remove',
-        content: [ {
-          block: 'remove',
-          elem: 'text',
-          content: ' моцарелла'
-        },
-        {
-          block: 'close-btn',
-          mods: {
-            type: 'ingridient'
-          }
-        }
-        ]
-      },
-      {
-        elem: 'remove',
-        content: [
-        {
-          block: 'remove',
-          elem: 'text',
-          content: ' маслины'
-        },
-        {
-          block: 'close-btn',
-          mods: {
-            type: 'ingridient'
-          }
-        }
-        ]
-      }
+      this.ctx.ingridients
       ]
     }
     ]
@@ -96,7 +65,7 @@ block('consist').mod('type', 'product').content()(function() {
       }
       ]
     },
-    {
+    this.ctx.modifiers && this.ctx.modifiers.length ? {
       elem: 'add_button',
       mix: { block: 'consist', elem: 'adder' },
       content: [
@@ -140,122 +109,37 @@ block('consist').mod('type', 'product').content()(function() {
           {
             elem: 'inner',
             content: [
-            {
-              elem: 'menu-item',
-              val: 1,
-              content: [
+            this.ctx.modifiers && this.ctx.modifiers.map( (item, index) => {
+              return [
               {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
+                elem: 'menu-item',
+                val: index + 1,
+                content: [
+                  {
+                    block: 'addon',
+                    mods: {
+                      type: 'product'
+                    },
+                    mix: { block: 'consist', elem: 'adding' },
+                    name: item.name,
+                    price: item.price,
+                    weight: item.weight
+                  }
+                ]
               }
               ]
-            },
-            {
-              elem: 'menu-item',
-              val: 2,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 3,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 4,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 5,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 6,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 7,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            },
-            {
-              elem: 'menu-item',
-              val: 8,
-              content: [
-              {
-                block: 'addon',
-                mods: {
-                  type: 'product'
-                },
-                mix: { block: 'consist', elem: 'adding' }
-              }
-              ]
-            }
+            })
             ]
           }
           ]
         }
       }
       ]
-    }
+    } : ''
     ]
   }
   ]
 });
-
 
 block('consist').mod('type', 'basket').content()(function() {
   return [

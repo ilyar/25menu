@@ -1,4 +1,6 @@
 block('*').js()(function() {
-return applyNext(true)
+  return applyNext(true)
 })
 
+
+block('page').js()( true )

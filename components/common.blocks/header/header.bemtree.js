@@ -9,13 +9,13 @@ block('header').content()(function() {
           content: '8 812 200-20-20'
         },
         {
-          elem: 'hours',
-          content: 'с 10 до 23'
-        },
-        {
           block: 'link',
           url: '#',
           content: 'Доставка и оплата'
+        },
+        {
+          elem: 'hours',
+          content: 'с 10 до 23'
         }
         ]
       },
