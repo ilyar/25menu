@@ -69,54 +69,25 @@ block('consist').mod('type', 'product').content()(function() {
       elem: 'add_button',
       mix: { block: 'consist', elem: 'adder' },
       content: [
-      {
-        block: 'dropdown',
-        mods: {
-          switcher: 'button',
-          theme: '25menu',
-          size: 'm'
-        },
-        switcher: {
-          block: 'button',
-          text: 'Добавить топпинг',
-          icon: {
-            block: 'icon',
-            mods: {
-              symbol: 'add'
-            },
-            mix:{ block: 'consist', elem: 'add-icon' }
-          }
-        },
-        popup: {
-          block: 'menu',
+        {
+          block: 'select',
           mods: {
-            size: 'm',
-            select: 'check',
-            theme: '25menu'
+              mode: 'check',
+              theme: '25menu',
+              size: 'm'
           },
-          content: [
-          {
-            elem: 'title',
-            content: 'Выберите добавки'
-          },
-          {
-            block: 'close-btn',
-            mods: {
-              type: 'popup'
-            },
-            mix: { block: 'popup', elem: 'close' }
-          },
-          {
-            elem: 'inner',
-            content: [
-            this.ctx.modifiers && this.ctx.modifiers.map( (item, index) => {
-              return [
-              {
-                elem: 'menu-item',
-                val: index + 1,
-                content: [
-                  {
+          name: 'Modifiers',
+          text: 'Добавить Топпинг',
+          options:[
+            {
+              title: 'Выберите добавки',
+              group:
+              this.ctx.modifiers && this.ctx.modifiers.map( (item, index) => {
+                return {
+                  val: index,
+                  text: {
                     block: 'addon',
+                    js: item,
                     mods: {
                       type: 'product'
                     },
@@ -125,21 +96,19 @@ block('consist').mod('type', 'product').content()(function() {
                     price: item.price,
                     weight: item.weight
                   }
-                ]
-              }
-              ]
-            })
-            ]
+                }
+              })
+
           }
           ]
         }
-      }
       ]
     } : ''
     ]
   }
   ]
 });
+
 
 block('consist').mod('type', 'basket').content()(function() {
   return [

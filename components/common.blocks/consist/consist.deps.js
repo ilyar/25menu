@@ -13,14 +13,6 @@
           }
       },
       {
-        block: 'dropdown',
-        mods: {
-            switcher: 'button',
-            theme: '25menu',
-            size: 'm'
-        }
-      },
-      {
         block: 'icon',
         mods: {
             added: true,
