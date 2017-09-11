@@ -74,10 +74,11 @@ block('consist').mod('type', 'product').content()(function() {
           mods: {
               mode: 'check',
               theme: '25menu',
+              type: 'topping',
               size: 'm'
           },
-          name: 'Modifiers',
-          text: 'Добавить Топпинг',
+          name: 'modifiers',
+          text: 'Добавить топпинг',
           options:[
             {
               title: 'Выберите добавки',

@@ -14,26 +14,4 @@
   border-bottom: 1px dotted #808080;
 }
 
-.consist_type_product .consist__add_button {
-  width: 148px;
-}
-
-
-.consist_type_product .consist__add_button button {
-  all: initial;
-  width: 184px;
-  height: 32px;
-  display: flex;
-  font-family: 'Lab grotesque';
-  font-size: 14px;
-  padding: 0;
-  position: relative;
-  cursor: pointer;
-  line-height: 32px;
-}
-
-.consist_type_product button .icon_symbol_add {
-  width: 32px;
-}
-
 

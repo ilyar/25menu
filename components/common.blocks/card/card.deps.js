@@ -5,6 +5,7 @@
       {
         checked: true,
         chosen: true,
+        big: true,
         type: '*'
       }
     },

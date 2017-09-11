@@ -1,8 +1,12 @@
 .basket {
   max-width: 352px;
   padding: 10px 0 0!important;
-  background-color: #363839;
   position: relative;
+}
+
+.basket:hover {
+  background-color: #363839;
+  transition: background-color, 0.5s;
 }
 
 .basket .form {
@@ -137,21 +141,6 @@
   padding: 8px 0;
   max-height: 450px;
   overflow: auto;
-}
-
-.basket .basket__is_empty {
-  color: white;
-  margin: 30px auto;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 20px;
-}
-
-.basket .basket__good {
-  width: 308px;
-  box-sizing: content-box;
-  margin-bottom: 15px;
 }
 
 /* Футер корзины */

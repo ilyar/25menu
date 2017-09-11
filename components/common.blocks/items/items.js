@@ -46,7 +46,7 @@ provide(bemDom.declBlock(this.name, {
   },
 
   _showProduct: function( card ) {
-    let cardPerRow = 4;
+    let cardPerRow = 3;
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
     let row = Math.ceil( this.allCards.size() / cardPerRow );
     let isFinalRow = row == Math.ceil( card.params.index / cardPerRow );

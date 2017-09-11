@@ -36,6 +36,17 @@
   color: #808080;
 }
 
+.description__ingridients {
+  font-size: 13px;
+  color: #808080;
+  display: none;
+}
+
+.card:hover .description__ingridients {
+  display: block;
+  transition: all 200ms;
+}
+
 .card__popup {
   position: absolute;
   top: 50%;

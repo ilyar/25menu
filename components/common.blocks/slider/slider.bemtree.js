@@ -1,10 +1,4 @@
 block('slider').content()(function() {
-    this.ctx.items = [
-      { title: 'hello 1' },
-      { title: 'hello 2' },
-      { title: 'hello 3' },
-      { title: 'hello 4' }
-    ]
 
     return [
     {
@@ -20,16 +14,53 @@ block('slider').content()(function() {
     },
     {
       elem: 'content',
-      content: this.ctx.items.map( item => {
+      content: this.data.banner.map(( item, index ) => {
+      let color;
+      let type;
+      if (item.template !== null){
+        let banner = [];
+        banner = item.template.split("_");
+
+        switch (banner[0]) {
+          case 'blur':
+           type = 'gradient';
+            break;
+          case 'full':
+           type = 'full';
+            break;
+          default:
+            break;
+        }
+
+        switch (banner[1]) {
+          case 'black': // &
+            color = 'black';
+            break;
+          case 'pink': // <
+            color = 'pink';
+            break;
+          case 'gray': // >
+            color = 'gray';
+            break;
+          default:
+            color = 'black';
+        }
+      }
+
         return {
           elem: 'item',
           content: [
             {
               block: 'card',
               mods: {
-                type: 'special'
+                type: 'special',
+                color: color,
+                full: type == 'full',
+                gradient: type == 'gradient'
               },
-              content: item
+              title: item.name,
+              image: item.img,
+              text: item.text
             }
           ]
         }

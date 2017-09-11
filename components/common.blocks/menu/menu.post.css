@@ -5,4 +5,10 @@ block(menu) {
     touch-action: manipulation;
     box-sizing: border-box
   }
+
+  .elem(group-title) {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }

@@ -99,7 +99,9 @@ block('items').content()(function() {
              },
              mix: { block: 'items', elem: 'card' },
              mods: {
-              type: 'usual'
+              type: 'usual',
+              big: index == 0,
+              'is-deleted': product.isDeleted == 1
              },
               name: product.name,
               price: product.price,

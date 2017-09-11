@@ -344,7 +344,7 @@ block('auth').content()(function() {
         {
           elem: 'fourth-step',
           elemMods: {
-            hide: false
+            hide: true
           },
           content: [
           {

@@ -1,4 +1,5 @@
 .basket_type_opened {
+  background-color: #363839;
   -webkit-animation: slide-in-right 0.5s ease-in-out;
           animation: slide-in-right 0.5s ease-in-out;
   transition: max-width 0.5s;

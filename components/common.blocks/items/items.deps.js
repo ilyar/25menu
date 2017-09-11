@@ -17,7 +17,9 @@
           gradient: true,
           color: '*',
           full: true,
-          new: true
+          new: true,
+          big: true,
+          'is-deleted': true
         }
       },
       {

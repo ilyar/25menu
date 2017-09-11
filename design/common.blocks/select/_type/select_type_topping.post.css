@@ -1,26 +1,8 @@
-block(select).mod(theme 25menu) {
+block(select).mod(type topping) {
   width: 100%;
   vertical-align: bottom;
   border-radius: 3px;
   outline: none;
-
-  .elem(arrow) {
-    display: inline-block;
-    float: right;
-  }
-
-  .elem(arrow):after {
-    content: '\00A0';
-    width: 10px;
-    background-image: url(../../../../components/common.blocks/icon/svg/select-arrow-black.svg);
-    visibility: visible!important;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translate(-1px, 0);
-    position: absolute;
-    right: 10px;
-    top: 0px;
-  }
 
   .elem(button) {
     width: 100%;
@@ -46,6 +28,10 @@ block(select).mod(theme 25menu) {
   .mod(focused) {
     background-color: rgb(218, 226, 242, 0.4);
     border-radius: 3px;
+
+    &.mod(focused) {
+      background-color: unset;
+    }
   }
 
   .mod(has-error) {
@@ -77,16 +63,23 @@ block(select).mod(theme 25menu) {
     block(button) {
       width: 164px;
       font-size: 14px;
-      border: 1px solid #d9d9d9;
       border-radius: 3px;
+
+      &block(button) {
+        border: none;
+        width: unset;
+        background: unset;
+      }
     }
     block(button).elem(text) {
       padding-right: 0;
-      padding-left: 10px;
+      padding-left: 0px;
+
+      &block(button).elem(text) {
+        padding: 0;
+      }
     }
 
   }
 
 }
-
-

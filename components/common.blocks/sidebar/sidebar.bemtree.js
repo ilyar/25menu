@@ -5,10 +5,16 @@ block('sidebar')
       elem: 'header',
       content: [
         {
-          block: 'logo',
-          mods: {
-            small: true
-          }
+          block: 'link',
+          url: '/',
+          content: [
+              {
+                block: 'logo',
+                mods: {
+                  small: true
+                }
+              }
+          ]
         },
         {
          elem: 'scroll-area',

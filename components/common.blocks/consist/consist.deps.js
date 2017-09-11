@@ -30,6 +30,7 @@
         block: 'select',
         mods: {
           theme: '25menu',
+          type: 'topping',
           size: '*'
         }
       },

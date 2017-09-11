@@ -207,63 +207,8 @@ block('basket').content()(function() {
         ]
       },
       {
-        elem: 'content',
-        mix: { block: 'basket', elem: 'content' },
-        content: [
-        {
-          elem: 'empty-block',
-          mix: { block: 'basket', elem: 'is_empty' },
-          content: 'В КОРЗИНЕ ПОКА ПУСТО'
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        },
-        {
-          block: 'product',
-          mix: { block: 'basket', elem: 'good' },
-          mods: {
-            type: 'basket'
-          }
-        }]
+        block: 'order',
+        mix: { block: 'basket', elem: 'content' }
       },
       {
         elem: 'footer',

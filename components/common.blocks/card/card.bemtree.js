@@ -16,7 +16,7 @@ block('card').mod('type', 'special').content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
+          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -32,11 +32,11 @@ block('card').mod('type', 'special').content()(function(){
             },
             {
               elem: 'main-info',
-              content: 'Скидка 15 % на все пиццы в день рождения'
+              content: this.ctx.title
             },
             {
               elem: 'add-info',
-              content: 'Промокод #partytime'
+              content: this.ctx.text
             }
           ]
         }
@@ -70,6 +70,10 @@ block('card').mod('type', 'usual').content()(function(){
           elem: 'weight',
           content: (this.ctx.weight*1000) + ' г.',
           tag: 'span'
+          },
+          {
+            elem: 'ingridients',
+            content: this.ctx.ingridients
           }
           ]
         }]

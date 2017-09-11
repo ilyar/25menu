@@ -13,7 +13,7 @@ var fs = require('fs'),
     slashes = require('connect-slashes'),
     passport = require('passport'),
     // LocalStrategy = require('passport-local').Strategy,
-    csrf = require('csurf'),
+    // csrf = require('csurf'),
     compression = require('compression'),
 
     config = require('./config'),
@@ -45,7 +45,7 @@ app
   }))
   .use(passport.initialize())
   .use(passport.session())
-  .use(csrf());
+  // .use(csrf());
 
 // NOTE: conflicts with livereload
 isDev || app.use(slashes());

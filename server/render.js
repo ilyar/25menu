@@ -29,7 +29,7 @@ function render(req, res, data, context) {
       view: data.view || 'page-' + data.page,
       params: req.params,
       url: req._parsedUrl,
-      csrf: req.csrfToken()
+      // csrf: req.csrfToken()
     }, data)
   };
 

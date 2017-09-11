@@ -1,0 +1,91 @@
+.card_big {
+  height: 336px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  background-color: #F5F5F5;
+  box-shadow: inset 0 0 0 10px white;
+}
+
+.card_big::before {
+  content: '';
+  background: transparent;
+
+}
+
+.card_big:hover {
+  border: 1px solid rgb(63, 63, 66, 0.6);
+}
+
+.card_big .card__header {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card_big .card__inner {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.card_big.card img {
+  display: block;
+  margin: 0;
+  height: 100%;
+}
+
+.card_big .description__main-info {
+  text-align: left;
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 24px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.card_big .description__weight {
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 20px;
+  color: #808080;
+  display: block;
+}
+
+.card_big .description__ingridients {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  max-width: 200px;
+}
+
+.card_big .card__popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+.card_big .card__price_block {
+  position: absolute;
+  bottom: 40px;
+  left: 63%;
+}
+
+.card_big .price_type_card:not(.price_pressed):hover {
+  margin-left: -32px;
+}
+
+.card_big .price_pressed {
+  margin-left: -32px;
+}
+

@@ -1,6 +1,11 @@
 [{
     shouldDeps: [
         {
+          elems: [
+            'content'
+          ]
+        },
+        {
           block: 'icon',
           mods: {
             symbol: '*'
@@ -29,6 +34,7 @@
           }
         },
         'form',
+        'order',
         {
           block: 'form-field',
           mods: {

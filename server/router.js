@@ -48,6 +48,11 @@ module.exports = function( app ) {
     products = request;
   })
 
+  let banner = [];
+  request({url: 'api/banner'}).then(request => {
+    banner = request;
+  })
+
   // let basket = [];
   // request({url: '/api/basket'}).then(request => {
   //   basket = request;
@@ -58,6 +63,7 @@ module.exports = function( app ) {
       page: 'index',
       bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
       menu: menu,
+      banner: banner,
       products: products,
       items: [
         {
@@ -78,6 +84,7 @@ module.exports = function( app ) {
   app.get('/cabinet', function(req, res) {
   render(req, res, {
     page: 'cabinet',
+    menu: menu,
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop'
     })
   });
@@ -85,6 +92,7 @@ module.exports = function( app ) {
   app.get('/order/', function(req, res) {
   render(req, res, {
     page: 'order',
+    menu: menu,
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
     title: req.params.order
     })
@@ -114,6 +122,29 @@ module.exports = function( app ) {
     title: req.params.item,
     })
   });
+
+
+  /*
+   * API
+   *
+   *******************************/
+
+  app.post('/api/order/add', function(req, res) {
+    res.send( JSON.stringify( { hello: 'world' } ) )
+    // client.post(
+    //   { url: 'basket/additem' },
+    //   {
+    //     item_id: req.query.id,
+    //     product_id: req.query.id,
+    //     count: req.query.count,
+    //     modifications: req.query.mods
+    //   }
+    // ).then( api => {
+    //   res.send( JSON.stringify( api ) )
+    // })
+  });
+
+
 
 }
 
