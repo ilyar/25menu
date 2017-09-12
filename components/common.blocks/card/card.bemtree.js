@@ -71,7 +71,7 @@ block('card').mod('type', 'usual').content()(function(){
           content: (this.ctx.weight*1000) + ' г.',
           tag: 'span'
           },
-          {
+          this.ctx.ingridients && {
             elem: 'ingridients',
             content: this.ctx.ingridients
           }
@@ -96,7 +96,7 @@ block('card').mod('type', 'pizza').content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
+          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -108,72 +108,80 @@ block('card').mod('type', 'pizza').content()(function(){
         {
           elem: 'main-info',
           content: [
-          'Борщик, с капусткой, но не красной',
+          this.ctx.name,
           {
           elem: 'weight',
-          content: '300 мг.',
+          content: (this.ctx.weight*1000) + ' г.',
           tag: 'span'
           }
           ]
+        },
+        this.ctx.ingridients && {
+          elem: 'ingridients',
+          content: this.ctx.ingridients
         }]
       },
       {
-        block: 'selector',
-        mods: {
-          pizza: 'size'
-        },
-        tag: 'select',
+        elem: 'options',
         content: [
-        {
-          elem: 'option',
-          tag: 'option',
-          attrs: {
-            value: 1
+          {
+            block: 'selector',
+            mods: {
+              pizza: 'size'
+            },
+            tag: 'select',
+            content: [
+            {
+              elem: 'option',
+              tag: 'option',
+              attrs: {
+                value: 1
+              },
+              content: 'Ø 25 см'
+            },
+            {
+              elem: 'option',
+              tag: 'option',
+              attrs: {
+                value: 2
+              },
+              content: 'Ø 35 см'
+            }
+            ]
           },
-          content: 'Ø 25 см'
-        },
-        {
-          elem: 'option',
-          tag: 'option',
-          attrs: {
-            value: 2
-          },
-          content: 'Ø 35 см'
-        }
-        ]
-      },
-      {
-        block: 'selector',
-        mods: {
-          pizza: 'base'
-        },
-        tag: 'select',
-        content: [
-        {
-          elem: 'option',
-          tag: 'option',
-          attrs: {
-            value: 1
-          },
-          content: 'На тонком тесте'
-        },
-        {
-          elem: 'option',
-          tag: 'option',
-          attrs: {
-            value: 2
-          },
-          content: 'На толстом тесте'
-        }
-        ]
-      },
+          {
+            block: 'selector',
+            mods: {
+              pizza: 'base'
+            },
+            tag: 'select',
+            content: [
+            {
+              elem: 'option',
+              tag: 'option',
+              attrs: {
+                value: 1
+              },
+              content: 'На тонком тесте'
+            },
+            {
+              elem: 'option',
+              tag: 'option',
+              attrs: {
+                value: 2
+              },
+              content: 'На толстом тесте'
+            }
+            ]
+          }
+      ]},
       {
         block: 'price',
         mods: {
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        content: '150 Р'
+        price: this.ctx.price
       }
       ]
     }]
@@ -211,7 +219,81 @@ block('card').mod('type', 'roll').content()(function(){
       content: [
         {
           block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
+          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+        }
+      ]
+    },
+    {
+      elem: 'inner',
+      content: [
+      {
+        block: 'description',
+        content: [
+        {
+          elem: 'main-info',
+          content: [
+          this.ctx.name,
+          {
+          elem: 'weight',
+          content: (this.ctx.weight*1000) + ' г.',
+          tag: 'span'
+          },
+          this.ctx.ingridients && {
+            elem: 'ingridients',
+            content: this.ctx.ingridients
+          }]
+        }]
+      },
+      {
+        elem: 'options',
+        content: [
+        {
+          block: 'selector',
+          mix: { block: 'description', elem: 'amount' },
+          mods: {
+            amount: true
+          },
+          tag: 'select',
+          content: [
+          {
+            elem: 'option',
+            tag: 'option',
+            attrs: {
+              value: 1
+            },
+            content: '4 шт.'
+          },
+          {
+            elem: 'option',
+            tag: 'option',
+            attrs: {
+              value: 2
+            },
+            content: '8 шт.'
+          }
+          ]
+        },
+        ]
+      },
+      {
+        block: 'price',
+        mods: {
+          type: 'card'
+        },
+        mix: { block: 'card', elem: 'price_block'},
+        price: this.ctx.price
+      }
+      ]
+    }]
+});
+
+block('card').mod('type', 'combo').content()(function(){
+  return [ {
+      elem: 'header',
+      content: [
+        {
+          block: 'image',
+          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -223,16 +305,13 @@ block('card').mod('type', 'roll').content()(function(){
         {
           elem: 'main-info',
           content: [
-          'Борщик, с капусткой, но не красной',
+          this.ctx.name,
           {
           elem: 'weight',
-          content: '300 мг.',
+          content: (this.ctx.weight*1000) + ' г.',
           tag: 'span'
           }
           ]
-        },{
-          elem: 'amount',
-          content: '8 штук'
         }]
       },
       {
@@ -241,7 +320,7 @@ block('card').mod('type', 'roll').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        content: '150 Р'
+        price: this.ctx.price
       }
       ]
     }]
@@ -293,4 +372,19 @@ block('card').mod('type', 'small').content()(function(){
       ]
     }]
 });
+
+
+// block('card').mod('big', true).content()(function(){
+//   return [
+//     {
+//       elem: 'header',
+//       content: [
+//         {
+//           block: 'image'
+//         }
+//       ]
+//     },
+//     applyNext()
+//     ]
+// });
 

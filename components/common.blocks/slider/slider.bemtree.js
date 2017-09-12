@@ -23,10 +23,10 @@ block('slider').content()(function() {
 
         switch (banner[0]) {
           case 'blur':
-           type = 'gradient';
-            break;
-          case 'full':
            type = 'full';
+            break;
+          case 'promo':
+           type = 'gradient';
             break;
           default:
             break;

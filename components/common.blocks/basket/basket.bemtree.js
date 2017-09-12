@@ -21,6 +21,7 @@ block('basket').content()(function() {
   },
   {
     block: 'form',
+    mix: { block: 'basket', elem: 'form' },
     content: [
     {
       elem: 'header',
@@ -209,6 +210,11 @@ block('basket').content()(function() {
       {
         block: 'order',
         mix: { block: 'basket', elem: 'content' }
+      },
+      {
+        elem: 'text',
+        mix: { block: 'basket', elem: 'name' },
+        content: 'Корзина'
       },
       {
         elem: 'footer',

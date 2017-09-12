@@ -1,11 +1,18 @@
 modules.define('items',
-  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn', 'header', 'page', 'sidebar'],
-  function(provide, bemDom, BEMHTML, Card, Product, Close, Header, Page, Sidebar) {
+  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn', 'header', 'page', 'sidebar', 'button'],
+  function(provide, bemDom, BEMHTML, Card, Product, Close, Header, Page, Sidebar, Button) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
     js: {
       inited: function() {
+
+
+        // let leftControl = this.findChildElem('control_left');
+        // // .on('click', ( event ) => {
+        //   console.log(leftControl)
+        //   // this._showProduct()
+        // // }),
 
         this._domEvents('card').on('click', ( event ) => {
           this.allCards = event.bemTarget.findParentElem('card-group').findChildElems('card');
@@ -31,11 +38,6 @@ provide(bemDom.declBlock(this.name, {
           this._hideProduct();
         }),
 
-        this._domEvents('product__control_left').on('click', ( event ) => {
-          console.log('hello')
-          // this._showProduct()
-        }),
-
         this._domEvents().on('scroll', () => {
           this._showSideLogo();
         })
@@ -46,7 +48,7 @@ provide(bemDom.declBlock(this.name, {
   },
 
   _showProduct: function( card ) {
-    let cardPerRow = 3;
+    let cardPerRow = 4;
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
     let row = Math.ceil( this.allCards.size() / cardPerRow );
     let isFinalRow = row == Math.ceil( card.params.index / cardPerRow );

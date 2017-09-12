@@ -26,6 +26,14 @@
   margin-bottom: 30px;
 }
 
+.items__subtitle {
+  font-size: 28px;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  font-weight: bold
+}
+
 .items__popup {
   position: relative;
   z-index: 0;

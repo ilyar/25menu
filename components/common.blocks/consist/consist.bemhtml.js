@@ -88,6 +88,7 @@ block('consist').mod('type', 'product').content()(function() {
                   val: index,
                   text: {
                     block: 'addon',
+                    val: index,
                     js: item,
                     mods: {
                       type: 'product'

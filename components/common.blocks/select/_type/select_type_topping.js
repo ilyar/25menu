@@ -8,25 +8,24 @@ provide(Select.declMod({ modName: 'type', modVal: 'topping' }, {
       inited: function() {
         this.__base.apply(this, arguments);
         let icon = this._elem('icon-add');
-        console.log( 'inited' );
-
-        // this.onToppingChoose;
-        this._events().on('change', this._updateAddButton, this);
+        let current = this.getVal();
+        console.log(current)
+        // this._onToppingChoose();
+        // this._events().on('click', this._updateAddButton);
       }
     }
   },
 
   _onToppingChoose : function() {
-    this.setVal( this.hasMod('mode', 'check') ? [] : '' );
+    var value = this.hasMod('mode', 'check') ? [] : '';
+    this.setVal( value );
+    console.log(this.getVal)
   },
 
   _updateAddButton : function() {
-    console.log( '!!!!!!!!!!!!!!!!!!!!!!' );
-    console.log( !!this.getVal().length );
-    this._elem('icon-add').toggleMod('ed', true, !!this.getVal().length );
+    console.log( !!this.getVal.length );
+    this._elem('icon-add').toggleMod('ed', true, !!this.getVal.length );
   }
-},{
-  lazyInit: false
 }));
 
 });

@@ -1,11 +1,11 @@
 .basket_closingAnimation.basket_type_closed {
   -webkit-animation: slide-out-right 0.5s ease-in-out forwards;
           animation: slide-out-right 0.5s ease-in-out forwards;
-  transition: min-width 0.5s;
+  transition: all 0.5s;
 }
 
 
-/* Анимация открытия корзины */
+/* Анимация закрытия корзины */
 @-webkit-keyframes slide-out-right {
   0% {
     min-width: 352px;
@@ -14,7 +14,7 @@
 
   100% {
     min-width: 64px;
-    background-color: #F05565;
+/*    background-color: #F05565;*/
   }
 }
 @keyframes slide-out-right {
@@ -25,7 +25,7 @@
 
   100% {
     min-width: 64px;
-    background-color: #F05565;
+    /*background-color: #F05565;*/
   }
 }
 

@@ -2,30 +2,26 @@
   background-color: #363839;
   -webkit-animation: slide-in-right 0.5s ease-in-out;
           animation: slide-in-right 0.5s ease-in-out;
-  transition: max-width 0.5s;
+  transition: all 0.5s;
 }
 
 /* Анимация открытия корзины */
 @-webkit-keyframes slide-in-right {
   0% {
     max-width: 64px;
-    background-color: #F05565
   }
 
   100% {
     max-width: 352px;
-    background-color: #363839;
   }
 }
 @keyframes slide-in-right {
   0% {
     max-width: 64px;
-    background-color: #F05565
   }
 
   100% {
     max-width: 352px;
-    background-color: #363839;
   }
 }
 

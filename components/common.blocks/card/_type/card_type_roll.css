@@ -1,8 +1,6 @@
 .description__amount {
-    text-align: center;
+  text-align: center;
   font-weight: normal;
   line-height: 20px;
   font-size: 13px;
-  margin: 0 auto;
-  color: #808080;
 }

@@ -10,7 +10,11 @@
           }
         },
         {
-          block: 'icon'
+          block: 'icon',
+          mods: {
+            symbol: '*',
+            revert: true
+          }
         },
         {
           block: 'price',
@@ -37,6 +41,12 @@
               theme: '25menu',
               size: 's'
           }
+        },
+        {
+          block: 'button',
+          mods: {
+              theme: '25menu'
         }
+    }
     ]
 })

@@ -3,6 +3,8 @@
   display: block;
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -10,13 +12,24 @@
 }
 
 .card__header {
-  height: 50%;
+  /*height: 50%;*/
   overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+
+.card__inner {
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card img {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .description__main-info {
@@ -25,7 +38,7 @@
   line-height: 20px;
   font-size: 18px;
   width: 200px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .description__weight {
@@ -40,11 +53,13 @@
   font-size: 13px;
   color: #808080;
   display: none;
+  max-width: 200px;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .card:hover .description__ingridients {
   display: block;
-  transition: all 200ms;
 }
 
 .card__popup {
@@ -58,8 +73,7 @@
 }
 
 .card__price_block {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
+  margin: 20px auto 40px;
+
 }
 

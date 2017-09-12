@@ -14,28 +14,30 @@ block('product').content()(function() {
       ]
     },
     {
-      elem: 'control',
-      js: true,
-      elemMods: {
-        left: true
+      block: 'button',
+      mods: {
+        theme: '25menu'
       },
-      content: [
+      mix: { block: 'product', elem: 'control', elemMods: { left: true } },
+      icon:
       {
-        block: 'icon'
+        block: 'icon',
+        mods: {
+          symbol: 'control',
+        }
       }
-      ]
     },
     {
-      elem: 'control',
-      js: true,
-      elemMods: {
-        right: true
-      },
-      content: [
+      block: 'button',
+      mix: { block: 'product', elem: 'control', elemMods: { right: true } },
+      icon:
       {
-        block: 'icon'
+        block: 'icon',
+        mods: {
+          symbol: 'control',
+          revert: true
+        }
       }
-      ]
     },
     {
       elem: 'info',

@@ -2,15 +2,15 @@
   max-width: 352px;
   padding: 10px 0 0!important;
   position: relative;
+  transition: all 0.5s;
 }
+
 
 .basket:hover {
   background-color: #363839;
-  transition: background-color, 0.5s;
 }
 
 .basket .form {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,12 @@
   z-index: 9999;
 }
 
+
+.basket__name {
+  color: white;
+  transform: rotate(270deg);
+  /*letter-spacing: 2px;*/
+}
 
 /* Хэдер корзины — поля ввода */
 .basket .basket__header {
@@ -138,9 +144,11 @@
 .basket .basket__content {
   flex: 1;
   background-color: #3F3F42;
-  padding: 8px 0;
+  padding: 20px 0;
+  box-sizing: border-box;
   max-height: 450px;
   overflow: auto;
+  min-height: 400px;
 }
 
 /* Футер корзины */
