@@ -112,7 +112,7 @@ block('items').content()(function() {
             return {
              block: 'card',
              js: {
-              index: index + 1,
+              index: index + 2,
               product: {
                 name: product.name,
                 price: product.price,

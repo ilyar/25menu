@@ -49,18 +49,19 @@ provide(bemDom.declBlock(this.name, {
 
   _showProduct: function( card ) {
     let cardPerRow = 4;
+    let cardsArray = this.allCards.size() + 1;
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
-    let row = Math.ceil( this.allCards.size() / cardPerRow );
+    let row = Math.ceil( cardsArray / cardPerRow );
     let isFinalRow = row === Math.ceil( card.params.index / cardPerRow );
 
     console.log('IND ' + card.params.index);
     console.log('INS ' + insertIndex);
     console.log('ROW ' + Math.ceil( card.params.index / cardPerRow ));
-    console.log(this.allCards.size());
+    console.log('SIZE ' + cardsArray);
     console.log(isFinalRow);
 
     bemDom.after(
-       isFinalRow ? this.allCards.get( this.allCards.size()).domElem : this.allCards.get(insertIndex ).domElem,
+       isFinalRow ? this.allCards.get(cardsArray - 2).domElem : this.allCards.get(insertIndex - 2 ).domElem,
         BEMHTML.apply(
         {
           block: 'items',
