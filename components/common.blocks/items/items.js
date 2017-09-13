@@ -53,13 +53,6 @@ provide(bemDom.declBlock(this.name, {
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
     let row = Math.ceil( cardsArray / cardPerRow );
     let isFinalRow = row === Math.ceil( card.params.index / cardPerRow );
-
-    console.log('IND ' + card.params.index);
-    console.log('INS ' + insertIndex);
-    console.log('ROW ' + Math.ceil( card.params.index / cardPerRow ));
-    console.log('SIZE ' + cardsArray);
-    console.log(isFinalRow);
-
     bemDom.after(
        isFinalRow ? this.allCards.get(cardsArray - 2).domElem : this.allCards.get(insertIndex - 2 ).domElem,
         BEMHTML.apply(

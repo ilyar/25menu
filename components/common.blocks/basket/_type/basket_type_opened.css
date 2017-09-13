@@ -5,6 +5,10 @@
   transition: all 0.5s;
 }
 
+.basket_type_opened .basket__name{
+  display: none;
+}
+
 /* Анимация открытия корзины */
 @-webkit-keyframes slide-in-right {
   0% {

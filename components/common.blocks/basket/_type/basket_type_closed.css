@@ -3,6 +3,16 @@
   background-color: #F05565;
   min-width: 64px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.basket_type_closed:hover {
+  background-color: #363839;
+  transition: all 0.5s;
+}
+
+.basket_type_closed .basket__name {
+  display: block;
 }
 
 

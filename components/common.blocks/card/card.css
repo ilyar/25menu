@@ -52,14 +52,16 @@
 .description__ingridients {
   font-size: 13px;
   color: #808080;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
   max-width: 200px;
   margin: 10px auto;
   text-align: center;
 }
 
 .card:hover .description__ingridients {
-  display: block;
+  max-height: 500px;
+  transition: max-height 1000ms;
 }
 
 .card__popup {
