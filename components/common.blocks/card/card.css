@@ -25,11 +25,15 @@
   justify-content: flex-end;
 }
 
-.card img {
+.card .img {
   display: block;
   width: 100%;
   position: absolute;
   bottom: 0;
+  height: 255px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .description__main-info {

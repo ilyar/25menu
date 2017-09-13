@@ -20,6 +20,9 @@
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card_big .card__inner {
@@ -30,14 +33,13 @@
   justify-content: flex-start;
 }
 
-.card_big.card img {
-/*  background-blend-mode: multiply;
-  background-image: url(this.ctx.image);*/
+.card_big.card .img {
   display: block;
   margin: auto;
-  /*height: 100%;*/
   width: 100%;
   position: static;
+  background-blend-mode: multiply;
+  background-color: #F5F5F5;
 }
 
 .card_big .description__main-info {

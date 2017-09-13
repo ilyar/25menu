@@ -15,8 +15,11 @@ block('card').mod('type', 'special').content()(function(){
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -48,12 +51,16 @@ block('card').mod('type', 'special').content()(function(){
 });
 
 block('card').mod('type', 'usual').content()(function(){
-  return [ {
+  return [
+    {
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -91,12 +98,16 @@ block('card').mod('type', 'usual').content()(function(){
 });
 
 block('card').mod('type', 'pizza').content()(function(){
-  return [ {
+  return [
+    {
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -205,8 +216,11 @@ block('card').mod('type', 'info').content()(function(){
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: 'http://lorempixel.com/196/196/cats'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     }
@@ -214,12 +228,16 @@ block('card').mod('type', 'info').content()(function(){
 });
 
 block('card').mod('type', 'roll').content()(function(){
-  return [ {
+  return [
+    {
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -288,12 +306,16 @@ block('card').mod('type', 'roll').content()(function(){
 });
 
 block('card').mod('type', 'combo').content()(function(){
-  return [ {
+  return [
+    {
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -332,8 +354,11 @@ block('card').mod('type', 'small').content()(function(){
       elem: 'header',
       content: [
         {
-          block: 'image',
-          url: 'http://lorempixel.com/112/112/cats'
+          block: 'img',
+          attrs: {
+            style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
+          }
+          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -373,18 +398,4 @@ block('card').mod('type', 'small').content()(function(){
     }]
 });
 
-
-// block('card').mod('big', true).content()(function(){
-//   return [
-//     {
-//       elem: 'header',
-//       content: [
-//         {
-//           block: 'image'
-//         }
-//       ]
-//     },
-//     applyNext()
-//     ]
-// });
 
