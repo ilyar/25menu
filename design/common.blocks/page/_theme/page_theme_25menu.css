@@ -2,30 +2,30 @@
 
 @font-face {
   font-family: 'Lab Grotesque';
-  src: url(../../../fonts/'LabGrotesque-Bold.eot');
-  src: url(../../../fonts/'LabGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
-       url(../../../fonts/'LabGrotesque-Bold.woff') format('woff'),
-       url(../../../fonts/'LabGrotesque-Bold.ttf') format('truetype');
+  src: url(../../../fonts/LabGrotesque-Bold.eot);
+  src: url(../../../fonts/LabGrotesque-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../../../fonts/LabGrotesque-Bold.woff) format('woff'),
+       url(../../../fonts/LabGrotesque-Bold.ttf) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lab Grotesque';
-  src: url(../../../fonts/'LabGrotesque-Regular.eot');
-  src: url(../../../fonts/'LabGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
-       url(../../../fonts/'LabGrotesque-Regular.woff') format('woff'),
-       url(../../../fonts/'LabGrotesque-Regular.ttf') format('truetype');
+  src: url(../../../fonts/LabGrotesque-Regular.eot);
+  src: url(../../../fonts/LabGrotesque-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../../../fonts/LabGrotesque-Regular.woff) format('woff'),
+       url(../../../fonts/LabGrotesque-Regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lab Grotesque';
-  src: url(../../../fonts/'LabGrotesque-Thin.eot');
-  src: url(../../../fonts/'LabGrotesque-Thin.eot?#iefix') format('embedded-opentype'),
-       url(../../../fonts/'LabGrotesque-Thin.woff') format('woff'),
-       url(../../../fonts/'LabGrotesque-Thin.ttf') format('truetype');
+  src: url(../../../fonts/LabGrotesque-Thin.eot);
+  src: url(../../../fonts/LabGrotesque-Thin.eot?#iefix) format('embedded-opentype'),
+       url(../../../fonts/LabGrotesque-Thin.woff) format('woff'),
+       url(../../../fonts/LabGrotesque-Thin.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
 }

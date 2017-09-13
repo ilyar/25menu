@@ -7,9 +7,6 @@
       }
     },
     {
-      mods: { view: ['404'] }
-    },
-    {
       block: 'basket',
       mods: {
         type: '*',

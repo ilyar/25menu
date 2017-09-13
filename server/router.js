@@ -39,12 +39,12 @@ const isCallerMobile = req => {
 module.exports = function( app ) {
 
   let menu = [];
-    request({url: '/api/catalog'}).then(request => {
+    request({url: 'api/catalog'}).then(request => {
     menu = request;
   })
 
   let products = [];
-    request({url: 'api/catalog?expand=products'}).then(request => {
+    request({url: 'api/category?expand=products'}).then(request => {
     products = request;
   })
 
@@ -123,6 +123,16 @@ module.exports = function( app ) {
     })
   });
 
+  app.get('*', function(req, res) {
+    res.status(404);
+    render(req, res, {
+    page: 'notfound',
+    menu: menu,
+    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+    title: req.params.notfound
+    })
+  });
+
 
   /*
    * API
@@ -143,8 +153,6 @@ module.exports = function( app ) {
     //   res.send( JSON.stringify( api ) )
     // })
   });
-
-
 
 }
 

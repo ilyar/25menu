@@ -66,11 +66,6 @@ require('./router')(app);
 
 isDev && require('./rebuild')(app);
 
-app.get('*', function(req, res) {
-  res.status(404);
-  return render(req, res, { view: '404', bundle: 'index' });
-});
-
 if (isDev) {
   app.get('/error/', function() {
     throw new Error('Uncaught exception from /error');

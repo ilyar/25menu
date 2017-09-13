@@ -1,0 +1,40 @@
+.page-notfound {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+
+.page-notfound__content {
+  flex: 1;
+  max-width: 1120px;
+  margin-bottom: 30px;
+}
+
+.page-notfound__error {
+  font-size: 10.5vw;
+  color: #F05565;
+  font-weight: bold;
+  display: inline;
+}
+
+.page-notfound__error .page-notfound__text {
+  display: inline;
+  color: black;
+  margin-left: 50px;
+}
+
+
+.page-notfound__text {
+  font-size: 10.5vw;
+  font-weight: bold;
+}
+
+
+.page-notfound__comeback {
+  background-color: #F05565;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+}
