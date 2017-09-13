@@ -92,7 +92,7 @@ block('items').content()(function() {
             content: item.name,
             mix: { block: 'items', elem: 'title' }
           },
-          item.products && item.products.map( (product, index) => {
+          item.items && item.items.map( (product, index) => {
             let type;
             if (product.card_type !== null){
               switch (product.card_type) {

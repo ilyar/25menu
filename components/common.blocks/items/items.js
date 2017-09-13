@@ -7,13 +7,6 @@ provide(bemDom.declBlock(this.name, {
     js: {
       inited: function() {
 
-
-        // let leftControl = this.findChildElem('control_left');
-        // // .on('click', ( event ) => {
-        //   console.log(leftControl)
-        //   // this._showProduct()
-        // // }),
-
         this._domEvents('card').on('click', ( event ) => {
           this.allCards = event.bemTarget.findParentElem('card-group').findChildElems('card');
           this.chosenCard = event.bemTarget.findMixedBlock(Card);
@@ -31,6 +24,33 @@ provide(bemDom.declBlock(this.name, {
               this.chosenCard.setMod('checked');
               this._showProduct(this.chosenCard);
           }
+          this.domElem.scrollTop(this.chosenCard.domElem[0].offsetTop + (this.findChildElem('popup') !== null ? 200 : 500) );
+        }),
+
+        this._domEvents('control_left').on('click', () => {
+          let previous = this.chosenCard.params.index - 1;
+          if ( previous < 2 ) {
+            this._hideProduct();
+            this.chosenCard.setMod('checked', false);
+          }
+          this._hideProduct();
+          this.chosenCard.setMod('checked', false);
+          this._showProduct(this.allCards.get(previous - 2).findMixedBlock(Card))
+          this.chosenCard = this.allCards.get(previous - 2).findMixedBlock(Card);
+          this.allCards.get(previous - 2).findMixedBlock(Card).setMod('checked');
+        }),
+
+        this._domEvents('control_right').on('click', () => {
+          let next = this.chosenCard.params.index + 1;
+          if ( next > this.allCards.size() + 1) {
+            this._hideProduct();
+            this.chosenCard.setMod('checked', false);
+          }
+          this._hideProduct();
+          this.chosenCard.setMod('checked', false);
+          this._showProduct(this.allCards.get(next - 2).findMixedBlock(Card))
+          this.chosenCard = this.allCards.get(next - 2).findMixedBlock(Card);
+          this.allCards.get(next - 2).findMixedBlock(Card).setMod('checked');
         }),
 
         this._domEvents('product_close').on('click', ( event ) => {
@@ -41,7 +61,6 @@ provide(bemDom.declBlock(this.name, {
         this._domEvents().on('scroll', () => {
           this._showSideLogo();
         })
-
 
       }
     }

@@ -44,7 +44,7 @@ module.exports = function( app ) {
   })
 
   let products = [];
-    request({url: 'api/category?expand=products'}).then(request => {
+    request({url: '/api/catalog?products=true'}).then(request => {
     products = request;
   })
 

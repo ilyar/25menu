@@ -21,7 +21,7 @@
   right: 2%;
 }
 
-.product__control.button {
+.items__control.button {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -31,25 +31,25 @@
   margin-top: -28px;
 }
 
-.product__control.button .icon {
+.items__control.button .icon {
   width: 20px;
   height: 20px;
 }
 
 
-.product__control_left {
+.items__control_left {
   left: -2.5%;
 }
 
-.product__control_left .icon {
+.items__control_left .icon {
   margin-left: 25px;
 }
 
-.product__control_right {
+.items__control_right {
   right: -2.5%;
 }
 
-.product__control_right .icon {
+.items__control_right .icon {
   margin-left: 7px;
 }
 

@@ -18,7 +18,7 @@ block('product').content()(function() {
       mods: {
         theme: '25menu'
       },
-      mix: { block: 'product', elem: 'control', elemMods: { left: true } },
+      mix: { block: 'items', elem: 'control', elemMods: { left: true } },
       icon:
       {
         block: 'icon',
@@ -29,7 +29,7 @@ block('product').content()(function() {
     },
     {
       block: 'button',
-      mix: { block: 'product', elem: 'control', elemMods: { right: true } },
+      mix: { block: 'items', elem: 'control', elemMods: { right: true } },
       icon:
       {
         block: 'icon',
