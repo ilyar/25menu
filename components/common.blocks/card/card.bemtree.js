@@ -19,7 +19,6 @@ block('card').mod('type', 'special').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -44,10 +43,39 @@ block('card').mod('type', 'special').content()(function(){
           ]
         }
       ]
+    }
+    ]
+});
+
+block('card').mod('type', 'map').content()(function(){
+  return [
+    {
+      elem: 'header',
+      content: [
+        {
+          block: 'img'
+        }
+      ]
     },
     {
-      elem: 'wrapper'
-    }]
+      elem: 'inner',
+      content: [
+        {
+          block: 'description',
+          content: [
+            {
+              elem: 'main-info',
+              content: this.ctx.title
+            },
+            {
+              elem: 'add-info',
+              content: this.ctx.text
+            }
+          ]
+        }
+      ]
+    }
+    ]
 });
 
 block('card').mod('type', 'usual').content()(function(){
@@ -60,7 +88,6 @@ block('card').mod('type', 'usual').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -107,7 +134,6 @@ block('card').mod('type', 'pizza').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -220,7 +246,6 @@ block('card').mod('type', 'info').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     }
@@ -237,7 +262,6 @@ block('card').mod('type', 'roll').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -315,7 +339,6 @@ block('card').mod('type', 'combo').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },
@@ -358,7 +381,6 @@ block('card').mod('type', 'small').content()(function(){
           attrs: {
             style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '252x252' + '");'
           }
-          // url: '//delivery.breadhead.ru' + this.ctx.image + '252x252'
         }
       ]
     },

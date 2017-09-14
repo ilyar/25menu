@@ -15,6 +15,12 @@
         },
         {
           block: 'pagination'
+        },
+        {
+          block: 'button',
+          mods: {
+            disabled: true
+          }
         }
     ]
 })

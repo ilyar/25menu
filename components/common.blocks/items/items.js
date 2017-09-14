@@ -37,6 +37,7 @@ provide(bemDom.declBlock(this.name, {
           this.chosenCard.setMod('checked', false);
           this._showProduct(this.allCards.get(previous - 2).findMixedBlock(Card))
           this.chosenCard = this.allCards.get(previous - 2).findMixedBlock(Card);
+          this.domElem.scrollTop(this.chosenCard.domElem[0].offsetTop + (this.findChildElem('popup') !== null ? 200 : 500) );
           this.allCards.get(previous - 2).findMixedBlock(Card).setMod('checked');
         }),
 
@@ -50,6 +51,7 @@ provide(bemDom.declBlock(this.name, {
           this.chosenCard.setMod('checked', false);
           this._showProduct(this.allCards.get(next - 2).findMixedBlock(Card))
           this.chosenCard = this.allCards.get(next - 2).findMixedBlock(Card);
+          this.domElem.scrollTop(this.chosenCard.domElem[0].offsetTop + (this.findChildElem('popup') !== null ? 200 : 500) );
           this.allCards.get(next - 2).findMixedBlock(Card).setMod('checked');
         }),
 
@@ -67,7 +69,7 @@ provide(bemDom.declBlock(this.name, {
   },
 
   _showProduct: function( card ) {
-    let cardPerRow = 4;
+    let cardPerRow = window.innerWidth < 1280 ? 3 : 4;
     let cardsArray = this.allCards.size() + 1;
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
     let row = Math.ceil( cardsArray / cardPerRow );

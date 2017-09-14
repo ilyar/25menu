@@ -1,4 +1,129 @@
 block('items').content()(function() {
+  // Функция для слайдера
+  let slider = [];
+  const cardPerSlide = 4;
+  const banner = [
+    {
+      name: 'Доставка готовых блюд в Санкт-Петербурге',
+      text: 'В Красногвардейском, Невском и Фрунзенском районах.'
+    },
+    ...this.data.banner
+  ];
+  let cards = banner.length;
+  const slidesCount = ( ( cards - ( cards % cardPerSlide ) ) / cardPerSlide ) + ( cards % cardPerSlide ? 1 : 0 );
+
+  for (let slidePage = 0; slidePage < slidesCount; slidePage++) {
+    slider[ slidePage ] = [];
+    for (let cardCount = 0; cards > 0 && cardCount < cardPerSlide; cardCount++, cards--) {
+      let currentCard = banner[ banner.length - cards ];
+      let color;
+      let form;
+      if ( currentCard.hasOwnProperty('template') ){
+          if (currentCard.type == 'promo' ) {
+            let bannerType = [];
+            bannerType = currentCard.template.split("_");
+            switch (bannerType[0]) {
+              case 'blur':
+               form = 'full';
+                break;
+              case 'promo':
+               form = 'gradient';
+                break;
+              default:
+                break;
+            }
+            switch (bannerType[1]) {
+              case 'black': // &
+                color = 'black';
+                break;
+              case 'pink': // <
+                color = 'pink';
+                break;
+              case 'white': // >
+                color = 'gray';
+                break;
+              default:
+                color = 'black';
+            }
+        }
+      } else if (currentCard.type == 'action' ) {
+          let bannerType = [];
+            bannerType = currentCard.template.split("_");
+            switch (bannerType[0]) {
+              case 'blur':
+               form = 'full';
+                break;
+              case 'promo':
+               form = 'gradient';
+                break;
+              default:
+                break;
+            }
+            switch (bannerType[1]) {
+              case 'black': // &
+                color = 'black';
+                break;
+              case 'pink': // <
+                color = 'pink';
+                break;
+              case 'white': // >
+                color = 'gray';
+                break;
+              default:
+                color = 'black';
+            }
+      }
+
+      slider[ slidePage ][ cardCount ] = currentCard.hasOwnProperty('product') ?
+        {
+          elem: 'item',
+          content: [
+            {
+              block: 'card',
+              js: {
+                product: {
+                  name: currentCard.product.name,
+                  price: currentCard.product.price,
+                  image: currentCard.product.images,
+                  weight: currentCard.product.weight,
+                  description: currentCard.product.description,
+                  energy: currentCard.product.energyAmount,
+                  fat: currentCard.product.fatAmount,
+                  fiber: currentCard.product.fiberAmount,
+                  hydrates: currentCard.product.carbohydrateAmount,
+                  ingridients: currentCard.product.additionalInfo,
+                  modifiers: currentCard.product.modifiers
+                }
+              },
+              mods: {
+                type: 'special',
+                color: color,
+                full: form == 'full',
+                gradient: form == 'gradient'
+              },
+              title: currentCard.name,
+              image: currentCard.product.images,
+              text: currentCard.text
+            }
+          ]
+        } :
+        {
+          elem: 'item',
+          content: [
+            {
+              block: 'card',
+              mods: {
+                type: 'map'
+              },
+              title: currentCard.name,
+              text: currentCard.text
+            }
+          ]
+        }
+    }
+  }
+
+
   return [
     { block: 'header'},
     { elem: 'card-group',
@@ -13,7 +138,8 @@ block('items').content()(function() {
         }
       },
       {
-        block: 'slider'
+        block: 'slider',
+        content: slider
       },
       {
         elem: 'info-block',
@@ -69,30 +195,36 @@ block('items').content()(function() {
       }]
     },
     this.data.products.map(( item, index ) => {
+
+      var title =
+      item.parentGroup
+        ? [
+          {
+            block: 'title',
+            attrs: { id: item.site_id },
+            mix: { block: 'items', elem: 'title_hide' },
+            content: item.name,
+          },
+          {
+            block: 'subtitle',
+            content: item.name,
+            mix: { block: 'items', elem: 'subtitle'}
+          }
+          ]
+        :
+        {
+          block: 'title',
+          attrs: { id: item.site_id },
+          content: item.name,
+          mix: { block: 'items', elem: 'title' }
+        }
+
       return [
         { elem: 'card-group',
           content: [
-          item.parentGroup ?
-          {
-            block: 'title',
-            attrs: { id: item.name || item.code},
-            content: [
-            !item.parentGroup && item.name,
-            { block: 'subtitle',
-              attrs: { id: item.name || item.code},
-              content: item.name,
-              mix: { block: 'items', elem: 'subtitle'}
-            }
-            ]
-          }
-          :
-          {
-            block: 'title',
-            attrs: { id: item.name || item.code},
-            content: item.name,
-            mix: { block: 'items', elem: 'title' }
-          },
-          item.items && item.items.map( (product, index) => {
+          title,
+          item.products.map( (product, index) => {
+
             let type;
             if (product.card_type !== null){
               switch (product.card_type) {
@@ -109,6 +241,7 @@ block('items').content()(function() {
                   type = 'usual';
               }
             }
+
             return {
              block: 'card',
              js: {
@@ -146,6 +279,7 @@ block('items').content()(function() {
               modifiers: product.modifiers
             }
           } )
+
           ]
         }
     ]}),

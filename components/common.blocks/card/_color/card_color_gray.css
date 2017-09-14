@@ -2,9 +2,13 @@
 
 }
 
+.card_color_gray .card__header .img {
+  background-color: #F2F2F2;
+}
+
 .card_color_gray .card__inner {
-  color: #F05565;
-  background-color: #F2F2F2;;
+  color: black;
+  background-color: #F2F2F2;
 }
 
 

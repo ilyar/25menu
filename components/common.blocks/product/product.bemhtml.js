@@ -93,7 +93,10 @@ block('product').content()(function() {
           ],
           mix: { block: 'product', elem: 'filter' }
         },
-        this.ctx.description
+        {
+          elem: 'text',
+          content: this.ctx.description
+        }
         ]
       },
       {
@@ -121,13 +124,10 @@ block('product').content()(function() {
       ]
     },
     {
-      elem: 'image',
-      content: [
-      {
-        block: 'image',
-        url: '//delivery.breadhead.ru' + this.ctx.image + '476x476'
+      block: 'img',
+      attrs: {
+        style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '476x476' + '");'
       }
-      ]
     }
     ]
 });
@@ -141,13 +141,9 @@ block('product').mod('type', 'basket').content()(function(){
       content: [
       {
         block: 'image',
-        url: 'http://lorempixel.com/40/40/cats'
+        url: 'http://lorempixel.com/40/40/pizza'
       }
       ]
-    },
-    {
-      elem: 'short-counter',
-      content: '2'
     },
     {
       elem: 'info',

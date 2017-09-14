@@ -7,6 +7,7 @@
     position: relative;
 }
 
+
 .slider__content {
     width: 100%;
     height: 336px;
@@ -15,8 +16,7 @@
 }
 
 .slider__item {
-  lost-column: 1/4;
-  margin-right: 5px!important;
+  lost-column: 1/4 4 5px;
 }
 
 .slider .card_type_special:hover {
@@ -34,12 +34,12 @@
   top: -70px;
 }
 
-.slider__control div {
+.slider__control .button {
   margin-right: 5px;
   cursor: pointer;
 }
 
-.slider__left, .slider__right {
+.slider__prev, .slider__next {
   width: 36px;
   height: 36px;
   border: 1px solid #D0D0D0;
@@ -48,7 +48,7 @@
   flex-shrink: 0;
 }
 
-.slider__left::after {
+.slider__prev::after {
   content: '';
   width: 36px;
   height: 36px;
@@ -61,7 +61,7 @@
   background-position: 47% 50%;
 }
 
-.slider__right::after {
+.slider__next::after {
   content: '';
   width: 36px;
   height: 36px;
@@ -77,5 +77,37 @@
 
 .slider__pagination {
   margin: 16px auto 0;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  text-align: center;
+}
+
+.slider__page-item {
+    width: 8px;
+    height: 8px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    cursor: pointer;
+  }
+
+.slider__page-item_active {
+    background-color: black;
+  }
+
+.slider__page-item:last-child {
+    margin-right: 0;
+  }
+
+
+.slider__page {
+  display: none;
+}
+
+.slider__page_visible {
+  display: block;
+  width: 100%;
 }
 

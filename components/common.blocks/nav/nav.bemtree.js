@@ -4,7 +4,7 @@ block('nav').content()(function() {
       return !item.parentGroup && {
         block: 'link',
         mix: { block: 'nav', elem: 'item' },
-        url: '/#'+ item.name,
+        url: '/#'+ item.site_id,
         content: item.name
       }
     })

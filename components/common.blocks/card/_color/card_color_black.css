@@ -3,6 +3,10 @@
   color: white;
 }
 
+.card_color_black .card__header .img {
+  background-color: #3F3F42;
+}
+
 .card_color_black .card__inner{
   background-color: #3F3F42;
 }

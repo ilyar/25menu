@@ -13,3 +13,10 @@
 .value_type_product div {
   margin-right: 15px;
 }
+
+
+@media screen and (max-width: 1280px) {
+  .value_type_product div {
+    margin-right: 7px;
+  }
+}

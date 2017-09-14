@@ -3,6 +3,10 @@
   background-color: #F05565;
 }
 
+.card_color_pink .card__header .img {
+  background-color: #F05565;
+}
+
 
 .card_color_pink .card__inner {
   background-color: #F05565;

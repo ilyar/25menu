@@ -28,13 +28,22 @@
 .page-notfound__text {
   font-size: 10.5vw;
   font-weight: bold;
+  max-width: 80%;
 }
 
 
 .page-notfound__comeback {
+  margin-top: 50px;
   background-color: #F05565;
   border-radius: 4px;
   color: white;
   text-decoration: none;
   padding: 5px 15px;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-notfound__error,
+  .page-notfound__text {
+     font-size: 156px;
+  }
 }
