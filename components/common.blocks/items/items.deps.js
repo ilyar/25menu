@@ -13,6 +13,7 @@
         block: 'card',
         mods: {
           type: '*',
+          type: 'map',
           checked: true,
           gradient: true,
           color: '*',

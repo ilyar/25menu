@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 24px;
 }
 
 .product_hide {

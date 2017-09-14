@@ -1,10 +1,10 @@
 .card_color_black {
-  background-color: #3F3F42;
+  background-color: #F2F2F2;
   color: white;
 }
 
 .card_color_black .card__header .img {
-  background-color: #3F3F42;
+  background-color: #F2F2F2;
 }
 
 .card_color_black .card__inner{

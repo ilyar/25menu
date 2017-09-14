@@ -5,7 +5,7 @@
 }
 
 .page-index__inner {
-  overflow: scroll;
+  overflow: auto;
   box-sizing: border-box;
   flex: 1;
   height: 100%;
@@ -18,3 +18,4 @@
 .page-index__inner::-webkit-scrollbar { width: 0; }
 .page-index__inner { -ms-overflow-style: none; }
 .page-index__inner { overflow: -moz-scrollbars-none; }
+

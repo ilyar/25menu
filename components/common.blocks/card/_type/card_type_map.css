@@ -1,23 +1,36 @@
-/*.card_type_map {
-  background-color: #F2F2F2;
+.card_type_map {
+  position: relative;
+}
+
+.card_type_map .card__header {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
 
 .card_type_map .card__header .img {
-  width: 100%;
-  background-blend-mode: multiply;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(mapBanner.jpg);
 }
 
-
 .card_type_map .card__inner {
+  position: absolute;
+  bottom: 0;
   box-sizing: border-box;
   padding: 15px 25px;
   height: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card_type_map .description__main-info {
-  display: none;
   font-size: 18px;
   font-weight: bold;
   max-width: 176px;
@@ -25,10 +38,6 @@
   text-align: left;
   margin: 0;
   margin-bottom: 5px;
-}
-
-.card_type_map .description__new-mark {
-  display: none;
 }
 
 .card_type_map .description__add-info {
@@ -48,4 +57,4 @@
   background: transparent;
 }
 
-*/
+

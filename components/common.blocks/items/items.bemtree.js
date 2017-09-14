@@ -4,7 +4,7 @@ block('items').content()(function() {
   const cardPerSlide = 4;
   const banner = [
     {
-      name: 'Доставка готовых блюд в Санкт-Петербурге',
+      name: 'Доставка готовых блюд в Петербурге',
       text: 'В Красногвардейском, Невском и Фрунзенском районах.'
     },
     ...this.data.banner
@@ -24,7 +24,7 @@ block('items').content()(function() {
             bannerType = currentCard.template.split("_");
             switch (bannerType[0]) {
               case 'blur':
-               form = 'full';
+                form = 'full';
                 break;
               case 'promo':
                form = 'gradient';
@@ -43,15 +43,14 @@ block('items').content()(function() {
                 color = 'gray';
                 break;
               default:
-                color = 'black';
+                break;
             }
-        }
-      } else if (currentCard.type == 'action' ) {
+        } else if (currentCard.type == 'action' ) {
           let bannerType = [];
             bannerType = currentCard.template.split("_");
             switch (bannerType[0]) {
               case 'blur':
-               form = 'full';
+                form = 'full';
                 break;
               case 'promo':
                form = 'gradient';
@@ -72,6 +71,7 @@ block('items').content()(function() {
               default:
                 color = 'black';
             }
+      }
       }
 
       slider[ slidePage ][ cardCount ] = currentCard.hasOwnProperty('product') ?

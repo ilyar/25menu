@@ -12,9 +12,12 @@
   z-index: 0;
 }
 
-.card_full .card__header .image {
-  width: unset;
+.card_full .card__header .img {
+  width: 100%;
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: unset;
 }
 
 .card_full .card__inner {
