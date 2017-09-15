@@ -6,14 +6,14 @@ block('footer').content()(function() {
           elem: 'contacts',
           content: [
           {
-            block: 'icon'
+            elem: 'icon'
           },
           {
             elem: 'phone',
             content: [{
               block: 'link',
-              content: '+7 812 200-20-30',
-              url: 'tel:200-20-30'
+              content: '8 812 200-20-20',
+              url: 'tel:200-20-20'
             }]
           },
           {
@@ -35,7 +35,12 @@ block('footer').content()(function() {
             mods: {
               type: 'vkontakte'
             },
-            content: 'VK',
+            content: [
+            {
+              elem: 'icon'
+            }
+            ],
+            target: '_blank',
             url: 'http://vk.com'
           },
           {
@@ -43,7 +48,12 @@ block('footer').content()(function() {
             mods: {
               type: 'facebook'
             },
-            content: 'FB',
+            content: [
+            {
+              elem: 'icon'
+            }
+            ],
+            target: '_blank',
             url: 'http://facebook.com'
           },
           {
@@ -51,7 +61,12 @@ block('footer').content()(function() {
             mods: {
               type: 'instagram'
             },
-            content: 'IN',
+            target: '_blank',
+            content: [
+            {
+              elem: 'icon'
+            }
+            ],
             url: 'http://instagram.com'
           }
           ]
@@ -64,7 +79,7 @@ block('footer').content()(function() {
           elem: 'feedback',
           content: [
             {
-              block: 'icon'
+              elem: 'icon'
             },
             {
               block: 'link',
@@ -78,6 +93,10 @@ block('footer').content()(function() {
           url: '/',
           content: 'Как мы готовим',
           mix: {block: 'footer', elem: 'faq'}
+        },
+        {
+          elem: 'empty-place',
+          content: ''
         }
         ]
       },

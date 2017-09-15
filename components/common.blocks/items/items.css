@@ -6,17 +6,16 @@
   flex-wrap: wrap;
   margin: 0 auto 50px;
   box-sizing: border-box;
-  border-radius: 5px;
 }
 
 
 .card_big.items__card {
-  lost-column: 1/2;
-  width: calc(49.95% - 1px);
+  width: 50%;
+  margin-left: -1px;
 }
 
 .items__card {
-  lost-column: 1/4;
+  width: calc(25% + 0.5px);
   z-index: 1;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
@@ -76,6 +75,20 @@
   text-align: center;
 }
 
+.items__info-block_card_points .icon {
+  width: 80px;
+  height: 56px;
+  margin-bottom: 12px;
+  background-image: url(svg/pic_bonus.svg);
+}
+
+.items__info-block_card_sale .icon {
+  width: 100px;
+  height: 56px;
+  margin-bottom: 12px;
+  background-image: url(svg/pic_share.svg);
+}
+
 .items__info-block_card:first-child {
   border-right: 1px solid #e6e6e6;
 }
@@ -116,11 +129,10 @@
   }
 
   .items__card {
-    lost-column: 1/3;
+    width: 33.3%;
   }
 
   .card_big.items__card {
-    lost-column: 2/3;
     width: calc(66.6% - 1px);
   }
 }

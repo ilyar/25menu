@@ -14,15 +14,16 @@
   padding: 0 20px;
 }
 
-.page-category__card-group {
+
+.page-category__content,
+.page-category__subcategory {
+  width: 100%;
   max-width: 1120px;
-  padding: 10px 20px 20px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto 50px;
   box-sizing: border-box;
-  border-radius: 5px;
 }
 
 

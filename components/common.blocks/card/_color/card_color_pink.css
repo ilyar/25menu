@@ -1,17 +1,10 @@
 .card_color_pink {
   color: white;
-  background-color: #F05565;
 }
-
-.card_color_pink .card__header .img {
-  background-color: #F05565;
-}
-
 
 .card_color_pink .card__inner {
   background-color: #F05565;
 }
-
 
 .card_gradient.card_color_pink {
   background-color: #F2F2F2;

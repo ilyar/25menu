@@ -74,13 +74,15 @@ block('items').content()(function() {
       }
       }
 
+      let img = currentCard.product && currentCard.product.images ? currentCard.product.images : currentCard.img;
+
       slider[ slidePage ][ cardCount ] = currentCard.hasOwnProperty('product') ?
         {
           elem: 'item',
           content: [
             {
               block: 'card',
-              js: {
+              js: currentCard.product && {
                 product: {
                   name: currentCard.product.name,
                   price: currentCard.product.price,
@@ -92,7 +94,8 @@ block('items').content()(function() {
                   fiber: currentCard.product.fiberAmount,
                   hydrates: currentCard.product.carbohydrateAmount,
                   ingridients: currentCard.product.additionalInfo,
-                  modifiers: currentCard.product.modifiers
+                  modifiers: currentCard.product.modifiers,
+                  code: currentCard.product.code
                 }
               },
               mods: {
@@ -102,11 +105,12 @@ block('items').content()(function() {
                 gradient: form == 'gradient'
               },
               title: currentCard.name,
-              image: currentCard.product.images,
+              image: img,
               text: currentCard.text
             }
           ]
-        } :
+        }
+        :
         {
           elem: 'item',
           content: [
@@ -146,8 +150,8 @@ block('items').content()(function() {
         content: [
         {
           elem: 'info-block_card',
-          mods: {
-            points_info: true
+          elemMods: {
+            points: true
           },
           content: [
           {
@@ -170,8 +174,8 @@ block('items').content()(function() {
         },
         {
           elem: 'info-block_card',
-          mods: {
-            sale_info: true
+          elemMods: {
+            sale: true
           },
           content: [
           {
@@ -257,7 +261,8 @@ block('items').content()(function() {
                 fiber: product.fiberAmount,
                 hydrates: product.carbohydrateAmount,
                 ingridients: product.additionalInfo,
-                modifiers: product.modifiers
+                modifiers: product.modifiers,
+                code: product.code
               }
              },
              mix: { block: 'items', elem: 'card' },
@@ -276,7 +281,8 @@ block('items').content()(function() {
               fiber: product.fiberAmount,
               hydrates: product.carbohydrateAmount,
               ingridients: product.additionalInfo,
-              modifiers: product.modifiers
+              modifiers: product.modifiers,
+              code: product.code
             }
           } )
 

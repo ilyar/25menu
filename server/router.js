@@ -98,29 +98,48 @@ module.exports = function( app ) {
     })
   });
 
-  app.get('/i/:category', function(req, res) {
-    request({url: 'api/catalog'}).then(request => {
-     category = request;
-    })
-  render(req, res, {
-    page: 'category',
-    menu: menu,
-    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-    title: req.params.category
-    })
+  app.get('/category-:category', function(req, res) {
+    request( { url: 'api/catalog?expand=children&products=true&site_id=' + req.params.category } )
+      .then(request => {
+        render( req, res, {
+          page: 'category',
+          menu: menu,
+          bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+          title: request[0].name,
+          category: request
+          })
+      })
+      .catch( () => {
+        res.status(404);
+        render(req, res, {
+        page: 'notfound',
+        menu: menu,
+        bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+        title: req.params.notfound
+        })
+      })
   });
 
-  app.get('/i/:category/:item', function(req, res) {
-  request({url: 'api/catalog'}).then(request => {
-     category = request;
-    })
-  render(req, res, {
-    page: 'item',
-    menu: menu,
-    products: products,
-    bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-    title: req.params.item,
-    })
+  app.get('/:item', function(req, res) {
+    request( { url: 'api/product?code=' + req.params.item } )
+      .then(request => {
+        render( req, res, {
+          page: 'item',
+          menu: menu,
+          bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+          title: request[0].name,
+          item: request
+          })
+      })
+      .catch( () => {
+        res.status(404);
+        render(req, res, {
+        page: 'notfound',
+        menu: menu,
+        bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
+        title: req.params.notfound
+        })
+      })
   });
 
   app.get('*', function(req, res) {

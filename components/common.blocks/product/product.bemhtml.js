@@ -2,6 +2,9 @@ block('product').js()( true )
 
 
 block('product').content()(function() {
+
+    console.log(this.ctx);
+
     return [
     {
       block: 'close-btn',
@@ -112,7 +115,7 @@ block('product').content()(function() {
       },
       {
         block: 'link',
-        url: '',
+        url: '/' + this.ctx.code,
         content: [
         'ПОДРОБНЕЕ',
         {
@@ -194,7 +197,7 @@ block('product').mod('type', 'basket').content()(function(){
           {
             block: 'bill',
             mix: { block: 'basket', elem: 'item-bill' },
-            content: '585 Р'
+            content: '585 ₽'
 
           },
         ]

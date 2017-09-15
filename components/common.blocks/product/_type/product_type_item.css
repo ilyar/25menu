@@ -2,7 +2,7 @@
     border: 0;
 }
 
-.product_type_item .product__control {
+.product_type_item .button__control {
   display: none;
 }
 
@@ -15,3 +15,6 @@
   display: none;
 }
 
+.product_type_item .title {
+  font-size: 44px;
+}

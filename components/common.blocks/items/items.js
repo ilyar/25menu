@@ -93,7 +93,8 @@ provide(bemDom.declBlock(this.name, {
             fiber: card.params.product.fiber,
             hydrates: card.params.product.hydrates,
             ingridients: card.params.product.ingridients,
-            modifiers: card.params.product.modifiers
+            modifiers: card.params.product.modifiers,
+            code: card.params.product.code
           }
           ]
         }));

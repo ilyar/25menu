@@ -29,13 +29,42 @@ hr {
   align-items: center;
 }
 
-.footer__contacts .icon,
-.footer__feedback .icon {
+.footer__workhours {
+  color: #808080;
+  font-size: 12px;
+}
+
+.footer__contacts .footer__icon,
+.footer__feedback .footer__icon {
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  border: 1px solid black;
   margin-right: 10px;
+}
+
+.footer__contacts .footer__icon {
+  background-image: url(svg/phone_24.svg);
+}
+
+.footer__feedback .footer__icon {
+  background-image: url(svg/write_us.svg);
+}
+
+.link_type_vkontakte .link__icon {
+  width: 32px;
+  height: 32px;
+  background-image: url(svg/vk.svg);
+}
+
+.link_type_facebook .link__icon {
+  width: 32px;
+  height: 32px;
+  background-image: url(svg/facebook.svg);
+}
+
+.link_type_instagram .link__icon {
+  width: 32px;
+  height: 32px;
+  background-image: url(svg/instagram.svg);
 }
 
 .footer__phone {
@@ -43,29 +72,30 @@ hr {
 }
 
 .footer__delivery {
-  width: 360px;
+  width: 340px;
   align-items: center;
   line-height: 26px;
+  text-align: center;
 }
 
 .footer__social {
-  flex: 1;
+  width: 340px;
   justify-content: flex-end;
   align-items: center;
   display: flex;
 }
 
-.footer__social .link {
+.footer__social .link__icon {
   display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1px solid black;
+  -webkit-background-size: cover;
+  background-size: cover;
   margin-left: 15px;
+  background-repeat: ;
 }
 
 .footer__faq {
   flex: 1;
+  text-align: center;
 }
 
 .footer__copyright {
@@ -79,8 +109,9 @@ hr {
   text-align: center;
 }
 
+.footer__empty-place,
 .footer__site_author {
-  width: 200px;
+  width: 340px;
   text-align: right;
   font-size: 14px;
   color: #808080;

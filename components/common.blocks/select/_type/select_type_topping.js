@@ -9,8 +9,8 @@ provide(Select.declMod({ modName: 'type', modVal: 'topping' }, {
         this.__base.apply(this, arguments);
 
         let icon = this._elem('icon-add');
-        debugger;
-        let current = this.getVal();
+        // debugger;
+        // let current = this.getVal ();
         // console.log(icon.domElem)
         console.log(current)
         // this._onToppingChoose();

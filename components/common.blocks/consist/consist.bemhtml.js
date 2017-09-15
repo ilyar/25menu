@@ -71,7 +71,6 @@ block('consist').mod('type', 'product').content()(function() {
       content: [
         {
           block: 'select',
-          val: [],
           mods: {
               mode: 'check',
               theme: '25menu',
@@ -86,22 +85,22 @@ block('consist').mod('type', 'product').content()(function() {
               group:
               this.ctx.modifiers && this.ctx.modifiers.map( (item, index) => {
                 return {
-                  val: index + 1,
-                  text: item.name
-                  // {
-                  //   block: 'addon',
-                  //   // val: index,
-                  //   js: item,
-                  //   mods: {
-                  //     type: 'product'
-                  //   },
-                  //   mix: { block: 'consist', elem: 'adding' },
-                  //   name: item.name,
-                  //   price: item.price,
-                  //   weight: item.weight
-                  // }
+                  val: index,
+                  text: {
+                    block: 'addon',
+                    val: index,
+                    js: item,
+                    mods: {
+                      type: 'product'
+                    },
+                    mix: { block: 'consist', elem: 'adding' },
+                    name: item.name,
+                    price: item.price,
+                    weight: item.weight
+                  }
                 }
               })
+
           }
           ]
         }
