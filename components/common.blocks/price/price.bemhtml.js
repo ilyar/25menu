@@ -1,41 +1,12 @@
-block('price').js()( true )
-
 block('price')(
-  addJs()(
-    {
-      quantity: 1
+  addJs()( function () {
+    return {
+      quantity: 1,
+      id: this.ctx.product_id
     }
-  )
+  }),
+  content()('')
 )
-
-
-
-block('price').mod('type', 'product')(
-  addJs()(
-    {
-      quantity: 1
-    }
-  )
-)
-
-
-
-block('price').mod('type', 'basket')(
-  addJs()(
-    {
-      quantity: 1
-    }
-  )
-)
-
-
-
-
-
-block('price').content()(function() {
-    return ;
-});
-
 
 block('price').mod('type', 'card').content()(function(){
   return [
@@ -62,23 +33,23 @@ block('price').mod('type', 'card').content()(function(){
             card: true
           },
           content: [
-              {
-                block: 'icon',
-                mods: {
-                  symbol: 'minus'
-                },
-                mix: { block: 'price', elem: 'minus' }
+            {
+              block: 'icon',
+              mods: {
+                symbol: 'minus'
               },
-              {
-                elem: 'quantity'
+              mix: { block: 'price', elem: 'minus' }
+            },
+            {
+              elem: 'quantity'
+            },
+            {
+              block: 'icon',
+              mods: {
+                symbol: 'plus'
               },
-              {
-                block: 'icon',
-                mods: {
-                  symbol: 'plus'
-                },
-                mix: { block: 'price', elem: 'plus' }
-              }
+              mix: { block: 'price', elem: 'plus' }
+            }
           ]
         }
       ]
@@ -138,12 +109,6 @@ block('price').mod('type', 'product').content()(function(){
   ]
 });
 
-
-
-
-
-
-
 block('price').mod('type', 'basket').content()(function(){
   return [
     {
@@ -173,5 +138,3 @@ block('price').mod('type', 'basket').content()(function(){
     }
     ]
 });
-
-

@@ -43,36 +43,28 @@ module.exports = function( app ) {
     menu = request;
   })
 
-  let products = [];
-    request({url: 'api/category'}).then(request => {
-    products = request;
-  })
-
-  let banner = [];
-  request({url: 'api/banner'}).then(request => {
-    banner = request;
-  })
-
-  // let basket = [];
-  // request({url: '/api/basket'}).then(request => {
-  //   basket = request;
-  // })
-
   app.get( '/', function( req, res ) {
-    render( req, res, {
-      page: 'index',
-      bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
-      menu: menu,
-      banner: banner,
-      products: products,
-      items: [
-        {
-          title: 'Title',
-          price: 500,
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores amet, pariatur obcaecati vel perspiciatis aspernatur nam, voluptatum, nemo eveniet maiores, velit quidem natus beatae? Ut eos reiciendis tenetur, fugiat minima.'
-        }
-      ]
-    } )
+    axios.all([
+      request( { url: 'api/banner' } ),   // banner
+      request( { url: 'api/category' } ), // categories
+      request( { url: 'api/basket' } ),   // basket
+    ]).then( (response) => {
+      render( req, res, {
+        page: 'index',
+        bundle: 'desktop',
+        menu: menu,
+        banner: response[0],
+        products: response[1],
+        basket: response[2],
+        items: [
+          {
+            title: 'Title',
+            price: 500,
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores amet, pariatur obcaecati vel perspiciatis aspernatur nam, voluptatum, nemo eveniet maiores, velit quidem natus beatae? Ut eos reiciendis tenetur, fugiat minima.'
+          }
+        ]
+      } )
+    } ).catch((e) => { console.log(e); res.send('error');  });
   });
 
   app.get( '/about/', function( req, res ) {
@@ -142,6 +134,36 @@ module.exports = function( app ) {
       })
   });
 
+
+  /*
+   * API
+   *
+   *******************************/
+
+  app.post('/api/order/add', function(req, res) {
+    res.send( JSON.stringify( req.body, null, 2 ) );
+    // client.post( '/basket/additem',
+    // {
+    //   product_id: req.body.id,
+    //   item_id: req.body.key,
+    //   count: req.body.count,
+    //   modifications: req.body.mods
+    // }, {
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   }
+    // } ).then( api => {
+    //   res.send( JSON.stringify( api ) )
+    // } )
+  });
+
+
+
+  /*
+   * 404
+   *
+   *******************************/
+
   app.get('*', function(req, res) {
     res.status(404);
     render(req, res, {
@@ -150,27 +172,6 @@ module.exports = function( app ) {
     bundle: isCallerMobile( req ) ? 'touch' : 'desktop',
     title: req.params.notfound
     })
-  });
-
-
-  /*
-   * API
-   *
-   *******************************/
-
-  app.post('/api/order/add', function(req, res) {
-    res.send( JSON.stringify( { hello: 'world' } ) )
-    // client.post(
-    //   { url: 'basket/additem' },
-    //   {
-    //     item_id: req.query.id,
-    //     product_id: req.query.id,
-    //     count: req.query.count,
-    //     modifications: req.query.mods
-    //   }
-    // ).then( api => {
-    //   res.send( JSON.stringify( api ) )
-    // })
   });
 
 }

@@ -1,11 +1,16 @@
 modules.define('card',
-  ['i-bem-dom', 'BEMHTML', 'price'],
-  function(provide, bemDom, BEMHTML, Price) {
+  ['i-bem-dom', 'BEMHTML', 'price', 'selector'],
+  function(provide, bemDom, BEMHTML, Price, Select) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
     js: {
       inited: function() {
+
+        this._domEvents(Select).on('click', (event) => {
+          event.stopPropagation();
+        })
+
         this._domEvents('price_block').on('click', ( event ) => {
           var priceBtn = event.bemTarget.findMixedBlock(Price);
           event.stopPropagation();

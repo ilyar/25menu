@@ -12,6 +12,7 @@
     'image',
     'button',
     'price',
+    'selector',
     {
       block: 'icon',
       mods: {

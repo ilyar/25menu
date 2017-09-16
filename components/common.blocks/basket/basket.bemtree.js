@@ -10,7 +10,7 @@ block('basket').content()(function() {
   {
     block: 'bill',
     mix: { block: 'basket_type_closed', elem: 'bill' },
-    content: '2130 ₽'
+    content: ''
   },
   {
    block: 'close-btn',
@@ -174,18 +174,9 @@ block('basket').content()(function() {
           name: 'select2',
           val: 3,
           options: [
-          {
-            val: 1,
-            text: 'Картой на сайте'
-          },
-          {
-            val: 2,
-            text: 'Картой курьеру'
-          },
-          {
-            val: 3,
-            text: 'Наличными курьеру'
-          }
+            { val: 1, text: 'Картой на сайте' },
+            { val: 2, text: 'Картой курьеру' },
+            { val: 3, text: 'Наличными курьеру' }
           ]
         },
         {
@@ -209,6 +200,12 @@ block('basket').content()(function() {
       },
       {
         block: 'order',
+        // mods: {
+        //   empty: true
+        // },
+        js: {
+          order: this.ctx.basket
+        },
         mix: { block: 'basket', elem: 'content' }
       },
       {
@@ -236,7 +233,7 @@ block('basket').content()(function() {
           {
             block: 'bill',
             mix: { block: 'final-price' },
-            content: '2130 Р'
+            content: ''
           }
           ]
         },
@@ -258,6 +255,3 @@ block('basket').content()(function() {
     }
   ]
 });
-
-
-

@@ -1,6 +1,6 @@
 modules.define('items',
-  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn', 'header', 'page', 'sidebar', 'button'],
-  function(provide, bemDom, BEMHTML, Card, Product, Close, Header, Page, Sidebar, Button) {
+  ['i-bem-dom', 'BEMHTML', 'card', 'product', 'close-btn', 'header', 'page', 'sidebar', 'button', 'slider'],
+  function(provide, bemDom, BEMHTML, Card, Product, Close, Header, Page, Sidebar, Button, Slider) {
 
 provide(bemDom.declBlock(this.name, {
   onSetMod:{
@@ -10,6 +10,7 @@ provide(bemDom.declBlock(this.name, {
         this._domEvents('card').on('click', ( event ) => {
           this.allCards = event.bemTarget.findParentElem('card-group').findChildElems('card');
           this.chosenCard = event.bemTarget.findMixedBlock(Card);
+          this.chosenItem = event.bemTarget;
           var otherCards = this.findChildBlocks(Card);
 
           if (this.findChildElem('popup') !== null) {
@@ -70,12 +71,14 @@ provide(bemDom.declBlock(this.name, {
 
   _showProduct: function( card ) {
     let cardPerRow = window.innerWidth < 1280 ? 3 : 4;
-    let cardsArray = this.allCards.size() + 1;
+    this.cardsArray = this.allCards.size() + 1;
     let insertIndex = (Math.ceil(card.params.index / cardPerRow)) * cardPerRow;
-    let row = Math.ceil( cardsArray / cardPerRow );
+    let row = Math.ceil( this.cardsArray / cardPerRow );
     let isFinalRow = row === Math.ceil( card.params.index / cardPerRow );
+    let place =  this.chosenItem.findParentElem('card-group').hasMod('special') ? this.findChildBlock(Slider).findChildElem('view').domElem :
+                (isFinalRow ? this.allCards.get(this.cardsArray - 2).domElem : this.allCards.get(insertIndex - 2 ).domElem);
     bemDom.after(
-       isFinalRow ? this.allCards.get(cardsArray - 2).domElem : this.allCards.get(insertIndex - 2 ).domElem,
+        place,
         BEMHTML.apply(
         {
           block: 'items',
@@ -94,7 +97,9 @@ provide(bemDom.declBlock(this.name, {
             hydrates: card.params.product.hydrates,
             ingridients: card.params.product.ingridients,
             modifiers: card.params.product.modifiers,
-            code: card.params.product.code
+            code: card.params.product.code,
+            type: card.params.product.type,
+            product_id: card.params.product.product_id
           }
           ]
         }));

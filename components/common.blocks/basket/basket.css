@@ -26,6 +26,8 @@
 .basket__name {
   color: white;
   transform: rotate(270deg);
+  position: relative;
+  top: 300px;
 }
 
 /* Хэдер корзины — поля ввода */
@@ -78,7 +80,7 @@
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
-  display: none;
+  /*display: none;*/
 }
 
 .basket .delivery-default__time {
@@ -106,7 +108,7 @@
 .basket .form-field_type_delivery-time {
   background: transparent;
   display: flex;
-  /*display: none;*/
+  display: none;
 }
 
 .basket .delivery__date {

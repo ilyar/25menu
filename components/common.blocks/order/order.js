@@ -8,8 +8,8 @@ provide(bemDom.declBlock(this.name, {
         js: {
             inited: function() {
               this._events().on('change', this._onChange);
-              this._add( 313132, 2, { bambaleilo: 'weeee' } );
-              console.log( this._get() );
+              // this._add( 313132, 2, 0, { bambaleilo: 'weeee' } );
+              // console.log( this._get() );
               // debugger;
             }
         }
@@ -40,16 +40,26 @@ provide(bemDom.declBlock(this.name, {
     },
 
     // добавить товар
-    _add: function( id, count = 1, options ) {
+    _add: function( id, count = 1, key = 0, mods ) {
       // var currentOrder = this._get();
-      $.post( '/api/order/add', {
-        id: id,
-        count: count,
-        toppings: options
+      $.ajax( {
+        async: true,
+        url: '/api/order/add',
+        method: 'POST',
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+        },
+        data: {
+          id: id,
+          count: count,
+          key: key,
+          mods: mods
+        }
       } ).done( request => {
         let newGood = JSON.parse( request );
-        let currentOrder = this._get().hello = newGood;
-        this._onChange( JSON.stringify( currentOrder ) );
+        console.log( newGood );
+        // let currentOrder = this._get().hello = newGood;
+        // this._onChange( JSON.stringify( currentOrder ) );
       } )
 
 

@@ -23,7 +23,7 @@ block('consist').mod('type', 'product').content()(function() {
   {
     elem: 'changer',
     content: [
-    {
+    this.ctx.type == 'pizza' ? {
       block: 'select',
       mix: { block: 'product', elem: 'size' },
       mods: {
@@ -31,7 +31,7 @@ block('consist').mod('type', 'product').content()(function() {
         theme: '25menu',
         size: 's'
       },
-      name: 'select2',
+      name: 'select1',
       val: 2,
       options: [
       {
@@ -43,8 +43,8 @@ block('consist').mod('type', 'product').content()(function() {
         text: 'Ø 25 см'
       }
       ]
-    },
-    {
+    } : '',
+    this.ctx.type == 'pizza' ? {
       block: 'select',
       mix: { block: 'product', elem: 'base' },
       mods: {
@@ -64,7 +64,28 @@ block('consist').mod('type', 'product').content()(function() {
         text: 'На толстом тесте'
       }
       ]
-    },
+    } : '',
+    this.ctx.type == 'susi' ? {
+      block: 'select',
+      mix: { block: 'product', elem: 'amount' },
+      mods: {
+        mode: 'radio',
+        theme: '25menu',
+        size: 'm'
+      },
+      name: 'select3',
+      val: 2,
+      options: [
+      {
+        val: 1,
+        text: '4 шт.'
+      },
+      {
+        val: 2,
+        text: '8 шт.'
+      }
+      ]
+    } : '',
     this.ctx.modifiers && this.ctx.modifiers.length ? {
       elem: 'add_button',
       mix: { block: 'consist', elem: 'adder' },

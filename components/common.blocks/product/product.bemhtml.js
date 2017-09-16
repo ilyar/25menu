@@ -3,8 +3,6 @@ block('product').js()( true )
 
 block('product').content()(function() {
 
-    console.log(this.ctx);
-
     return [
     {
       block: 'close-btn',
@@ -56,7 +54,10 @@ block('product').content()(function() {
           type: 'product'
         },
         mix: { block: 'product', elem: 'topping' },
+        type: this.ctx.type,
+        // ингридиенты
         ingridients: this.ctx.ingridients,
+        // топпинги
         modifiers: this.ctx.modifiers
       },
       {
@@ -65,7 +66,8 @@ block('product').content()(function() {
           type: 'product'
         },
         mix: { block: 'product', elem: 'price-block' },
-        price: this.ctx.price
+        price: this.ctx.price,
+        product_id: this.ctx.product_id
       },
       {
         block: 'description',
@@ -190,6 +192,7 @@ block('product').mod('type', 'basket').content()(function(){
           },
           {
             block: 'price',
+            product_id: this.ctx.product_id,
             mods:{
               type: 'basket'
             }

@@ -1,6 +1,6 @@
 modules.define('slider',
-  ['i-bem-dom', 'button' ],
-  function(provide, bemDom, Button) {
+  ['i-bem-dom','BEMHTML', 'button', 'card', 'product', 'close-btn'],
+  function(provide, bemDom, BEMHTML, Button, Card, Product, CloseBtn) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
@@ -56,10 +56,9 @@ provide(bemDom.declBlock(this.name, {
                     this._elem('next').findMixedBlock(Button).setMod('disabled', false);
                   }
                 })
-
             }
         }
-    },
+    }
 
 }));
 

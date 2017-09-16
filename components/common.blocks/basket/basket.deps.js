@@ -34,7 +34,12 @@
           }
         },
         'form',
-        'order',
+        {
+          block: 'order',
+          mods: {
+            empty: true
+          }
+        },
         {
           block: 'form-field',
           mods: {

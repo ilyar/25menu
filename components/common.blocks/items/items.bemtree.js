@@ -78,51 +78,43 @@ block('items').content()(function() {
 
       slider[ slidePage ][ cardCount ] = currentCard.hasOwnProperty('product') ?
         {
-          elem: 'item',
-          content: [
-            {
-              block: 'card',
-              js: currentCard.product && {
-                product: {
-                  name: currentCard.product.name,
-                  price: currentCard.product.price,
-                  image: currentCard.product.images,
-                  weight: currentCard.product.weight,
-                  description: currentCard.product.description,
-                  energy: currentCard.product.energyAmount,
-                  fat: currentCard.product.fatAmount,
-                  fiber: currentCard.product.fiberAmount,
-                  hydrates: currentCard.product.carbohydrateAmount,
-                  ingridients: currentCard.product.additionalInfo,
-                  modifiers: currentCard.product.modifiers,
-                  code: currentCard.product.code
-                }
-              },
-              mods: {
-                type: 'special',
-                color: color,
-                full: form == 'full',
-                gradient: form == 'gradient'
-              },
-              title: currentCard.name,
-              image: img,
-              text: currentCard.text
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          js: currentCard.product && {
+            product: {
+              name: currentCard.product.name,
+              price: currentCard.product.price,
+              image: currentCard.product.images,
+              weight: currentCard.product.weight,
+              description: currentCard.product.description,
+              energy: currentCard.product.energyAmount,
+              fat: currentCard.product.fatAmount,
+              fiber: currentCard.product.fiberAmount,
+              hydrates: currentCard.product.carbohydrateAmount,
+              ingridients: currentCard.product.additionalInfo,
+              modifiers: currentCard.product.modifiers,
+              code: currentCard.product.code
             }
-          ]
+          },
+          mods: {
+            type: 'special',
+            color: color,
+            full: form == 'full',
+            gradient: form == 'gradient'
+          },
+          title: currentCard.name,
+          image: img,
+          text: currentCard.text
         }
         :
         {
-          elem: 'item',
-          content: [
-            {
-              block: 'card',
-              mods: {
-                type: 'map'
-              },
-              title: currentCard.name,
-              text: currentCard.text
-            }
-          ]
+          block: 'card',
+          mix: { block: 'items', elem: 'card' },
+          mods: {
+            type: 'map'
+          },
+          title: currentCard.name,
+          text: currentCard.text
         }
     }
   }
@@ -262,7 +254,9 @@ block('items').content()(function() {
                 hydrates: product.carbohydrateAmount,
                 ingridients: product.additionalInfo,
                 modifiers: product.modifiers,
-                code: product.code
+                code: product.code,
+                type: product.card_type,
+                product_id: product.id
               }
              },
              mix: { block: 'items', elem: 'card' },
@@ -282,7 +276,9 @@ block('items').content()(function() {
               hydrates: product.carbohydrateAmount,
               ingridients: product.additionalInfo,
               modifiers: product.modifiers,
-              code: product.code
+              code: product.code,
+              type: product.card_type,
+              product_id: product.id
             }
           } )
 

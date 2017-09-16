@@ -17,11 +17,11 @@ block('sidebar')
           ]
         },
         {
-         elem: 'scroll-area',
-         elemMods: {
+          elem: 'scroll-area',
+          elemMods: {
           hide: true
         },
-         content: [
+        content: [
           {
             block: 'logo',
             mods: {

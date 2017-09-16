@@ -118,7 +118,8 @@ block('card').mod('type', 'usual').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        price: this.ctx.price
+        price: this.ctx.price,
+        product_id: this.ctx.product_id
       }
       ]
     }]
@@ -218,7 +219,8 @@ block('card').mod('type', 'pizza').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        price: this.ctx.price
+        price: this.ctx.price,
+        product_id: this.ctx.product_id
       }
       ]
     }]
@@ -323,7 +325,8 @@ block('card').mod('type', 'roll').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        price: this.ctx.price
+        price: this.ctx.price,
+        product_id: this.ctx.product_id
       }
       ]
     }]
@@ -365,7 +368,8 @@ block('card').mod('type', 'combo').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        price: this.ctx.price
+        price: this.ctx.price,
+        product_id: this.ctx.product_id
       }
       ]
     }]
@@ -414,7 +418,8 @@ block('card').mod('type', 'small').content()(function(){
           type: 'card'
         },
         mix: { block: 'card', elem: 'price_block'},
-        content: '150 Р'
+        content: '150 Р',
+        product_id: this.ctx.product_id
       }
       ]
     }]

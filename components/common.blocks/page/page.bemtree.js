@@ -9,9 +9,10 @@ block('page').content()(function() {
     },
     {
       block: 'basket',
-        mods: {
-          type: 'closed'
-        }
+      mods: {
+        type: 'closed'
+      },
+      basket: this.data.basket
     }
   ];
 });

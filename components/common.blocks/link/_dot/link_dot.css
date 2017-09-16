@@ -1,15 +1,19 @@
 .link_dot_red {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: red;
+    width: 20px;
+    height: 20px;
+    background-image: url(svg/label_spicy.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .link_dot_green {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: green;
+    width: 20px;
+    height: 20px;
+    background-image: url(svg/label_vegetarian.svg);
     margin-left: 16px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
