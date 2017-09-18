@@ -7,8 +7,7 @@ provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-              this._events().on('change', this._onChange);
-              // this._add( 313132, 2, 0, { bambaleilo: 'weeee' } );
+              // this._events().on('change', this._onChange);
               // console.log( this._get() );
               // debugger;
             }
@@ -16,8 +15,17 @@ provide(bemDom.declBlock(this.name, {
     },
 
     // Запросить только товары
+
     _get: function() {
-      return window.localStorage.getItem( 'order' );
+      $.ajax( {
+        async: true,
+        url: 'http://delivery.breadhead.ru/api/basket',
+        method: 'GET',
+      } ).done( request => {
+        console.log( request );
+        // let currentOrder = this._get().hello = newGood;
+        // this._onChange( JSON.stringify( currentOrder ) );
+      } )
     },
 
     // Запросить итоговую стоимость, вес и пр.
@@ -40,24 +48,22 @@ provide(bemDom.declBlock(this.name, {
     },
 
     // добавить товар
-    _add: function( id, count = 1, key = 0, mods ) {
-      // var currentOrder = this._get();
+    _add: function( id, count = 1, key, mods ) {
       $.ajax( {
         async: true,
-        url: '/api/order/add',
+        url: 'http://delivery.breadhead.ru/basket/additem',
         method: 'POST',
-        headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-        },
         data: {
-          id: id,
+          product_id: id,
           count: count,
-          key: key,
-          mods: mods
+          item_id: key,
+          modifications: mods
         }
       } ).done( request => {
         let newGood = JSON.parse( request );
         console.log( newGood );
+        // this._render(newGood);
+        // console.log( currentOrder );
         // let currentOrder = this._get().hello = newGood;
         // this._onChange( JSON.stringify( currentOrder ) );
       } )
@@ -91,7 +97,26 @@ provide(bemDom.declBlock(this.name, {
     _onChange: function( order ) {
       window.localStorage.setItem( 'order', order );
       this._get();
-    }
+    },
+
+
+    // Рендер корзины
+
+    // _render( items ){
+    //     bemDom.update(
+    //       this.domElem,
+    //         items..map ( item => {
+    //         BEMHTML.apply({
+    //             block : 'product',
+    //             mix: { block: 'order', elem: 'good' },
+    //             mods: {
+    //               type: 'basket'
+    //             }
+    //           })
+    //       }))
+    //     return this;
+    // }
+
 }));
 
 });

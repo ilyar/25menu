@@ -67,7 +67,8 @@ block('product').content()(function() {
         },
         mix: { block: 'product', elem: 'price-block' },
         price: this.ctx.price,
-        product_id: this.ctx.product_id
+        product_id: this.ctx.product_id,
+        modifiers: this.ctx.modifiers
       },
       {
         block: 'description',
@@ -142,13 +143,10 @@ block('product').content()(function() {
 block('product').mod('type', 'basket').content()(function(){
     return [
     {
-      elem: 'image',
-      content: [
-      {
-        block: 'image',
-        url: 'http://lorempixel.com/40/40/pizza'
+      block: 'img',
+      attrs: {
+        style: 'background-image: url("' + '//delivery.breadhead.ru' + this.ctx.image + '476x476' + '");'
       }
-      ]
     },
     {
       elem: 'info',
@@ -162,7 +160,7 @@ block('product').mod('type', 'basket').content()(function(){
             content: [
               {
                 elem: 'name',
-                content: 'Котик няшечка в соусе'
+                content: this.ctx.name
               },
               {
                 block: 'dropdown',
@@ -200,7 +198,7 @@ block('product').mod('type', 'basket').content()(function(){
           {
             block: 'bill',
             mix: { block: 'basket', elem: 'item-bill' },
-            content: '585 ₽'
+            content: this.ctx.price
 
           },
         ]
@@ -210,7 +208,8 @@ block('product').mod('type', 'basket').content()(function(){
         mods: {
           type: 'basket'
         },
-        mix: { block: 'basket', elem: 'topping' }
+        mix: { block: 'basket', elem: 'topping' },
+        modifiers: this.ctx.modifiers
       }
       ]
     }

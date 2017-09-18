@@ -1,5 +1,15 @@
 block('addon').js()( true )
 
+
+block('addon')(
+  addJs()( function () {
+    return {
+      id: this.ctx.js
+    }
+  }),
+  content()('')
+)
+
 block('addon').mod('type', 'product').content()(function(){
   return [
     {

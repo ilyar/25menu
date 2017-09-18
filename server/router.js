@@ -140,22 +140,23 @@ module.exports = function( app ) {
    *
    *******************************/
 
-  app.post('/api/order/add', function(req, res) {
-    res.send( JSON.stringify( req.body, null, 2 ) );
-    // client.post( '/basket/additem',
-    // {
-    //   product_id: req.body.id,
-    //   item_id: req.body.key,
-    //   count: req.body.count,
-    //   modifications: req.body.mods
-    // }, {
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded'
-    //   }
-    // } ).then( api => {
-    //   res.send( JSON.stringify( api ) )
-    // } )
-  });
+
+
+  // app.post('/api/order/add', function(req, res) {
+  //   client.post( '/basket/additem', {
+  //     product_id: req.body.product_id,
+  //     item_id: req.body.item_id,
+  //     count: req.body.count,
+  //     modifications: req.body.modifications
+  //   } )
+  //     .then( api => {
+  //       console.log( api.data );
+  //       res.send( JSON.stringify( api ) )
+  //   } )
+  //     .catch( (error) => {
+  //       console.log( error.error );
+  //   } )
+  // });
 
 
 

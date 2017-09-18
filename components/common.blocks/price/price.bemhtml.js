@@ -2,7 +2,8 @@ block('price')(
   addJs()( function () {
     return {
       quantity: 1,
-      id: this.ctx.product_id
+      id: this.ctx.product_id,
+      modifiers: this.ctx.modifiers
     }
   }),
   content()('')

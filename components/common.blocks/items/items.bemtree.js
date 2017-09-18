@@ -237,7 +237,6 @@ block('items').content()(function() {
                   type = 'usual';
               }
             }
-
             return {
              block: 'card',
              js: {

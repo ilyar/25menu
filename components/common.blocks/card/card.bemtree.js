@@ -119,7 +119,8 @@ block('card').mod('type', 'usual').content()(function(){
         },
         mix: { block: 'card', elem: 'price_block'},
         price: this.ctx.price,
-        product_id: this.ctx.product_id
+        product_id: this.ctx.product_id,
+        modifiers: this.ctx.modifiers
       }
       ]
     }]
